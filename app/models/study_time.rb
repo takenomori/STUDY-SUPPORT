@@ -1,0 +1,2 @@
+class StudyTime < ApplicationRecord
+end
