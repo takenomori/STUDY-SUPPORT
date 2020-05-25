@@ -1,0 +1,2 @@
+class TextbookTag < ApplicationRecord
+end
