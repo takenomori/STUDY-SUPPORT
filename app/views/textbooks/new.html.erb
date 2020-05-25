@@ -7,13 +7,13 @@
             </div>
         </div>
 
-            <%= form_for(@textbook, url:) do |f| %>
+            <%= form_for(@textbook, url:textbooks_path) do |f| %>
             <%#= render 'layouts/error_messages', model: f.object %>
                 <!--教材画像登録-->
                 <div class="col-xs-8">
                     <div class="img-fluid">
-                    <%= attachment_image_tag @textbook, :image,format: 'jpg', fallback: "logo.png", size:'250x250' %>
-                        <%= f.attachment_field :image, placeholder:"教材画像" %>
+                    <%= attachment_image_tag @textbook, :image, format: 'jpg', fallback: "no-image.gif", size:'250x250' %> %>
+<%# <%= f.attachment_field :image %> %>
                     </div>
                 </div>
                 <!--教材項目入力欄-->
@@ -29,9 +29,9 @@
                     <div class="form-group">
                         <%= f.label :status, '教材状況' %>
                         <%= f.select :status, {
-                            "後で": later,
-                            "使用中": doing,
-                            "済み": done
+                            "後で": 1,
+                            "使用中": 2,
+                            "済み": 3
                         } %> 
                     </div>
                 </div>
