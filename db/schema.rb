@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_25_060004) do
+ActiveRecord::Schema.define(version: 2020_05_25_064157) do
 
   create_table "study_times", force: :cascade do |t|
     t.integer "user_id"
@@ -18,6 +18,12 @@ ActiveRecord::Schema.define(version: 2020_05_25_060004) do
     t.integer "time"
     t.string "genre"
     t.text "comment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "textbook_tags", force: :cascade do |t|
+    t.string "genre"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
