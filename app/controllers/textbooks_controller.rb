@@ -3,6 +3,7 @@ class TextbooksController < ApplicationController
   end
 
   def new
+    @textbook = Textbook.new
   end
 
   def create
