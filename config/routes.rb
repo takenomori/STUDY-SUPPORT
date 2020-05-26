@@ -14,7 +14,12 @@ Rails.application.routes.draw do
   # get 'users/top'
   # get 'users/edit'
   # get 'users/show'
-  devise_for :users
+
+  devise_for :users, controllers: {
+    sessions: 'devise/sessions',
+    registrations: 'devise/registrations',
+    passwords: 'devise/passwords'
+  }
 
   root 'users#top'
   resources :users, only: [:edit, :show, :update, :destroy]
