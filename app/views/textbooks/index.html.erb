@@ -1,2 +1,27 @@
-<h1>Textbooks#index</h1>
-<p>Find me in app/views/textbooks/index.html.erb</p>
+<div class="jumbotron">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-xs-6 col-xs-offset-0">
+                <h1>教材一覧</h1>
+            </div>
+        </div>
+
+    <% @textbooks.each do |textbook| %>
+        <div class="col-xs-3 text-center ">
+                <%= attachment_image_tag product, :image, format: 'jpeg', fallback: "logo.png", size: 150 %><br>
+            <%= textbook.title %><br>
+            <!-- 教材状況 -->
+            <div class="form-group">
+                <%= f.label :status, '教材状況' %>
+                <%= f.select :status, {
+                    "後で": 1,
+                    "使用中": 2,
+                    "済み": 3
+                } %> 
+            </div>
+        </div>
+    <% end %>
+
+    </div>
+</div>

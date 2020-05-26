@@ -1,5 +1,6 @@
 class TextbooksController < ApplicationController
   def index
+    @textbooks = Textbook.where(user_id: current_user.id)
   end
 
   def new
