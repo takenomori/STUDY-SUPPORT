@@ -2,26 +2,49 @@
     <div class="container">
 
         <div class="row">
-            <div class="col-xs-6 col-xs-offset-0">
-                <h1>教材一覧</h1>
-            </div>
+					<div class="col-xs-1 col-xs-offset-0">
+						<%= link_to "+", new_textbook_path, class: " btn btn-default", style: "border-radius: 100%" %>	
+					</div>
+					<div class="col-xs-6 col-xs-offset-0">
+							<h1>教材一覧</h1>
+					</div>
         </div>
 
-    <% @textbooks.each do |textbook| %>
-        <div class="col-xs-3 text-center ">
-                <%= attachment_image_tag product, :image, format: 'jpeg', fallback: "logo.png", size: 150 %><br>
-            <%= textbook.title %><br>
-            <!-- 教材状況 -->
-            <div class="form-group">
-                <%= f.label :status, '教材状況' %>
-                <%= f.select :status, {
-                    "後で": 1,
-                    "使用中": 2,
-                    "済み": 3
-                } %> 
-            </div>
-        </div>
-    <% end %>
+			<table class="table table-hover table-resposive">
+				<thead>
+					<tr class="active">
+						<th>ID</th>
+						<th>テキスト画像</th>
+						<th>タイトル</th>
+						<th>メモ</th>
+						<th>ステータス</th>
+					</tr>
+				</thead>
+				<tbody>
+				<% @textbooks.each do |textbook| %>
+						<tr>
+					<td>
+						<%= textbook.id %>
+					</td>
+					<td>
+					<%= link_to textbook_path(textbook.id) do %>
+						<%= attachment_image_tag textbook, :image, format: 'jpeg', fallback: "no-image.gif", size: 100 %>
+					<% end %>
+					</td>
+					<td>
+						<%= link_to textbook.title, textbook_path(textbook.id) %>
+					</td>
+					<td>
+						<%= link_to textbook.note, textbook_path(textbook.id) %>
+					</td>
+					<td>
+						<%= textbook.status %>
+					</td>
+        <% end %>
+				</tbody>
+			</table>
+
+
 
     </div>
 </div>

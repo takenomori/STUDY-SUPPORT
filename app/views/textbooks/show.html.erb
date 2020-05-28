@@ -1,2 +1,38 @@
-<h1>Textbooks#show</h1>
-<p>Find me in app/views/textbooks/show.html.erb</p>
+<div class="jumbotron">
+	<div class="container">
+
+			<div class="row">
+				<div class="col-xs-6 col-xs-offset-0">
+					<h1>教材詳細</h1>
+				</div>
+			</div>
+
+
+  <div class="field row">
+<%= attachment_image_tag @textbook, :image, format: 'jpg', fallback: "no-image.gif", size:'250x250' %>
+<%#= f.attachment_field :image %>
+  </div>
+
+  <div class="field row">
+    <%= @textbook.title %>
+  </div>
+
+  <div class="field row">
+    <%= @textbook.note %>
+  </div>
+
+  <div class="field row">
+    <%= @textbook.status %>
+  </div>
+
+				<div class="row">
+					<div class="col-xs-1">
+						<%= link_to "fix", edit_textbook_path, class: " btn btn-default", style: "border-radius: 100%" %>	
+					</div>
+					<div class="col-xs-1">
+						<%= link_to 'Destroy', @textbook, method: :delete, data: { confirm: '本当に消しますか？' }, class: "btn-sm btn-danger destroy_textbook_#{@textbook.id}"%>
+					</div>
+				</div>
+
+	</div>
+</div>
