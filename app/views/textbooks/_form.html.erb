@@ -1,0 +1,29 @@
+<%= form_for(@textbook) do |f| %>
+    <%= render 'layouts/error_messages', model: f.object %>
+
+  <div class="field row">
+    <%= attachment_image_tag @textbook, :image, format: 'jpg', fallback: "no-image.gif", size:'250x250' %>
+    <%= f.attachment_field :image, direct: true %>
+
+  </div>
+
+  <div class="field row">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'col-xs-12 book_title' %>
+  </div>
+
+  <div class="field row">
+    <%= f.label :note %>
+    <%= f.text_area :note, class: 'col-xs-12 book_body'%>
+  </div>
+
+  <div class="field row">
+    <%= f.label :status, '教材状況' %>
+    <%= f.select :status, Textbook.statuses.keys, class: 'col-xs-12 book_body' %>
+  </div>
+
+  <div class="actions row">
+    <%= f.submit class: 'btn btn-primary col-xs-12'%>
+  </div>
+
+<% end %>
