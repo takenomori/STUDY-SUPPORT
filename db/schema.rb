@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_25_065720) do
+ActiveRecord::Schema.define(version: 2020_05_28_031120) do
 
   create_table "calenders", force: :cascade do |t|
     t.integer "user_id"
@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 2020_05_25_065720) do
     t.integer "user_id"
     t.integer "textbook_tag_id"
     t.string "title"
-    t.string "image"
+    t.string "image_id"
     t.integer "status", default: 1
     t.text "note"
     t.datetime "created_at", null: false

@@ -2,17 +2,15 @@ class Textbook < ApplicationRecord
     belongs_to :user
     has_many :textbook_tags
     
-    enum status:{
-        later: 1,
-        doing: 2,
-        done: 3,
-    }
+    attachment :image
+
+		enum status: %w(後で 使用中 済み)
 
     with_options presence: true do |t|
-        t.validates :user_id
-        t.validates :textbook_tag_id
+        # t.validates :user_id
+        # t.validates :textbook_tag_id
         t.validates :title
-        t.validates :image
+        # t.validates :image
         t.validates :status
         t.validates :note
     end

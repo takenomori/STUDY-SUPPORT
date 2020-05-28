@@ -1,47 +1,13 @@
 <div class="jumbotron">
-    <div class="container">
+  <div class="container">
 
-        <div class="row">
-            <div class="col-xs-6 col-xs-offset-0">
-                <h1>教材登録</h1>
-            </div>
-        </div>
-
-            <%= form_for(@textbook, url:textbooks_path) do |f| %>
-            <%#= render 'layouts/error_messages', model: f.object %>
-                <!--教材画像登録-->
-                <div class="col-xs-8">
-                    <div class="img-fluid">
-                    <%= attachment_image_tag @textbook, :image, format: 'jpg', fallback: "no-image.gif", size:'250x250' %> %>
-<%# <%= f.attachment_field :image %> %>
-                    </div>
-                </div>
-                <!--教材項目入力欄-->
-                <div class="col-xs-4">
-                    <div class="form-group form-group-lg" >
-                        <%= f.label :title, '教材名' %>
-                        <%= f.text_field :title %> 
-                    </div>
-                    <div class="form-group">
-                        <%= f.label :note, 'メモ内容' %>
-                        <%= f.text_area :note %>
-                    </div>
-                    <div class="form-group">
-                        <%= f.label :status, '教材状況' %>
-                        <%= f.select :status, {
-                            "後で": 1,
-                            "使用中": 2,
-                            "済み": 3
-                        } %> 
-                    </div>
-                </div>
-                <!--ボタン-->
-                <div class="row">
-                    <div class="col-xs-4 col-xs-offset-8">
-                        <%= f.submit "新規登録" , class: "btn btn-primary"  %>
-                    </div>
-                </div>
-            <% end %>
-
+    <div class="row">
+      <div class="col-xs-6 col-xs-offset-0">
+        <h1>教材登録</h1>
+      </div>
     </div>
+
+    <%= render 'form', books: @textbook%>
+
+  </div> 
 </div>
