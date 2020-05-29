@@ -1,4 +1,38 @@
-<h1>StudyTimes#index</h1>
-<p>Find me in app/views/study_times/index.html.erb</p>
+<div class="jumbotron">
+    <div class="container">
+
+    <%= render 'users/template', user: @user%>
 
 <%= link_to "user", user_path(current_user.id), class: " btn btn-default", style: "border-radius: 100%" %>	
+<%= link_to "study_time", new_study_time_path(current_user.id), class: " btn btn-default", style: "border-radius: 100%" %>	
+
+			<table class="table table-hover table-resposive">
+				<thead>
+					<tr class="active">
+						<th>教科</th>
+						<th>学習時間</th>
+						<th>科目名</th>
+						<th>コメント</th>
+					</tr>
+				</thead>
+				<tbody>
+				<% @study_times.each do |study_time| %>
+						<tr>
+					<td>
+						<%= study_time.day %>
+					</td>
+					<td>
+						<%= link_to study_time.time, study_time_path(study_time.id) %>
+					</td>
+					<td>
+						<%= link_to study_time.genre, study_time_path(study_time.id) %>
+					</td>
+					<td>
+						<%= study_time.comment %>
+					</td>
+        <% end %>
+				</tbody>
+			</table>
+
+  </div>
+</div>

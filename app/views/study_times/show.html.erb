@@ -1,2 +1,38 @@
-<h1>StudyTimes#show</h1>
-<p>Find me in app/views/study_times/show.html.erb</p>
+<div class="jumbotron">
+  <div class="container">
+
+			<div class="row">
+				<div class="col-xs-6 col-xs-offset-0">
+					<h1>教材詳細</h1>
+				</div>
+			</div>
+
+  <div class="field row">
+    <%= @study_time.day %>
+  </div>
+
+  <div class="field row">
+    <%= @study_time.time %>
+  </div>
+
+  <div class="field row">
+    <%= @study_time.genre %>
+  </div>
+
+  <div class="field row">
+    <%= @study_time.comment %>
+  </div>
+
+				<div class="row">
+					<div class="col-xs-1">
+    <%= link_to "fix", edit_study_time_path, class: " btn btn-default", style: "border-radius: 100%" %>	
+					</div>
+					<div class="col-xs-1">
+						<%= link_to 'Destroy', @study_time, method: :delete, data: { confirm: '本当に消しますか？' }, class: "btn-sm btn-danger destroy_study_time_#{@study_time.id}"%>
+					</div>
+				</div>
+
+
+
+  </div>
+</div>
