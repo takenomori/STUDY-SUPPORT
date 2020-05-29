@@ -1,0 +1,28 @@
+    <%= form_for(@study_time) do |f| %>
+        <%= render 'layouts/error_messages', model: f.object %>
+
+      <div class="field row">
+        <%= f.label :day, '教科'%>
+        <%= f.text_field :day, class: 'col-xs-12 day' %>
+      </div>
+
+      <div class="field row">
+        <%= f.label :time, "学習時間" %>
+        <%= f.text_area :time, class: 'col-xs-12 time'%>
+      </div>
+
+      <div class="field row">
+        <%= f.label :genre, '科目名' %>
+        <%= f.text_area :genre, class: 'col-xs-12 genre' %>
+      </div>
+
+      <div class="field row">
+        <%= f.label :comment, 'コメント' %>
+        <%= f.text_area :comment, class: 'col-xs-12 comment' %>
+      </div>
+
+      <div class="actions row">
+        <%= f.submit class: 'btn btn-primary col-xs-12'%>
+      </div>
+
+    <% end %>
