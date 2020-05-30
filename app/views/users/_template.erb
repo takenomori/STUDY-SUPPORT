@@ -1,0 +1,18 @@
+
+	<h1>ユーザーサイドバー</h1>
+
+  <div class="field row">
+<%#= f.attachment_field :image %>
+  </div>
+
+  <div class="field row">
+    <%= @user.last_name %>  <%= @user.first_name %> 
+  </div>
+
+  <div class="field row">
+    <%= @user.kana_last_name %>  <%= @user.kana_first_name %>  
+  </div>
+
+  <div class="field row">
+    <%= @user.email %>
+  </div>
