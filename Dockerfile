@@ -1,4 +1,4 @@
-FROM ruby:2.5.7
+FROM ruby:2.6.3
 #日本語対応
 ENV LANG C.UTF-8
 #作業用ディレクトリを作成
