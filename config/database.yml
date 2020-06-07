@@ -15,7 +15,7 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
   password: password # docker-compose.ymlのMYSQL_ROOT_PASSWORD
-  host: localhost # docker-compose.ymlのservice名
+  host: db # docker-compose.ymlのservice名
 
 development:
   <<: *default

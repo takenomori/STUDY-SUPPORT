@@ -12,7 +12,7 @@ RUN mkdir /app_name
 ENV APP_ROOT /app_name 
 WORKDIR $APP_ROOT
 
-# ホスト側（ローカル）のGemfileを追加する（ローカルのGemfileは【３】で作成）
+# ホスト側（ローカル）のGemfileを追加する
 ADD ./Gemfile $APP_ROOT/Gemfile
 ADD ./Gemfile.lock $APP_ROOT/Gemfile.lock
 
