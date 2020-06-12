@@ -1,15 +1,77 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>AppName</title>
+    <title>STUDY-SUPPORT</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <%#= favicon_link_tag %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+<!--header-->
+    <header id="header" class="navbar navbar-light bg-light">
+      <div class="container">
+        <nav class="nav navbar-light navbar-left">
+            <%# ECサイトの場合 %>
+            <a href="/" style="font-size: 40px">
+            トップページ
+            </a>
+        </nav><br>
+
+        <nav class="clearfix">
+          <ul class="nav nav-pills navbar-light navbar-right">
+            <%# 会員でログインしている場合 %>
+            <% if user_signed_in? %>
+                <li>
+                  ようこそ、<%= current_user.first_name %>さん！
+                </li>
+                <li>
+                  <%= link_to "勉強時間一覧", study_times_path, :style=>"color:black;" %>
+                </li>
+                <li>
+                  <%= link_to "本棚", textbooks_path, :style=>"color:black;" %>
+                </li>
+                <li>
+                  <%= link_to "ログアウト", destroy_user_session_path, method: :delete, :style=>"color:black;" %>
+                </li>
+            <%# 会員でログインしていない場合 %>
+            <% else %>
+                <li>
+                  <%= link_to "新規登録", new_user_registration_path, :style=>"color:black;" %>
+                </li>
+                <li>
+                  <%= link_to "ログイン", new_user_session_path, :style=>"color:black;" %>
+                </li>
+
+
+
+                <li>
+                  <%= link_to "勉強時間一覧", study_times_path, :style=>"color:black;" %>
+                </li>
+                <li>
+                  <%= link_to "本棚", textbooks_path, :style=>"color:black;" %>
+                </li>                
+
+
+            <% end %>
+            <li><a href="" title=""></a></li>
+          </ul>
+        </nav>
+        <div class="row">
+          <div class="col-xs-12">
+            <% flash.each do |key, value| %>
+              <% key = "info" if key == "notice" %>
+              <% key = "danger" if key == "alert" %>
+              <%= content_tag :div, value, class: "alert alert-#{key}" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </header>
+<!-- /header -->
     <%= yield %>
   </body>
+
 </html>

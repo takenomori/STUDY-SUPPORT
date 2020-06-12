@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  get 'users/top'
-  get 'users/show'
-  get 'users/edit'
+  get 'home/front'
+  # get 'users/top'
+  # get 'users/show'
+  # get 'users/edit'
   # get 'users/top'
   # get 'users/edit'
   # get 'users/show'
@@ -11,9 +12,9 @@ Rails.application.routes.draw do
   # get 'textbooks/edit'
   devise_for :users
 
-  root 'users#top'
+  root 'home#front'
+  
   resources :users, only: [:edit, :show, :update, :destroy]
-
 
   resources :calenders
   resources :textbooks
