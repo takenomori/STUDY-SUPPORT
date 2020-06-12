@@ -1,5 +1,6 @@
 class TextbooksController < ApplicationController
   def index
+    @user = User.find(current_user.id)
     @textbooks = Textbook.where(user_id: current_user.id)
   end
 
@@ -47,4 +48,7 @@ class TextbooksController < ApplicationController
     params.require(:textbook).permit(:user_id, :textbook_tag_id, :title, :status, :note)
   end
 
+  def user_params
+    params.require(:user).permit(:email, :image, :last_name, :first_name, :kana_last_name, :kana_first_name)
+  end
 end

@@ -1,11 +1,10 @@
-<div class="jumbotron">
-    <div class="container">
+<div class="container">
+	<div class="row">
+		<div class="col-xs-2">
+			<%= render 'users/template', user: @user%>
+		</div>
 
-    <%= render 'users/template', user: @user%>
-
-<%= link_to "user", user_path(current_user.id), class: " btn btn-default", style: "border-radius: 100%" %>	
-<%= link_to "study_time", new_study_time_path(current_user.id), class: " btn btn-default", style: "border-radius: 100%" %>	
-
+		<div class="col-xs-10">
 			<table class="table table-hover table-resposive">
 				<thead>
 					<tr class="active">
@@ -16,23 +15,25 @@
 					</tr>
 				</thead>
 				<tbody>
-				<% @study_times.each do |study_time| %>
-						<tr>
-					<td>
-						<%= study_time.day %>
-					</td>
-					<td>
-						<%= link_to study_time.time, study_time_path(study_time.id) %>
-					</td>
-					<td>
-						<%= link_to study_time.genre, study_time_path(study_time.id) %>
-					</td>
-					<td>
-						<%= study_time.comment %>
-					</td>
-        <% end %>
+					<% @study_times.each do |study_time| %>
+							<tr>
+						<td>
+							<%= study_time.day %>
+						</td>
+						<td>
+							<%= link_to study_time.time, study_time_path(study_time.id) %>
+						</td>
+						<td>
+							<%= link_to study_time.genre, study_time_path(study_time.id) %>
+						</td>
+						<td>
+							<%= study_time.comment %>
+						</td>
+					<% end %>
 				</tbody>
 			</table>
+			<%= link_to "user", user_path(current_user.id), class: " btn btn-default", style: "border-radius: 100%" %>	
+			<%= link_to "study_time", new_study_time_path(current_user.id), class: " btn btn-default", style: "border-radius: 100%" %>	
+		</div>
 
-  </div>
 </div>
