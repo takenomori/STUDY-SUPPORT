@@ -1,2 +1,54 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<div class="jumbotron">
+	<div class="container">
+
+			<div class="row">
+				<div class="col-xs-6 col-xs-offset-0">
+					<h1>ユーザー編集</h1>
+				</div>
+			</div>
+
+<%= form_for(@user) do |f| %>
+    <%= render 'layouts/error_messages', model: f.object %>
+
+  <div class="field row">
+    <%= f.label :email %>
+    <%= f.text_field :email, class: 'col-xs-12 user_email' %>
+  </div>
+
+  <div class="field row">
+    <%= f.label :last_name %>
+    <%= f.text_area :last_name, class: 'col-xs-12 user_last_name'%>
+  </div>
+
+  <div class="field row">
+    <%= f.label :first_name %>
+    <%= f.text_area :first_name, class: 'col-xs-12 user_first_name'%>
+  </div>
+
+  <div class="field row">
+    <%= f.label :kana_last_name %>
+    <%= f.text_area :kana_last_name, class: 'col-xs-12 user_kana_last_name' %>
+  </div>
+
+  <div class="field row">
+    <%= f.label :kana_first_name %>
+    <%= f.text_area :kana_first_name, class: 'col-xs-12 user_kana_first_name' %>
+  </div>
+
+  <div class="actions row">
+    <%= f.submit class: 'btn btn-primary col-xs-12'%>
+  </div>
+
+<% end %>
+
+				<div class="row">
+					<div class="col-xs-1">
+						<%= link_to "show", user_path, class: " btn btn-default", style: "border-radius: 100%" %>	
+					</div>
+					<div class="col-xs-1">
+						<%# <%= link_to 'Destroy', @textbook, method: :delete, data: { confirm: '本当に消しますか？' }, class: "btn-sm btn-danger destroy_textbook_#{@textbook.id}"%> %>
+					</div>
+				</div>
+
+	</div>
+</div>
