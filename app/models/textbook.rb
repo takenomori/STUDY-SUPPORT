@@ -10,4 +10,5 @@ class Textbook < ApplicationRecord
         t.validates :title
         t.validates :status
         t.validates :note
+    end
 end
