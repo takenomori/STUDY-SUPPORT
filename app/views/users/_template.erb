@@ -3,7 +3,6 @@
 
   <div class="field row">
     <%= attachment_image_tag @user, :image, format: 'jpg', fallback: "no-image.gif", size:'250x250' %>
-    <%= f.attachment_field :image, direct: true %>
   </div>
 
   <div class="field row">

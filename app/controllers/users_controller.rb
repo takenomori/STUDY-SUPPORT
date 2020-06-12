@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
   def top
+    @user = User.find(current_user.id)
+    @study_times = StudyTime.where(user_id: current_user.id)
   end
 
   def edit

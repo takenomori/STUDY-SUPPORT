@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  get 'home/front'
+  # get 'study_times/index'
+  # get 'study_times/new'
+  # get 'study_times/show'
+  # get 'study_times/edit'
+  # get 'home/front'
   # get 'users/top'
   # get 'users/show'
   # get 'users/edit'
@@ -10,11 +14,16 @@ Rails.application.routes.draw do
   # get 'textbooks/new'
   # get 'textbooks/show'
   # get 'textbooks/edit'
+  
   devise_for :users
 
   root 'home#front'
   
-  resources :users, only: [:edit, :show, :update, :destroy]
+  resources :users, only: [:edit, :show, :update, :destroy] do
+    collection do
+      get 'top'
+    end
+  end
 
   resources :calenders
   resources :textbooks
