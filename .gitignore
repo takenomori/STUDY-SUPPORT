@@ -28,3 +28,6 @@
 /config/master.key
 
 .DS_Store
+
+# デプロイ  RDSで構築したMySQLへ接続する設定の記述
+/.env
