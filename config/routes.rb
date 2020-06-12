@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'study_times/index'
+  get 'study_times/new'
+  get 'study_times/show'
+  get 'study_times/edit'
   get 'home/front'
   # get 'users/top'
   # get 'users/show'
