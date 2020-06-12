@@ -18,6 +18,5 @@ class User < ApplicationRecord
     u.validates :last_name
     u.validates :kana_first_name
     u.validates :kana_last_name
-    u.validates :image_id
   end
 end
