@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: {
-    sessions: 'devise/sessions',
-    registrations: 'devise/registrations',
-    passwords: 'devise/passwords'
-  }
+  get 'users/top'
+  get 'users/show'
+  get 'users/edit'
+  # get 'users/top'
+  # get 'users/edit'
+  # get 'users/show'
+  # get 'textbooks/index'
+  # get 'textbooks/new'
+  # get 'textbooks/show'
+  # get 'textbooks/edit'
+  devise_for :users
 
   root 'users#top'
   resources :users, only: [:edit, :show, :update, :destroy]
