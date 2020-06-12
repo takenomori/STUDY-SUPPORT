@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'home/front'
   # get 'users/top'
   # get 'users/show'
   # get 'users/edit'
@@ -12,6 +13,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   root 'home#front'
+  
   resources :users, only: [:edit, :show, :update, :destroy]
 
   resources :calenders
