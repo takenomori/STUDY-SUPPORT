@@ -3,7 +3,7 @@
 
 			<div class="row">
 				<div class="col-xs-6 col-xs-offset-0">
-					<h1>ユーザー編集</h1>
+					<h2>ユーザー編集</h2>
 				</div>
 			</div>
 
@@ -51,7 +51,7 @@
 						<%= link_to "show", user_path, class: " btn btn-default", style: "border-radius: 100%" %>	
 					</div>
 					<div class="col-xs-1">
-						<%# <%= link_to 'Destroy', @textbook, method: :delete, data: { confirm: '本当に消しますか？' }, class: "btn-sm btn-danger destroy_textbook_#{@textbook.id}"%> %>
+						<%= link_to 'Destroy', @user, method: :delete, data: { confirm: '本当に消しますか？' }, class: "btn-sm btn-danger destroy_user_#{@user.id}"%>
 					</div>
 				</div>
 

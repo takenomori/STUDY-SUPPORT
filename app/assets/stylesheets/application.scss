@@ -15,3 +15,18 @@
  */
 @import "bootstrap-sprockets";  /*ここを追加*/
 @import "bootstrap";            /*ここを追加*/
+// カラーリスト
+$dark		 : #142850;
+$mid-dark : #27496d;
+$mid-light: #00909e;
+$light	 : #dae1e7;
+$btn-active: #25b7c0;
+
+$header-height: 120px;
+
+// ヘッダー
+header {
+	width: 100%;
+	height: $header-height;
+	background-color: $dark;
+	}

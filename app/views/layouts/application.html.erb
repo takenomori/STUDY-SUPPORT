@@ -13,52 +13,31 @@
 <!--header-->
     <header id="header" class="navbar navbar-light bg-light">
       <div class="container">
+      <div class="row">
+          <div class="col-xs-12">
         <nav class="nav navbar-light navbar-left">
-            <%# ECサイトの場合 %>
-            <a href="/" style="font-size: 40px">
-            トップページ
-            </a>
+          <h1>
+            <a href="/" style="color:white;">STUDY-SUPPORT</a>
+          </h1>
         </nav><br>
 
         <nav class="clearfix">
           <ul class="nav nav-pills navbar-light navbar-right">
-            <%# 会員でログインしている場合 %>
+            <%# ログインしている場合 %>
             <% if user_signed_in? %>
-                <li>
-                  ようこそ、<%= current_user.first_name %>さん！
-                </li>
-                <li>
-                  <%= link_to "勉強時間一覧", top_users_path, :style=>"color:black;" %>
-                </li>
-                <li>
-                  <%= link_to "本棚", textbooks_path, :style=>"color:black;" %>
-                </li>
-                <li>
-                  <%= link_to "ログアウト", destroy_user_session_path, method: :delete, :style=>"color:black;" %>
-                </li>
-            <%# 会員でログインしていない場合 %>
+                  <%= link_to "　メインページ　", top_users_path, :style=>"color:#DCDCDC;" %>
+                  <%= link_to "　本棚　", textbooks_path, :style=>"color:#DCDCDC;" %>
+                  <%= link_to "　マイページ　", user_path(current_user.id), :style=>"color:#DCDCDC;" %>
+                  <%= link_to "　ログアウト　", destroy_user_session_path, method: :delete, :style=>"color:#DCDCDC;" %>
+            <%# ログインしていない場合 %>
             <% else %>
-                <li>
-                  <%= link_to "新規登録", new_user_registration_path, :style=>"color:black;" %>
-                </li>
-                <li>
-                  <%= link_to "ログイン", new_user_session_path, :style=>"color:black;" %>
-                </li>
-
-
-
-                <li>
-                  <%= link_to "勉強時間一覧", study_times_path, :style=>"color:black;" %>
-                </li>
-                <li>
-                  <%= link_to "本棚", textbooks_path, :style=>"color:black;" %>
-                </li>                
-
-
+                  <%= link_to "　新規登録　", new_user_registration_path, :style=>"color:#DCDCDC;" %>
+                  <%= link_to "　ログイン　", new_user_session_path, :style=>"color:#DCDCDC;" %>
             <% end %>
-            <li><a href="" title=""></a></li>
           </ul>
         </nav>
+      </div>
+      </div>
         <div class="row">
           <div class="col-xs-12">
             <% flash.each do |key, value| %>
