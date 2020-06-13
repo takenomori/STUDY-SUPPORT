@@ -3,34 +3,39 @@
 
 			<div class="row">
 				<div class="col-xs-6 col-xs-offset-0">
-					<h1>ユーザー詳細</h1>
+					<h2>ユーザー詳細</h2>
 				</div>
 			</div>
 
 
   <div class="field row">
-<%#= f.attachment_field :image %>
+    <%= attachment_image_tag @user, :image, format: 'jpg', fallback: "no-image.gif", size:'250' %>
   </div>
 
-  <div class="field row">
-    <%= @user.last_name %>  <%= @user.first_name %> 
-  </div>
+<div class="table-responsive">
+	<table class="table text-nowrap">
+		<tbody>
+			<tr>
+				<td>email</td>
+				<td> <%= @user.email %> </td>
+			</tr>
+			<tr>
+				<td>last_name　first_name</td>
+				<td> <%= @user.last_name %> <%= @user.first_name %> </td>
+			</tr>
+			<tr>
+				<td>kana_last_name　kana_first_name</td>
+				<td> <%= @user.kana_last_name %> <%= @user.kana_first_name %> </td>
+			</tr>
 
-  <div class="field row">
-    <%= @user.kana_last_name %>  <%= @user.kana_first_name %>  
-  </div>
-
-  <div class="field row">
-    <%= @user.email %>
-  </div>
-
+		</tbody>
+	</table>
 				<div class="row">
 					<div class="col-xs-1">
 						<%= link_to "edit", edit_user_path, class: " btn btn-default", style: "border-radius: 100%" %>	
 					</div>
 				</div>
 
-<%# <%= link_to 'Destroy', @user, method: :delete, data: { confirm: '本当に消しますか？' }, class: "btn-sm btn-danger destroy_user_#{@user.id}"%> %>
 
 	</div>
 </div>

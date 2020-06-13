@@ -21,11 +21,11 @@ class UsersController < ApplicationController
     end
   end
 
-  # def destroy
-  #   @user = User.find(params[:id])
-  #   @user.destroy
-  #   redirect_to root_path, success: "削除されました"
-  # end
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    redirect_to root_path, success: "削除されました"
+  end
 
   private
 

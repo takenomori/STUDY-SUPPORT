@@ -1,10 +1,10 @@
 <div class="container">
 	<div class="row">
-		<div class="col-xs-2">
+		<div class="col-xs-3">
 			<%= render 'users/template', user: @user%>
 		</div>
 
-		<div class="col-xs-10">
+		<div class="col-xs-9">
 			<table class="table table-hover table-resposive">
 				<thead>
 					<tr class="active">
@@ -32,7 +32,6 @@
 					<% end %>
 				</tbody>
 			</table>
-			<%= link_to "user", user_path(current_user.id), class: " btn btn-default", style: "border-radius: 100%" %>	
 			<%= link_to "study_time", new_study_time_path(current_user.id), class: " btn btn-default", style: "border-radius: 100%" %>	
 		</div>
 
