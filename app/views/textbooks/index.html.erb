@@ -1,45 +1,35 @@
 <div class="container">
 	<div class="row">
-		<div class="col-xs-3">
 			<%= render 'users/template', user: @user%>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-2">
+			<%= link_to "+", new_textbook_path, class: " btn btn-default", style: "border-radius: 100%" %>	
 		</div>
-
 		<div class="col-xs-9">
-        <div class="row">
-					<div class="col-xs-1 col-xs-offset-0">
-						<%= link_to "+", new_textbook_path, class: " btn btn-default", style: "border-radius: 100%" %>	
-					</div>
-					<div class="col-xs-6 col-xs-offset-0">
-							<h2>教材一覧</h2>
-					</div>
-        </div>
+				<h2>教材一覧</h2>
+		</div>
+	</div>
 
-			<table class="table table-hover table-resposive">
-				<thead>
-					<tr class="active">
-						<th>タイトル</th>
-						<th>メモ</th>
-						<th>ステータス</th>
-					</tr>
-				</thead>
-				<tbody>
-				<% @textbooks.each do |textbook| %>
-						<tr>
-					<td>
-						<%= link_to textbook.title, textbook_path(textbook.id) %>
-					</td>
-					<td>
-						<%= link_to textbook.note, textbook_path(textbook.id) %>
-					</td>
-					<td>
-						<%= textbook.status %>
-					</td>
-        <% end %>
-				</tbody>
-			</table>
-
-
-
+	<div class="row">
+		<table class="table table-hover table-resposive">
+			<thead>
+				<tr class="active">
+					<th>タイトル</th>
+					<th>メモ</th>
+					<th>ステータス</th>
+				</tr>
+			</thead>
+			<tbody>
+			<% @textbooks.each do |textbook| %>
+				<tr>
+					<td><%= link_to textbook.title, textbook_path(textbook.id) %></td>
+					<td><%= link_to textbook.note, textbook_path(textbook.id) %></td>
+					<td><%= textbook.status %></td>
+				</tr>
+			<% end %>
+			</tbody>
+		</table>
     </div>
-</div>
 </div>

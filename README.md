@@ -1,24 +1,22 @@
-# README
+# STUDY-SUPPORT
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
+使用してきた参考書やテストの点数、予定など学習に関係するデータを保存しておくことで、勉強に集中できる環境を作成
+### サイトテーマ
+- 自分の努力が継続的な物であるかを客観的に見る    
+- 数値を可視化する事で客観的な判断をサポートする    
 
-Things you may want to cover:
+### テーマを選んだ理由
+1.自身の浪人生活を通して学習手帳の有用性を感じていたが、一つのページに収まらず活用しきれなかった経験から      
+2.勉強関係の情報をまとめて管理するサイトが欲しかった為  
 
-* Ruby version
+### ターゲットユーザ
+継続した勉学に励む人 
 
-* System dependencies
+### 主な利用シーン 
+- 年間予定の管理  
+- テスト結果、勉強の進捗の管理  
+- 日々の学習記録  
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### 機能一覧
+https://docs.google.com/spreadsheets/d/1bA42QbMgT3bWOHPbRyIiFXhN-48xaL2RX58cjw6TnaI/edit#gid=0

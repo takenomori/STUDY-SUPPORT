@@ -1,38 +1,29 @@
 <div class="container">
+
 	<div class="row">
-		<div class="col-xs-3">
+		<div class="col-xs-12">
 			<%= render 'users/template', user: @user%>
 		</div>
-
-		<div class="col-xs-9">
-			<table class="table table-hover table-resposive">
-				<thead>
-					<tr class="active">
-						<th>教科</th>
-						<th>学習時間</th>
-						<th>科目名</th>
-						<th>コメント</th>
-					</tr>
-				</thead>
-				<tbody>
-					<% @study_times.each do |study_time| %>
-							<tr>
-						<td>
-							<%= study_time.day %>
-						</td>
-						<td>
-							<%= link_to study_time.time, study_time_path(study_time.id) %>
-						</td>
-						<td>
-							<%= link_to study_time.genre, study_time_path(study_time.id) %>
-						</td>
-						<td>
-							<%= study_time.comment %>
-						</td>
-					<% end %>
-				</tbody>
-			</table>
-			<%= link_to "study_time", new_study_time_path(current_user.id), class: " btn btn-default", style: "border-radius: 100%" %>	
+	</div>
+	
+	<div class="row">
+		<div class="col-xs-12">
+			<h3>今日の記録件数　　　今日の学習時間</h3>
+			<h3><%= link_to @study_time.count, study_times_path(current_user.id) %> 件 </h3>
 		</div>
+	</div>
+
+	
+			<%= link_to "カレンダー", events_path(current_user.id), class: " btn btn-default", style: "border-radius: 100%" %>	
+	<div class="row">
+		<div class="col-xs-12">
+			<%= link_to "勉強時間追加", new_study_time_path(current_user.id), class: " btn btn-default", style: "border-radius: 100%" %>	
+			<%= link_to "時間履歴", study_times_path(current_user.id), class: " btn btn-default", style: "border-radius: 100%" %>	
+		</div>
+	</div>
+
+	<div class="row">
+		<div id="calendar"></div>
+	</div>
 
 </div>
