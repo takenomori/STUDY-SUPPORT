@@ -73,15 +73,12 @@ gem 'kaminari','~> 1.2.1'
 
 # レイアウト
 gem 'bootstrap-sass', '~> 3.4.1'
-gem 'jquery-rails'
+gem 'jquery-rails'   # カレンダー
+gem 'fullcalendar-rails'
+gem 'momentjs-rails'
 
 # タグ
 # gem 'acts-as-taggable-on', '~> 6.0'
-
-# カレンダー
-# gem 'jquery-rails', '4.3.3'
-# gem 'fullcalendar-rails'
-# gem 'momentjs-rails'
 
 # グラフ機能
 # gem 'chart-js-rails', '~> 0.1.4'

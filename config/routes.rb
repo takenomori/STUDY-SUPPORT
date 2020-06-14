@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :events
   # get 'study_times/index'
   # get 'study_times/new'
   # get 'study_times/show'
