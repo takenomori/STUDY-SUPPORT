@@ -25,7 +25,7 @@
           <ul class="nav nav-pills navbar-light navbar-right">
             <%# ログインしている場合 %>
             <% if user_signed_in? %>
-                  <%= link_to "　メインページ　", top_users_path, :style=>"color:#DCDCDC;" %>
+                  <%= link_to "　メインページ　", events_path, :style=>"color:#DCDCDC;" %>
                   <%= link_to "　本棚　", textbooks_path, :style=>"color:#DCDCDC;" %>
                   <%= link_to "　マイページ　", user_path(current_user.id), :style=>"color:#DCDCDC;" %>
                   <%= link_to "　ログアウト　", destroy_user_session_path, method: :delete, :style=>"color:#DCDCDC;" %>
