@@ -4,6 +4,9 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
+    @user = User.find(current_user.id)
+    @study_time = StudyTime.where(user_id: current_user.id).where(created_at:  Time.zone.now.all_day)
+
     @events = Event.all
   end
 
@@ -70,5 +73,9 @@ class EventsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def event_params
       params.require(:event).permit(:title, :description, :start_date, :end_date)
+    end
+
+    def user_params
+      params.require(:user).permit(:email, :image, :last_name, :first_name, :kana_last_name, :kana_first_name)
     end
 end
