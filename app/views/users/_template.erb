@@ -1,7 +1,7 @@
 <%# サイドバー %>
 
 <%= link_to user_path(current_user.id) do %>
-  <%= attachment_image_tag @user, :image, format: 'jpg', fallback: "no-image.gif", size:'50' %>
+  <%= attachment_image_tag @user, :image, format: 'jpg', fallback: "no-image.gif", size:'100' %>
 <% end %>
 <%= @user.last_name %>
 <%= @user.first_name %> 
