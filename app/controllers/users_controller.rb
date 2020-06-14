@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   def top
     @user = User.find(current_user.id)
-    @study_times = StudyTime.where(user_id: current_user.id)
+    @study_time = StudyTime.where(user_id: current_user.id).where(created_at:  Time.zone.now.all_day)
   end
 
   def edit
