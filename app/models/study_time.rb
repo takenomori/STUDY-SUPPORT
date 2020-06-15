@@ -3,9 +3,9 @@ class StudyTime < ApplicationRecord
 
     with_options presence: true do |st|
         st.validates :user_id
-        st.validates :day
+        # st.validates :day
         st.validates :time
-        # st.validates :genre
+        st.validates :genre
         st.validates :comment
     end
 
