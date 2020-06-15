@@ -7,7 +7,10 @@
         <%= render 'users/template', user: @user%>
       </div>
     </div>
-    
+
+<canvas id="myChart" width="200" height="100"></canvas> ←★追記
+<script>draw_graph();</script> ←★追記
+
     <div class="row">
       <div class="col-xs-12">
         <h3>今日の記録件数　　　今日の学習時間</h3>
@@ -55,6 +58,6 @@
 
   <%= link_to 'New Event', new_event_path %>
 
-  <div id="calendar"></div>
+  <div id="calendar" ></div>
 
 </div>

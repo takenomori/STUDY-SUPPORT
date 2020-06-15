@@ -81,7 +81,8 @@ gem 'momentjs-rails'
 # gem 'acts-as-taggable-on', '~> 6.0'
 
 # グラフ機能
-# gem 'chart-js-rails', '~> 0.1.4'
+gem 'chart-js-rails', '~> 0.1.4'
+gem 'gon', '~> 6.2.0'
 
 # AWSでデプロイするのにデータベースの接続設定で「環境変数」を利用するので、環境変数を管理するgemも追加
 gem 'dotenv-rails'

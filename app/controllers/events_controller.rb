@@ -4,6 +4,11 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
+    gon.data = []
+    6.times do
+      gon.data << rand(100.0)
+    end
+
     @user = User.find(current_user.id)
     @study_time = StudyTime.where(user_id: current_user.id).where(created_at:  Time.zone.now.all_day)
 
