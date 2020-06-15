@@ -6,6 +6,7 @@
       <div class="col-xs-12">
         <h3>今日の記録件数　　　今日の学習時間</h3>
         <h3><%= link_to @study_time.count, study_times_path(current_user.id) %> 件 </h3>
+        <h3><%= @today_study_time %> 時間 </h3>
       </div>
     </div>
 

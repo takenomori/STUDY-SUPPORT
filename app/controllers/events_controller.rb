@@ -4,21 +4,12 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    # @study_time = StudyTime.where(user_id: current_user.id).where(created_at:  Time.zone.now.all_day).map(&:to_i)
-
-
-    
-    # @study_times = StudyTime.where(user_id: current_user.id).where(created_at:  Time.zone.now.all_day)
-    # @total_time = @study_times.sum(:time)
-    # gon.time1 = @total_time
-
-    @total_time =  StudyTime.where(user_id: current_user.id).where(created_at:  Time.zone.now.all_day).pluck(:time)
-    gon.time1 = @total_time
-
-
+    @study_time = StudyTime.where(user_id: current_user.id).where(created_at:  Time.zone.now.all_day)
+    @today_study_time = @study_time.sum(:time)
+    gon.time1  = @study_time.sum(:time)
 
     @user = User.find(current_user.id)
-    @study_time = StudyTime.where(user_id: current_user.id).where(created_at:  Time.zone.now.all_day)
+    #@study_time = StudyTime.where(user_id: current_user.id).where(created_at:  Time.zone.now.all_day)
 
     @events = Event.all
   end

@@ -1,19 +1,26 @@
-# Place all the behaviors and hooks related to the matching controller here.
+#Place all the behaviors and hooks related to the matching controller here.
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
-# ["月", "火", "水", "木", "金", "土", "日"],
+stringDate =(date)->
+    return date.getMonth()+'/'+date.getDate()
+
 window.draw_graph = -> 
     ctx = document.getElementById("myChart").getContext('2d')
 
     d = new Date();
+    oneDay = 3600000*24
+    days = [stringDate(d)];
+    for i in [1..6]
+        wd = new Date(d-oneDay*i)
+        days.unshift(stringDate(wd))
 
     myChart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ["月", "火", "水", "木", "金", "土", "日"],
+            labels: days,
             datasets: [{
                 label: '# of Votes',
-                data: gon.time1 ,
+                data: [gon.time1 ],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
