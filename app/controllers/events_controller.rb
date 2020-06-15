@@ -4,10 +4,18 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    gon.data = []
-    6.times do
-      gon.data << rand(100.0)
-    end
+    # @study_time = StudyTime.where(user_id: current_user.id).where(created_at:  Time.zone.now.all_day).map(&:to_i)
+
+
+    
+    # @study_times = StudyTime.where(user_id: current_user.id).where(created_at:  Time.zone.now.all_day)
+    # @total_time = @study_times.sum(:time)
+    # gon.time1 = @total_time
+
+    @total_time =  StudyTime.where(user_id: current_user.id).where(created_at:  Time.zone.now.all_day).pluck(:time)
+    gon.time1 = @total_time
+
+
 
     @user = User.find(current_user.id)
     @study_time = StudyTime.where(user_id: current_user.id).where(created_at:  Time.zone.now.all_day)

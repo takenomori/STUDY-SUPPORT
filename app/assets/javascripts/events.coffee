@@ -1,16 +1,19 @@
 # Place all the behaviors and hooks related to the matching controller here.
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
-
+# ["月", "火", "水", "木", "金", "土", "日"],
 window.draw_graph = -> 
     ctx = document.getElementById("myChart").getContext('2d')
+
+    d = new Date();
+
     myChart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+            labels: ["月", "火", "水", "木", "金", "土", "日"],
             datasets: [{
                 label: '# of Votes',
-                data: gon.data,
+                data: gon.time1 ,
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
