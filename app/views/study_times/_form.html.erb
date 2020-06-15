@@ -2,13 +2,14 @@
         <%= render 'layouts/error_messages', model: f.object %>
 
       <div class="field row">
-        <%= f.label :day, '曜日'%>
-        <%= f.text_field :day, class: 'col-xs-12 day' %>
+        <%= f.label :day, '日付'%>
+        <%= f.date_field :day, style: "width: 50%", class: 'col-xs-12 day' %>
       </div>
 
       <div class="field row">
         <%= f.label :time, "学習時間" %>
-        <%= f.text_area :time, class: 'col-xs-12 time'%>
+        <%= f.select :time, ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24'],
+                            style: "width: 50%", class: 'col-xs-12 time'%>
       </div>
 
       <div class="field row">
@@ -17,7 +18,7 @@
       </div>
 
       <div class="field row">
-        <%= f.label :comment, 'コメント' %>
+        <%= f.label :comment, 'メモ欄' %>
         <%= f.text_area :comment, class: 'col-xs-12 comment' %>
       </div>
 
@@ -26,3 +27,4 @@
       </div>
 
     <% end %>
+

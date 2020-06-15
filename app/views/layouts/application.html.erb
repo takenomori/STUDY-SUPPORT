@@ -5,11 +5,13 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%#= favicon_link_tag %>
+    <!--gem gon chart.jsで使用-->
+    <%= Gon::Base.render_data %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body style="padding-top: 5.5rem; background-color: rgb(240, 240, 240);">
 <!--header-->
     <header id="header" class="navbar navbar-light bg-light">
       <div class="container">
