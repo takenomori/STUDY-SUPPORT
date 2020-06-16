@@ -28,12 +28,49 @@ a {
 	color: black;
 	}
 
-// ヘッダー
-header {
-	width: 100%;
-	height: 120px;
-	background-color: $dark;
+a:hover {
+	text-decoration: none;
 	}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Helvetica Neue", Helvetica, Arial, "游ゴシック体", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, 'Open Sans', sans-serif;
+}
+
+body{
+    font-family: "Helvetica Neue", Helvetica, Arial, "游ゴシック体", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, 'Open Sans', sans-serif;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+.header{
+	height: 85px; 
+	text-align: center; 
+	background-color: #fff;
+}
+.glovalNavigation{
+	height: 70px; 
+	text-align: center; 
+	background-color: #888;
+	color: #fff;
+}
+.content{
+	flex: 1;
+	background-color: #fff;
+	text-align: center;
+	margin: 10px 0 10px 0;
+}
+// .localNavigation{
+// 	height: 70px;
+// 	text-align: center;
+// 	background-color: #888;
+// 	color: #fff;
+// }
+.footer{
+	height: 70px;
+	text-align: center;
+	background-color: #888;
+}
+
 
 .top-image {
 		width: 100%;
