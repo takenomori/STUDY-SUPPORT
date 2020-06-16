@@ -14,8 +14,9 @@
  *= require_self
  *= require fullcalendar
  */
-@import "bootstrap-sprockets";  /*ここを追加*/
-@import "bootstrap";            /*ここを追加*/
+@import "bootstrap-sprockets";
+@import "bootstrap";       
+    
 // カラーリスト
 $dark		 : #142850;
 $mid-dark : #27496d;
@@ -23,6 +24,9 @@ $mid-light: #00909e;
 $light	 : #dae1e7;
 $btn-active: #25b7c0;
 
+a {
+	color: black;
+	}
 
 // ヘッダー
 header {
@@ -31,9 +35,9 @@ header {
 	background-color: $dark;
 	}
 
-	.top-image {
+.top-image {
 		width: 100%;
 		height: 700px;
 		background-image: image-url("study.image.jpg");
 		background-size: cover;
-	  }
+		}
