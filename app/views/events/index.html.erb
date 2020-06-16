@@ -1,64 +1,81 @@
 <p id="notice"><%= notice %></p>
-
-  <div class="container">
-
-    <div class="row">
-      <div class="col-xs-12">
-        <h3>今日の記録件数　　　今日の学習時間</h3>
-        <h3><%= link_to @study_time.count, study_times_path(current_user.id) %> 件 </h3>
-        <h3><%= @today_study_time %> 時間 </h3>
-      </div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <%= render 'users/template', user: @user%>
     </div>
+  </div>
 
-    <div class="row">
-      <div class="col-xs-12">
-        <%= render 'users/template', user: @user%>
-      </div>
-    </div>
-
-<canvas id="myChart" width="100" height="50"></canvas> 
-<script>draw_graph();</script> 
-    
-    <div class="row">
-      <div class="col-xs-12">
-        <%= link_to "勉強時間追加", new_study_time_path(current_user.id), class: " btn btn-default", style: "border-radius: 100%" %>	
-        <%= link_to "時間履歴", study_times_path(current_user.id), class: " btn btn-default", style: "border-radius: 100%" %>	
-      </div>
-    </div>
-
-
-  <h1>Events</h1>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Title</th>
-        <th>Description</th>
-        <th>Start date</th>
-        <th>End date</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @events.each do |event| %>
-        <tr>
-          <td><%= event.title %></td>
-          <td><%= event.description %></td>
-          <td><%= event.start_date %></td>
-          <td><%= event.end_date %></td>
-          <td><%= link_to 'Show', event %></td>
-          <td><%= link_to 'Edit', edit_event_path(event) %></td>
-          <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
+  <div class="row">
+    <span class="col-xs-4">
+      <%= link_to study_times_path(current_user.id) do %>
+        <h3>今日　<%= @total_study_time0 %> h</h3>
       <% end %>
-    </tbody>
-  </table>
+    </span>
+    <div class="col-xs-4">
+      <%= link_to study_times_path(current_user.id) do %>
+        <h3>今週　<%= @week_study_time %> h</h3>
+      <% end %>
+    </div>
 
-  <br>
+    <div class="col-xs-4">
+      <%= link_to study_times_path(current_user.id) do %>
+        <h3>総計　<%= @all_study_time %> h</h3>
+      <% end %>
+    </div>
+  </div>
 
-  <%= link_to 'New Event', new_event_path %>
+  <div class="row">
+    <div class="col-xs-12">
+      <%= link_to "勉強時間追加", new_study_time_path(current_user.id), class: " btn btn-default", style: "border-radius: 100%" %>	
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <%# <div style="position:relative; top:60px; width:500px; height:500px;"> %>
+        <canvas id="myChart"></canvas> 
+        <script>draw_graph();</script> 
+      <%# </div> %>
+    </div>
+  </div>
 
-  <div id="calendar" ></div>
+  <div class="row">
+    <div class="col-xs-12">
+      <%# <div style="position:relative; top:60px; width:500px; height:500px;"> %>
+        <div id="calendar" ></div>
+      <%# </div> %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <table>
+        <thead>
+          <tr>
+            <th>タイトル</th>
+            <th>内容</th>
+            <th>開始時間</th>
+            <th>終了時間</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @events.each do |event| %>
+            <tr>
+              <td><%= event.title %></td>
+              <td><%= event.description %></td>
+              <td><%= event.start_date %></td>
+              <td><%= event.end_date %></td>
+              <td><%= link_to '詳細', event %></td>
+              <td><%= link_to '編集', edit_event_path(event) %></td>
+              <td><%= link_to '消去', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+
+      <%= link_to '新しい予定', new_event_path %>
+    <div class="col-xs-12">
+  </div>
 
 </div>

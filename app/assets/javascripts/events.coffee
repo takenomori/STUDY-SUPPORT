@@ -20,7 +20,7 @@ window.draw_graph = ->
             labels: days,
             datasets: [{
                 label: '# of Votes',
-                data: [gon.time1 ],
+                data: [gon.time0, gon.time1, gon.time2, gon.time3, gon.time4, gon.time5, gon.time6],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',

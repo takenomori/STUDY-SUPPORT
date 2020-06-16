@@ -4,13 +4,31 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    @study_time = StudyTime.where(user_id: current_user.id).where(created_at:  Time.zone.now.all_day)
-    @today_study_time = @study_time.sum(:time)
-    gon.time1  = @study_time.sum(:time)
-
     @user = User.find(current_user.id)
-    #@study_time = StudyTime.where(user_id: current_user.id).where(created_at:  Time.zone.now.all_day)
-
+    study_time = StudyTime.where(user_id: current_user.id)
+    study_time0 = study_time.where(created_at:  Time.zone.now.all_day).sum(:time)
+    study_time1 = study_time.where(created_at:  1.day.ago.all_day).sum(:time)
+    study_time2 = study_time.where(created_at:  2.day.ago.all_day).sum(:time)
+    study_time3 = study_time.where(created_at:  3.day.ago.all_day).sum(:time)
+    study_time4 = study_time.where(created_at:  4.day.ago.all_day).sum(:time)
+    study_time5 = study_time.where(created_at:  5.day.ago.all_day).sum(:time)
+    study_time6 = study_time.where(created_at:  6.day.ago.all_day).sum(:time)
+    # 今日の勉強時間
+    @total_study_time0 = study_time0
+    # 今週の勉強時間
+    array = [study_time0,study_time1,study_time2,study_time3,study_time4,study_time5,study_time6]
+    @week_study_time = array.sum
+    # 総計勉強時間
+    @all_study_time = StudyTime.where(user_id: current_user.id).sum(:time)    
+    ## 勉強時間グラフ events.coffeeで使用
+    gon.time0 = study_time0
+    gon.time1 = study_time1
+    gon.time2 = study_time2
+    gon.time3 = study_time3
+    gon.time4 = study_time4
+    gon.time5 = study_time5
+    gon.time6 = study_time6
+    # カレンダー
     @events = Event.all
   end
 
