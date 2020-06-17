@@ -1,9 +1,10 @@
 <%# サイドバー %>
-
-<%= link_to user_path(current_user.id) do %>
+<div style="background:#fff;border:1px solid #3D58A8;padding:5px;color:#000;">user</div>
+<div style="border:1px solid #3D58A8;padding:10px;">
   <%= attachment_image_tag @user, :image, format: 'jpg', fallback: "no-image.gif", size:'100' %>
-<% end %>
-<%= @user.last_name %>
-<%= @user.first_name %> 
-<%= @user.email %>
+  <%= @user.last_name %>
+  <%= @user.first_name %> 
+  <%= @user.email %>
+</div>
+
 

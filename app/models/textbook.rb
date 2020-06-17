@@ -2,7 +2,7 @@ class Textbook < ApplicationRecord
     belongs_to :user
     has_many :textbook_tags
     
-	enum status: %w(後で 使用中 済み)
+	enum status: %w(学習予定 使用中 学習済み)
 
     with_options presence: true do |t|
         # t.validates :user_id
