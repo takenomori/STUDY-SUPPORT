@@ -1,30 +1,18 @@
-    <%= form_for(@study_time) do |f| %>
-        <%= render 'layouts/error_messages', model: f.object %>
+<%= form_for(@study_time) do |f| %>
+    <%= render 'layouts/error_messages', model: f.object %>
 
-      <div class="field row">
-        <%= f.label :day, '日付'%>
-        <%= f.date_field :day, style: "width: 50%", class: 'col-xs-12 day' %>
-      </div>
+  <div class="field row">
+        <%= f.number_field :time, class: 'btn btn-default', min: 1, max:24, step:1, value:1%>
+        <%= f.label :time, "時間" %>
+  </div>
 
-      <div class="field row">
-        <%= f.label :time, "学習時間" %>
-        <%= f.select :time, ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24'],
-                            style: "width: 50%", class: 'col-xs-12 time'%>
-      </div>
+  <div class="field row">
+    <%= f.label :comment, "内容" %>
+    <%= f.text_area :comment, class: 'col-xs-12 comment' %>
+  </div>
 
-      <div class="field row">
-        <%= f.label :genre, '科目名' %>
-        <%= f.text_area :genre, class: 'col-xs-12 genre' %>
-      </div>
-
-      <div class="field row">
-        <%= f.label :comment, 'メモ欄' %>
-        <%= f.text_area :comment, class: 'col-xs-12 comment' %>
-      </div>
-
-      <div class="actions row">
-        <%= f.submit class: 'btn btn-primary col-xs-12'%>
-      </div>
-
-    <% end %>
-
+  <div class="actions row">
+    <%= f.submit class: 'btn btn-primary col-xs-12'%>
+  </div>
+  
+<% end %>

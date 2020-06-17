@@ -5,8 +5,8 @@ class StudyTime < ApplicationRecord
         st.validates :user_id
         # st.validates :day
         st.validates :time
-        st.validates :genre
-        st.validates :comment
+        # st.validates :genre
+        # st.validates :comment
     end
 
 end
