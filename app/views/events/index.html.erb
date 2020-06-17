@@ -7,31 +7,23 @@
   </div>
 
   <div class="row">
-    <span class="col-xs-4">
+    <div class="col-xs-4">
       <%= link_to study_times_path(current_user.id) do %>
         <h3>今日　<%= @total_study_time0 %> h</h3>
       <% end %>
-    </span>
-    <div class="col-xs-4">
       <%= link_to study_times_path(current_user.id) do %>
         <h3>今週　<%= @week_study_time %> h</h3>
       <% end %>
-    </div>
 
-    <div class="col-xs-4">
       <%= link_to study_times_path(current_user.id) do %>
         <h3>総計　<%= @all_study_time %> h</h3>
       <% end %>
-    </div>
-  </div>
 
-  <div class="row">
-    <div class="col-xs-12">
-      <%= link_to "勉強時間追加", new_study_time_path(current_user.id), class: " btn btn-default", style: "border-radius: 100%" %>	
+      <%= link_to "記録", new_study_time_path(current_user.id), class:"btn btn-success form-control" %>	
     </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-12">
+
+
+    <div class="col-xs-8">
       <%# <div style="position:relative; top:60px; width:500px; height:500px;"> %>
         <canvas id="myChart"></canvas> 
         <script>draw_graph();</script> 
@@ -39,11 +31,21 @@
     </div>
   </div>
 
+  <br>
+
   <div class="row">
-    <div class="col-xs-12">
+    <div class="col-xs-8">
       <%# <div style="position:relative; top:60px; width:500px; height:500px;"> %>
         <div id="calendar" ></div>
       <%# </div> %>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="row">
+    <div class="col-xs-8">
+      <%= link_to '新しい予定', new_event_path, class:"btn btn-success form-control" %>	
     </div>
   </div>
 
@@ -73,9 +75,6 @@
           <% end %>
         </tbody>
       </table>
-
-      <%= link_to '新しい予定', new_event_path %>
-    <div class="col-xs-12">
+    </div>
   </div>
-
 </div>
