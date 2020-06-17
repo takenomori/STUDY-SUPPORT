@@ -16,20 +16,11 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";       
-    
-// カラーリスト
-$dark		 : #142850;
-$mid-dark : #27496d;
-$mid-light: #00909e;
-$light	 : #dae1e7;
-$btn-active: #25b7c0;
+	
 
-a {
-	color: black;
-	}
-
-a:hover {
+a {	
 	text-decoration: none;
+	color: #4b4b4b;
 	}
 
 h1, h2, h3, h4, h5, h6 {
@@ -42,34 +33,51 @@ body{
 	display: flex;
 	flex-direction: column;
 }
-.header{
-	height: 85px; 
-	text-align: center; 
-	background-color: #fff;
-}
-.glovalNavigation{
-	height: 70px; 
-	text-align: center; 
-	background-color: #888;
-	color: #fff;
-}
-.content{
-	flex: 1;
-	background-color: #fff;
-	text-align: center;
-	margin: 10px 0 10px 0;
-}
-// .localNavigation{
-// 	height: 70px;
-// 	text-align: center;
-// 	background-color: #888;
-// 	color: #fff;
-// }
-.footer{
-	height: 70px;
-	text-align: center;
-	background-color: #888;
-}
+	.header{
+		height: 70px; 
+		display: flex;
+		align-items: center;
+		background-color: #fff;
+	}
+		nav {
+			margin: 0 0 0 auto;
+			}
+		ul {
+			list-style: none;
+			margin: 0;
+			display: flex;
+		}
+		li {
+			margin: 0 0 0 15px;
+			font-size: 14px;
+		}
+	.glovalNavigation{
+		margin: 0;
+		padding: 0;
+		position: relative;
+		height: 60px;
+		border-bottom: #dddddd solid 1px;
+		border-top: #dddddd solid 1px;
+		text-align: center;
+	}
+
+	.content{
+		flex: 1;
+		background-color: #fff;
+		// text-align: center;
+		margin: 10px 0 10px 0;
+	}
+	// .localNavigation{
+	// 	height: 70px;
+	// 	text-align: center;
+	// 	background-color: #888;
+	// 	color: #fff;
+	// }
+	.footer{
+		height: 70px;
+		text-align: center;
+		background-color: #888;
+	}
 
 
 .top-image {

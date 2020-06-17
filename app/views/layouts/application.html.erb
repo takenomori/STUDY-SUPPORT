@@ -14,14 +14,20 @@
   <body>
     <header class="header">
       <%= image_tag 'header.png', width: 100, height: 70 %>
+  <nav class="headerNavigation">
+    <ul>
       <%# ログインしている場合 %>
       <% if user_signed_in? %>
-        <%= link_to "　ログアウト　", destroy_user_session_path, method: :delete%>
+      <li><%= link_to "トップページ", root_path %></li>
+      <li><%= link_to "ログアウト　", destroy_user_session_path, method: :delete%></li>
       <%# ログインしていない場合 %>
       <% else %>
-        <%= link_to "　新規登録　", new_user_registration_path %>
-        <%= link_to "　ログイン　", new_user_session_path%>
+        <li><%= link_to "トップページ", root_path %></li>
+        <li><%= link_to "新規登録", new_user_registration_path %></li>
+        <li><%= link_to "ログイン　", new_user_session_path%></li>
       <% end %>
+    </ul>
+  </nav>
 
         <div class="row">
           <div class="col-xs-12">
@@ -37,9 +43,9 @@
     <div class="glovalNavigation">
       <%# ログインしている場合 %>
       <% if user_signed_in? %>
-        <%= link_to "　本棚　", textbooks_path%>
-        <%= link_to "　メインページ　", events_path%>
-        <%= link_to "　マイページ　", user_path(current_user.id) %>
+        <%= link_to "　　本棚　　", textbooks_path%>
+        <%= link_to "　　メインページ　　", events_path%>
+        <%= link_to "　　マイページ　　", user_path(current_user.id) %>
       <%# ログインしていない場合 %>
       <% else %>
       <% end %>    
