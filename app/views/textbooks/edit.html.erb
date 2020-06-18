@@ -3,15 +3,16 @@
 	
         <div class="row">
             <div class="col-xs-6 col-xs-offset-0">
-                <h1>教材編集画面</h1>
+                <h1>教材編集</h1>
             </div>
         </div>
 
         <%= render 'form', books: @textbook%>
 
         <div class="row">
-            <div class="col-xs-1 col-xs-offset-0">
-                <%= link_to "show", textbook_path(@textbook.id) %>
+            <div class="col-xs-2">
+                <%= link_to "戻る", textbook_path(@textbook.id), class: " btn btn-default" %>
+
             </div>
         </div>
     

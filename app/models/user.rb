@@ -7,9 +7,10 @@ class User < ApplicationRecord
   #画像投稿のrefile/gem
   attachment :image
 
+  has_many :events
   has_many :textbooks
   has_many :study_times
-  has_many :calenders
+  # has_many :calenders
   # has_many :tset_formats
   # has_many :test_dates
 

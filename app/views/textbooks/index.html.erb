@@ -1,16 +1,4 @@
 <div class="container">
-	<div class="row">
-			<%= render 'users/template', user: @user%>
-	</div>
-
-	<div class="row">
-		<div class="col-xs-2">
-			<%= link_to "+", new_textbook_path, class: " btn btn-default", style: "border-radius: 100%" %>	
-		</div>
-		<div class="col-xs-9">
-				<h2>教材一覧</h2>
-		</div>
-	</div>
 
 	<div class="row">
 		<table class="table"  BORDER='2' style="table-layout:fixed;width:100%;" >
@@ -18,18 +6,27 @@
 				<tr class="active">
 					<th>タイトル</th>
 					<th>メモ</th>
-					<th>ステータス</th>
+					<th>教材状況</th>
+					<th colspan="1"></th>
 				</tr>
 			</thead>
 			<tbody>
 			<% @textbooks.each do |textbook| %>
 				<tr>
-					<td><%= link_to textbook.title, textbook_path(textbook.id) %></td>
-					<td><%= link_to textbook.note, textbook_path(textbook.id) %></td>
+					<td><%= textbook.title %></td>
+					<td><%= textbook.note %></td>
 					<td><%= textbook.status %></td>
+					<td><%= link_to '詳細', textbook_path(textbook.id) %></td>
 				</tr>
 			<% end %>
 			</tbody>
 		</table>
     </div>
+	<br>
+
+	<div class="row">
+		<div class="col-xs-12">
+			<%= link_to '教材を追加', new_textbook_path, class:"btn btn-success form-control" %>	
+		</div>
+	</div>
 </div>

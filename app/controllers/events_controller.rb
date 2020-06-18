@@ -29,7 +29,9 @@ class EventsController < ApplicationController
     gon.time5 = study_time5
     gon.time6 = study_time6
     # カレンダー
-    @events = Event.all
+    @events = Event.where(user_id: current_user.id)
+
+    
   end
 
   # GET /events/1
@@ -53,7 +55,7 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       if @event.save
-        format.html { redirect_to @event, notice: 'Event was successfully created.' }
+        format.html { redirect_to @event, notice: '作成されました' }
         format.json { render :show, status: :created, location: @event }
       else
         format.html { render :new }
@@ -94,7 +96,7 @@ class EventsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def event_params
-      params.require(:event).permit(:title, :description, :start_date, :end_date)
+      params.require(:event).permit(:user_id ,:title, :description, :start_date, :end_date)
     end
 
     def user_params
