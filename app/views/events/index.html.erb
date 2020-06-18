@@ -9,25 +9,23 @@
   <div class="row">
     <div class="col-xs-4">
       <%= link_to study_times_path(current_user.id) do %>
-        <h3>今日　<%= @total_study_time0 %> h</h3>
+        <h3>今日 <%= @total_study_time0 %> h</h3>
       <% end %>
       <%= link_to study_times_path(current_user.id) do %>
-        <h3>今週　<%= @week_study_time %> h</h3>
+        <h3>今週 <%= @week_study_time %>  h</h3>
       <% end %>
 
       <%= link_to study_times_path(current_user.id) do %>
-        <h3>総計　<%= @all_study_time %> h</h3>
+        <h3>累計 <%= @all_study_time %> h</h3>
       <% end %>
 
       <%= link_to "記録", new_study_time_path(current_user.id), class:"btn btn-success form-control" %>	
+      
     </div>
 
-
     <div class="col-xs-8">
-      <%# <div style="position:relative; top:60px; width:500px; height:500px;"> %>
         <canvas id="myChart"></canvas> 
         <script>draw_graph();</script> 
-      <%# </div> %>
     </div>
   </div>
 
@@ -35,9 +33,7 @@
 
   <div class="row">
     <div class="col-xs-8">
-      <%# <div style="position:relative; top:60px; width:500px; height:500px;"> %>
         <div id="calendar" ></div>
-      <%# </div> %>
     </div>
   </div>
 
