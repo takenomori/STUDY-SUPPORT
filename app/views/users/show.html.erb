@@ -1,41 +1,42 @@
 <div class="jumbotron">
 	<div class="container">
 
-			<div class="row">
-				<div class="col-xs-6 col-xs-offset-0">
-					<h2>ユーザー詳細</h2>
-				</div>
+		<div class="row">
+			<div class="col-xs-6 col-xs-offset-0">
+				<h2>ユーザー詳細</h2>
 			</div>
+		</div>
 
 
-  <div class="field row">
-    <%= attachment_image_tag @user, :image, format: 'jpg', fallback: "no-image.gif", size:'250' %>
-  </div>
+		<div class="field row">
+			<%= attachment_image_tag @user, :image, format: 'jpg', fallback: "no-image.gif", size:'250' %>
+		</div>
 
-<div class="table-responsive">
-	<table class="table text-nowrap">
-		<tbody>
-			<tr>
-				<td>email</td>
-				<td> <%= @user.email %> </td>
-			</tr>
-			<tr>
-				<td>last_name　first_name</td>
-				<td> <%= @user.last_name %> <%= @user.first_name %> </td>
-			</tr>
-			<tr>
-				<td>kana_last_name　kana_first_name</td>
-				<td> <%= @user.kana_last_name %> <%= @user.kana_first_name %> </td>
-			</tr>
+		<div class="table-responsive">
+			<table class="table text-nowrap">
+				<tbody>
+					<tr>
+						<td>メールアドレス</td>
+						<td> <%= @user.email %> </td>
+					</tr>
+					<tr>
+						<td>名字　名前</td>
+						<td> <%= @user.last_name %> <%= @user.first_name %> </td>
+					</tr>
+					<tr>
+						<td>ミョウジ　ナマエ</td>
+						<td> <%= @user.kana_last_name %> <%= @user.kana_first_name %> </td>
+					</tr>
 
-		</tbody>
-	</table>
-				<div class="row">
-					<div class="col-xs-1">
-						<%= link_to "edit", edit_user_path, class: " btn btn-default", style: "border-radius: 100%" %>	
-					</div>
-				</div>
+				</tbody>
+			</table>
+		</div>
 
+		<div class="row">
+			<div class="col-xs-1">
+				<%= link_to "編集", edit_user_path, class: " btn btn-default" %>	
+			</div>
+		</div>
 
 	</div>
 </div>
