@@ -30,6 +30,8 @@ class EventsController < ApplicationController
     gon.time6 = study_time6
     # カレンダー
     @events = Event.all
+
+    
   end
 
   # GET /events/1
