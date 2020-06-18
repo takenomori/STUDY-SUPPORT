@@ -10,28 +10,32 @@
       </ul>
     </div>
   <% end %>
+  
+  <div class="field">
+    <%= form.hidden_field :user_id, :value => current_user.id %>
+  </div>
 
   <div class="field">
-    <%= form.label :title %>
+    <%= form.label :title, "タイトル" %>
     <%= form.text_field :title %>
   </div>
 
   <div class="field">
-    <%= form.label :description %>
+    <%= form.label :description, "詳細" %>
     <%= form.text_area :description %>
   </div>
 
   <div class="field">
-    <%= form.label :start_date %>
+    <%= form.label :start_date, "開始日時" %>
     <%= form.datetime_select :start_date %>
   </div>
 
   <div class="field">
-    <%= form.label :end_date %>
+    <%= form.label :end_date, "終了日時" %>
     <%= form.datetime_select :end_date %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "登録する", class: "btn btn-primary" %>
   </div>
 <% end %>

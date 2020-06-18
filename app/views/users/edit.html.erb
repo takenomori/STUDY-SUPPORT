@@ -16,27 +16,27 @@
   </div>
 
   <div class="field row">
-    <%= f.label :email %>
+    <%= f.label :email, 'メールアドレス' %>
     <%= f.text_field :email, class: 'col-xs-12 user_email' %>
   </div>
 
   <div class="field row">
-    <%= f.label :last_name %>
+    <%= f.label :last_name, '姓' %>
     <%= f.text_area :last_name, class: 'col-xs-12 user_last_name'%>
   </div>
 
   <div class="field row">
-    <%= f.label :first_name %>
+    <%= f.label :first_name, '名' %>
     <%= f.text_area :first_name, class: 'col-xs-12 user_first_name'%>
   </div>
 
   <div class="field row">
-    <%= f.label :kana_last_name %>
+    <%= f.label :kana_last_name, 'セイ' %>
     <%= f.text_area :kana_last_name, class: 'col-xs-12 user_kana_last_name' %>
   </div>
 
   <div class="field row">
-    <%= f.label :kana_first_name %>
+    <%= f.label :kana_first_name, 'メイ' %>
     <%= f.text_area :kana_first_name, class: 'col-xs-12 user_kana_first_name' %>
   </div>
 
@@ -47,11 +47,8 @@
 <% end %>
 
 				<div class="row">
-					<div class="col-xs-1">
-						<%= link_to "show", user_path, class: " btn btn-default", style: "border-radius: 100%" %>	
-					</div>
-					<div class="col-xs-1">
-						<%= link_to 'Destroy', @user, method: :delete, data: { confirm: '本当に消しますか？' }, class: "btn-sm btn-danger destroy_user_#{@user.id}"%>
+					<div class="col-xs-3">
+						<%= link_to '退会する', @user, method: :delete, data: { confirm: '本当に消しますか？' }, class: " btn btn-default"%>
 					</div>
 				</div>
 
