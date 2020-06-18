@@ -2,12 +2,12 @@
     <%= render 'layouts/error_messages', model: f.object %>
 
   <div class="field row">
-    <%= f.label :title %>
+    <%= f.label :title, "タイトル" %>
     <%= f.text_field :title, class: 'col-xs-12 book_title' %>
   </div>
 
   <div class="field row">
-    <%= f.label :note %>
+    <%= f.label :note, "メモ" %>
     <%= f.text_area :note, class: 'col-xs-12 book_body'%>
   </div>
 

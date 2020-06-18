@@ -9,6 +9,6 @@ class Textbook < ApplicationRecord
         # t.validates :textbook_tag_id
         t.validates :title
         t.validates :status
-        t.validates :note
+        # t.validates :note
     end
 end
