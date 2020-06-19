@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_18_225403) do
+ActiveRecord::Schema.define(version: 2020_06_19_133704) do
 
   create_table "calenders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "user_id"
@@ -38,12 +38,6 @@ ActiveRecord::Schema.define(version: 2020_06_18_225403) do
     t.integer "time"
     t.string "genre"
     t.text "comment"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "textbook_tags", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "genre"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
