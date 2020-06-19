@@ -1,7 +1,6 @@
 class StudyTimesController < ApplicationController
   def index
-    @user = User.find(current_user.id)
-    @study_times = StudyTime.where(user_id: current_user.id)
+    @study_times = StudyTime.where(user_id: current_user.id).page(params[:page]).per(5)
   end
 
   def new
