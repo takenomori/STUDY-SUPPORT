@@ -1,7 +1,6 @@
 class TextbooksController < ApplicationController
   def index
-    @user = User.find(current_user.id)
-    @textbooks = Textbook.where(user_id: current_user.id)
+    @textbooks = Textbook.where(user_id: current_user.id).page(params[:page]).per(5)
   end
 
   def new
