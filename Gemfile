@@ -68,6 +68,10 @@ gem 'devise'
 gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
 
+#ダミーデータ
+gem 'faker'
+# gem 'gimei'
+
 # ページネーション
 gem 'kaminari','~> 1.2.1'
 
@@ -77,15 +81,10 @@ gem 'jquery-rails'   # カレンダー
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'
 
-# タグ
-# gem 'acts-as-taggable-on', '~> 6.0'
-
 # グラフ機能
 gem 'chart-js-rails', '~> 0.1.4'
 gem 'gon', '~> 6.2.0'
 
-#ダミーデータ
-gem 'faker'
 
 # AWSでデプロイするのにデータベースの接続設定で「環境変数」を利用するので、環境変数を管理するgemも追加
 gem 'dotenv-rails'
