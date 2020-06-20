@@ -20,8 +20,8 @@
           <ul>
             <%# ログインしている場合 %>
             <% if user_signed_in? %>
-            <li><%= link_to "　トップページ　", root_path %></li>
-            <li><%= link_to "　ログアウト　", destroy_user_session_path, method: :delete%></li>
+            <li><strong><%= link_to "　トップページ　", root_path %></strong></li>
+            <li><strong><%= link_to "　ログアウト　", destroy_user_session_path, method: :delete%></strong></li>
             <%# ログインしていない場合 %>
             <% else %>
               <li><%= link_to "　トップページ　", root_path %></li>
@@ -37,9 +37,9 @@
           <div class="col-xs-12">
             <%# ログインしている場合 %>
             <% if user_signed_in? %>
-              <%= link_to "　　本棚　　", textbooks_path%>
-              <%= link_to "　　メインページ　　", events_path%>
-              <%= link_to "　　マイページ　　", user_path(current_user.id) %>
+              <strong><%= link_to "　　本棚　　", textbooks_path%></strong>
+              <strong><%= link_to "　　メインページ　　", events_path%></strong>
+              <strong><%= link_to "　　マイページ　　", user_path(current_user.id) %></strong>
             <%# ログインしていない場合 %>
             <% else %>
             <% end %>    
