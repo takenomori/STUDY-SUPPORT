@@ -2,16 +2,16 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 stringDate =(date)->
-    return date.getMonth()+'/'+date.getDate()
+    return date.getMonth()+1+'/'+date.getDate()
 
 window.draw_graph = -> 
     ctx = document.getElementById("myChart").getContext('2d')
 
-    d = new Date();
+    today = new Date();
     oneDay = 3600000*24
-    days = [stringDate(d)];
+    days = [stringDate(today)];
     for i in [1..6]
-        wd = new Date(d-oneDay*i)
+        wd = new Date(today-oneDay*i)
         days.unshift(stringDate(wd))
 
     myChart = new Chart(ctx, {
