@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  def top
+  def tops
     @user = User.find(current_user.id)
     @study_time = StudyTime.where(user_id: current_user.id).where(created_at:  Time.zone.now.all_day)
   end
