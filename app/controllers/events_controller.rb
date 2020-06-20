@@ -4,6 +4,28 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
+  ## レベルアップシステム
+    user = User.find(current_user.id)
+    user.experience_point= StudyTime.where(user_id: current_user.id).sum(:point)
+    user.update(experience_point: user.experience_point)
+    #経験値を更新
+  
+    levelSetting = LevelSetting.find_by(level: user.level + 1)
+    #levelsettingモデルから、自分のレベルより1高いレコードを探す
+  
+    if levelSetting.thresold <= user.experience_point
+    #探してきたレコードの閾値よりもユーザーの総経験値が高かった場合
+      user.level = user.level + 1
+      user.update(level: user.level)
+    #レベルを1増やして更新
+    end
+  ##
+
+  levelSetting = LevelSetting.find_by(level: user.level + 1)
+  levelSetting.thresold -= user.experience_point
+    @user_experience = levelSetting.thresold
+
+
     @user = User.find(current_user.id)
     study_time = StudyTime.where(user_id: current_user.id)
     study_time0 = study_time.where(created_at:  Time.zone.now.all_day).sum(:time)
