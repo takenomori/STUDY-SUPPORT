@@ -16,16 +16,14 @@ User.create!(
     password: "password",
     password_confirmation: "password",
 )
-StudyTime.create!(
-    user_id: '1',
-    day: '1',
-    time: '1',
-    genre: 'テスト',
-    comment: 'テスト',
-    created_at: '2020-06-15 02:13:55',
-    updated_at:  '2020-06-14 03:10:00',
-    point: '1',
-  )
+# レベルとりあえず10年✖️365日✖️24時間
+[
+    ['2', '2'],['3', '4'],['4','8'],['5','16'],['6','32'],['7','64'],['8','128'],['9','256'],['10','512'],['11','1024'],['12','2028'],['13','4056'],['14','8112'],['15','16224'],['16','32448'],['17','64896'],['18','129792']
+].each do |level, thresold|
+    LevelSetting.create!(
+        { level: level, thresold: thresold}
+    )
+end
 
 # ランダムユーザー
 last_names =  ["佐藤", "鈴木", "高橋", "田中", "伊藤", "山本", "渡辺", "中村", "小林", "加藤", "吉田", "山田", "佐々木", "山口", "松本", "井上", "木村", "林", "斎藤", "清水", "山崎", "阿部", "森", "池田", "橋本", "山下", "石川", "中島", "前田", "藤田", "後藤", "小川", "岡田", "村上", "長谷川", "近藤", "石井", "斉藤", "坂本", "遠藤", "藤井", "青木", "福田", "三浦", "西村", "藤原", "太田", "松田", "原田", "岡本", "中野", "中川", "小野", "田村", "竹内", "金子", "中山", "和田", "石田", "工藤", "上田", "原", "森田", "酒井", "横山", "柴田", "宮崎", "宮本", "内田", "高木", "谷口", "安藤", "丸山", "今井", "大野", "高田", "菅原", "河野", "武田", "藤本", "上野", "杉山", "千葉", "村田", "増田", "小島", "小山", "大塚", "平野", "久保", "渡部", "松井", "菊地", "岩崎", "松尾", "佐野", "木下", "野口", "野村", "新井", "田口", "盛合"]
@@ -37,21 +35,21 @@ kana_first_names =  ["ショウタ", "レン", "ショウ", "リク", "ソウタ
 Faker::Config.locale = :ja
 
 30.times do |n|
-  first_name_random = rand(first_names.length)
-  last_name_random = rand(last_names.length)
-  first_name = first_names[first_name_random]
-  last_name = last_names[last_name_random]
-  kana_first_name = kana_first_names[first_name_random]
-  kana_last_name = kana_last_names[last_name_random]
-  email = Faker::Internet.email(domain: 'example')
+    first_name_random = rand(first_names.length)
+    last_name_random = rand(last_names.length)
+    first_name = first_names[first_name_random]
+    last_name = last_names[last_name_random]
+    kana_first_name = kana_first_names[first_name_random]
+    kana_last_name = kana_last_names[last_name_random]
+    email = Faker::Internet.email(domain: 'example')
 
-  user = User.create!(
-    first_name: first_name,
-    last_name: last_name,
-    kana_first_name: kana_first_name,
-    kana_last_name: kana_last_name,
-    email: email,
-    password: 'password',
-    password_confirmation: 'password'
-  )
+    user = User.create!(
+        first_name: first_name,
+        last_name: last_name,
+        kana_first_name: kana_first_name,
+        kana_last_name: kana_last_name,
+        email: email,
+        password: 'password',
+        password_confirmation: 'password'
+    )
 end
