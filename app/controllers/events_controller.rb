@@ -6,7 +6,7 @@ class EventsController < ApplicationController
   def index
   ## レベルアップシステム
     user = User.find(current_user.id)
-    user.experience_point= StudyTime.where(user_id: current_user.id).sum(:point)
+    user.experience_point= StudyTime.where(user_id: current_user.id).sum(:time)
     user.update(experience_point: user.experience_point)
     #経験値を更新
   
