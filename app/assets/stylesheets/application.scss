@@ -82,9 +82,12 @@ body{
 	}
 
 
-.top-image {
+.front-image {
 		width: 100%;
-		height: 700px;
+		height: 600px;
 		background-image: image-url("study.image.jpg");
 		background-size: cover;
 		}
+.front-image h1{
+	color: white;
+}
