@@ -1,9 +1,4 @@
 class UsersController < ApplicationController
-  def tops
-    @user = User.find(current_user.id)
-    @study_time = StudyTime.where(user_id: current_user.id).where(created_at:  Time.zone.now.all_day)
-  end
-
   def edit
     @user = User.find(params[:id])
   end
@@ -32,4 +27,4 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:email, :image, :last_name, :first_name, :kana_last_name, :kana_first_name)
   end
-end
+endgit 
