@@ -27,4 +27,4 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:email, :image, :last_name, :first_name, :kana_last_name, :kana_first_name)
   end
-endgit 
+end
