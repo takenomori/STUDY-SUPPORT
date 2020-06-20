@@ -12,16 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2020_06_20_024011) do
 
-  create_table "calenders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "day"
-    t.integer "time"
-    t.string "title"
-    t.text "plan"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
     t.text "description"
