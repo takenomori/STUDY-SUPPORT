@@ -1,6 +1,7 @@
 <div class="container">
+	<%# 学習時間一覧 %>
     <div class="row">
-		<table class="table"  BORDER='2' style="table-layout:fixed;width:100%;" >
+		<table class="table table-hover table-bordered"  BORDER='2' style="table-layout:fixed;width:100%;" >
 			<thead>
 				<tr class="active">
 					<th>記録日</th>
@@ -18,7 +19,7 @@
 			</tbody>
 		</table>
     </div>
-
+	<%# 学習時間一覧ページネーション %>
 	<%= paginate(@study_times) %>
 
 </div>

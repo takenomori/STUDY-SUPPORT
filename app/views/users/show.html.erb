@@ -1,17 +1,14 @@
 <div class="jumbotron">
 	<div class="container">
-
+		<%# ユーザー詳細表示 %>
 		<div class="row">
-			<div class="col-xs-6 col-xs-offset-0">
+			<div class="col-md-6 col-xs-offset-0">
 				<h2>ユーザー詳細</h2>
 			</div>
 		</div>
-
-
 		<div class="field row">
 			<%= attachment_image_tag @user, :image, format: 'jpg', fallback: "no-image.gif", size:'250' %>
 		</div>
-
 		<div class="table-responsive">
 			<table class="table text-nowrap">
 				<tbody>
@@ -27,16 +24,14 @@
 						<td>セイ　メイ</td>
 						<td> <%= @user.kana_last_name %> <%= @user.kana_first_name %> </td>
 					</tr>
-
 				</tbody>
 			</table>
 		</div>
-
+		<%# 編集ボタン %>
 		<div class="row">
-			<div class="col-xs-1">
-				<%= link_to "編集", edit_user_path, class: " btn btn-default" %>	
+			<div class="col-md-12">
+				<%= link_to '編集', edit_user_path %> | <%= link_to '戻る', events_path %>
 			</div>
 		</div>
-
 	</div>
 </div>
