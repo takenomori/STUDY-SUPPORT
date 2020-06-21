@@ -1,12 +1,14 @@
 <div class="container">
+    <%# フロントページ画像表示 %>
     <div class="row">
         <div class="col-md-12 front-image">
             <br>
                 <h1>　STUDY-SUPPORT</h1>
         </div>
     </div>
+    <%# ランキング表示 %>
     <h3>累計勉強時間 上位10名</h3>
-            <table class="table"  BORDER='3' style="table-layout:fixed;width:100%;" >
+    <table class="table"  BORDER='3' style="table-layout:fixed;width:100%;" >
         <% @user.each do |user| %>
                 <tr>
                     <td style="width:30%; height:30px">
@@ -20,7 +22,7 @@
                     </td>
                 </tr>
         <% end %>
-            </table>
+    </table>
 </div>
 
 

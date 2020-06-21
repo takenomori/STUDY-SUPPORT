@@ -1,25 +1,21 @@
 <div class="jumbotron">
 	<div class="container">
-
-			<div class="row">
-				<div class="col-md-6 col-md-offset-0">
-					<h1>教材詳細</h1>
-				</div>
+		<%# 教材詳細表示 %>
+		<div class="row">
+			<div class="col-md-6 col-md-offset-0">
+				<h1>教材詳細</h1>
 			</div>
-
-	<div class="field row">
-		<%=	@textbook.title %>
-	</div>
-
-	<div class="field row">
-		<%= @textbook.note %>
-	</div>
-
-	<div class="field row">
-		<%= @textbook.status %>
-	</div>
-
-
+		</div>
+		<div class="field row">
+			<%=	@textbook.title %>
+		</div>
+		<div class="field row">
+			<%= @textbook.note %>
+		</div>
+		<div class="field row">
+			<%= @textbook.status %>
+		</div>
+		<%# 編集、消去ボタン %>
 		<div class="row">
 			<div class="col-md-2">
 				<%= link_to "編集", edit_textbook_path, class: " btn btn-default" %>	
@@ -28,6 +24,5 @@
 				<%= link_to '削除', @user, method: :delete, data: { confirm: '本当に消しますか？' }, class: " btn btn-default"%>
 			</div>
 		</div>
-
 	</div>
 </div>
