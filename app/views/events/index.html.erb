@@ -8,30 +8,34 @@
 <br>
   <div class="row">
     <div class="col-xs-12">
-		<table class="table"  BORDER='2' style="table-layout:fixed;width:100%;" >
-			<tbody>
-            <tr class="active">
-            <td>
-            <%= link_to study_times_path(current_user.id) do %>
-              <h3>今日 <%= @total_study_time0 %> h</h3>
-            <% end %>  
+      <table class="table"  BORDER='2' style="table-layout:fixed;width:100%;" >
+        <tbody>
+          <tr class="active">
+            <td class="active text-center">
+              <%= link_to study_times_path(current_user.id) do %>
+                <h3><strong>
+                  今日 <%= @total_study_time0 %> h
+                </strong></h3>
+              <% end %>  
             </td>
-            <td>
-            <%= link_to study_times_path(current_user.id) do %>
-              <h3>今週 <%= @week_study_time %>  h</h3>
-            <% end %>  
+            <td class="active text-center">
+              <%= link_to study_times_path(current_user.id) do %>
+                <h3><strong>
+                  今週 <%= @week_study_time %>  h
+                </strong></h3>
+              <% end %>  
             </td>
-            <td>
-            <%= link_to study_times_path(current_user.id) do %>
-              <h3>累計 <%= @all_study_time %> h</h3>
-            <% end %>
+            <td class="active text-center">
+              <%= link_to study_times_path(current_user.id) do %>
+                <h3><strong>
+                  累計 <%= @all_study_time %> h
+                </strong></h3>
+              <% end %>
             </td>
-            </tr>
-			</tbody>
-      <table>
-
-          <%= link_to "記録", new_study_time_path(current_user.id), class:"btn btn-success form-control" %>	
-
+          </tr>
+        </tbody>
+      </table>
+      <%= link_to "記録", new_study_time_path(current_user.id), class:"btn btn-success form-control" %>	
     </div>
 
     <div class="col-xs-12">
