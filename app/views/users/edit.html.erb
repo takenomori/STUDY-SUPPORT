@@ -2,7 +2,7 @@
 	<div class="container">
 
 			<div class="row">
-				<div class="col-xs-6 col-xs-offset-0">
+				<div class="col-md-6 col-md-offset-0">
 					<h2>ユーザー編集</h2>
 				</div>
 			</div>
@@ -17,37 +17,37 @@
 
   <div class="field row">
     <%= f.label :email, 'メールアドレス' %>
-    <%= f.text_field :email, class: 'col-xs-12 user_email' %>
+    <%= f.text_field :email, class: 'col-md-12 user_email' %>
   </div>
 
   <div class="field row">
     <%= f.label :last_name, '姓' %>
-    <%= f.text_area :last_name, class: 'col-xs-12 user_last_name'%>
+    <%= f.text_area :last_name, class: 'col-md-12 user_last_name'%>
   </div>
 
   <div class="field row">
     <%= f.label :first_name, '名' %>
-    <%= f.text_area :first_name, class: 'col-xs-12 user_first_name'%>
+    <%= f.text_area :first_name, class: 'col-md-12 user_first_name'%>
   </div>
 
   <div class="field row">
     <%= f.label :kana_last_name, 'セイ' %>
-    <%= f.text_area :kana_last_name, class: 'col-xs-12 user_kana_last_name' %>
+    <%= f.text_area :kana_last_name, class: 'col-md-12 user_kana_last_name' %>
   </div>
 
   <div class="field row">
     <%= f.label :kana_first_name, 'メイ' %>
-    <%= f.text_area :kana_first_name, class: 'col-xs-12 user_kana_first_name' %>
+    <%= f.text_area :kana_first_name, class: 'col-xs-md user_kana_first_name' %>
   </div>
 
   <div class="actions row">
-    <%= f.submit class: 'btn btn-primary col-xs-12'%>
+    <%= f.submit class: 'btn btn-primary col-md-12'%>
   </div>
 
 <% end %>
 
 				<div class="row">
-					<div class="col-xs-3">
+					<div class="col-md-3">
 						<%= link_to '退会する', @user, method: :delete, data: { confirm: '本当に消しますか？' }, class: " btn btn-default"%>
 					</div>
 				</div>

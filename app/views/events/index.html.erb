@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 <div class="container">
   <div class="row">
-    <div class="col-xs-12">
+    <div class="col-md-12">
       <%= render 'users/template', user: @user%>
     </div>
   </div>
 <br>
   <div class="row">
-    <div class="col-xs-12">
+    <div class="col-md-12">
       <table class="table"  BORDER='2' style="table-layout:fixed;width:100%;" >
         <tbody>
           <tr class="active">
@@ -38,7 +38,7 @@
       <%= link_to "記録", new_study_time_path(current_user.id), class:"btn btn-success form-control" %>	
     </div>
 
-    <div class="col-xs-12">
+    <div class="col-md-12">
         <canvas id="myChart"></canvas> 
         <script>draw_graph();</script> 
     </div>
@@ -47,7 +47,7 @@
   <br>
 
   <div class="row">
-    <div class="col-xs-12">
+    <div class="col-md-12">
       <table class="table table-hover table-bordered"  BORDER='2' style="table-layout:fixed;width:100%;" >
         <thead>
           <tr class="active">
@@ -90,7 +90,7 @@
 
 
   <div class="row">
-    <div class="col-xs-12">
+    <div class="col-md-12">
         <div id="calendar" ></div>
     </div>
     <br>

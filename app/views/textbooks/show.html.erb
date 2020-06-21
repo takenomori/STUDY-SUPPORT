@@ -2,7 +2,7 @@
 	<div class="container">
 
 			<div class="row">
-				<div class="col-xs-6 col-xs-offset-0">
+				<div class="col-md-6 col-md-offset-0">
 					<h1>教材詳細</h1>
 				</div>
 			</div>
@@ -21,10 +21,10 @@
 
 
 		<div class="row">
-			<div class="col-xs-2">
+			<div class="col-md-2">
 				<%= link_to "編集", edit_textbook_path, class: " btn btn-default" %>	
 			</div>
-			<div class="col-xs-2">
+			<div class="col-md-2">
 				<%= link_to '削除', @user, method: :delete, data: { confirm: '本当に消しますか？' }, class: " btn btn-default"%>
 			</div>
 		</div>

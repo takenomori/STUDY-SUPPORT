@@ -2,7 +2,7 @@
   <div class="container">
 
 			<div class="row">
-				<div class="col-xs-6 col-xs-offset-0">
+				<div class="col-md-6 col-md-offset-0">
 					<h1>時間詳細</h1>
 				</div>
 			</div>
@@ -24,10 +24,10 @@
   </div>
 
 				<div class="row">
-					<div class="col-xs-1">
+					<div class="col-md-1">
     <%= link_to "fix", edit_study_time_path, class: " btn btn-default", style: "border-radius: 100%" %>	
 					</div>
-					<div class="col-xs-1">
+					<div class="col-md-1">
 						<%= link_to 'Destroy', @study_time, method: :delete, data: { confirm: '本当に消しますか？' }, class: "btn-sm btn-danger destroy_study_time_#{@study_time.id}"%>
 					</div>
 				</div>
