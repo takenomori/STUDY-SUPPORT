@@ -36,6 +36,30 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
+# 追加のgem
+gem 'devise'
+
+# 画像登録
+gem "refile", require: "refile/rails", github: 'manfe/refile'
+gem "refile-mini_magick"
+
+#ダミーデータ
+gem 'faker'
+# gem 'gimei'
+
+# ページネーション
+gem 'kaminari','~> 1.2.1'
+
+# レイアウト
+gem 'bootstrap-sass', '~> 3.4.1'
+gem 'jquery-rails'   # カレンダー
+gem 'fullcalendar-rails'
+gem 'momentjs-rails'
+
+# グラフ機能
+gem 'chart-js-rails', '~> 0.1.4'
+gem 'gon', '~> 6.2.0'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -60,30 +84,6 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-# 追加のgem
-gem 'devise'
-
-# 画像登録
-gem "refile", require: "refile/rails", github: 'manfe/refile'
-gem "refile-mini_magick"
-
-#ダミーデータ
-gem 'faker'
-# gem 'gimei'
-
-# ページネーション
-gem 'kaminari','~> 1.2.1'
-
-# レイアウト
-gem 'bootstrap-sass', '~> 3.4.1'
-gem 'jquery-rails'   # カレンダー
-gem 'fullcalendar-rails'
-gem 'momentjs-rails'
-
-# グラフ機能
-gem 'chart-js-rails', '~> 0.1.4'
-gem 'gon', '~> 6.2.0'
 
 
 # AWSでデプロイするのにデータベースの接続設定で「環境変数」を利用するので、環境変数を管理するgemも追加
