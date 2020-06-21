@@ -1,7 +1,7 @@
 <div class="container">
 
 	<div class="row">
-		<table class="table"  BORDER='2' style="table-layout:fixed;width:100%;" >
+		<table class="table table-hover table-bordered"  BORDER='2' style="table-layout:fixed;width:100%;" >
 			<thead>
 				<tr class="active">
 					<th>タイトル</th>
@@ -16,7 +16,7 @@
 					<td><%= textbook.title %></td>
 					<td><%= textbook.note %></td>
 					<td><%= textbook.status %></td>
-					<td><%= link_to '詳細', textbook_path(textbook.id) %></td>
+					<td><strong><%= link_to '詳細', textbook_path(textbook.id) %></strong></td>
 				</tr>
 			<% end %>
 			</tbody>
