@@ -25,6 +25,7 @@ window.draw_graph = ->
                 backgroundColor: ['rgba(54, 162, 235, 0.2)','rgba(54, 162, 235, 0.2)','rgba(54, 162, 235, 0.2)','rgba(54, 162, 235, 0.2)','rgba(54, 162, 235, 0.2)','rgba(54, 162, 235, 0.2)','rgba(54, 162, 235, 0.2)'],
                 borderColor: ['rgba(54, 162, 235, 1)','rgba(54, 162, 235, 1)','rgba(54, 162, 235, 1)','rgba(54, 162, 235, 1)','rgba(54, 162, 235, 1)','rgba(54, 162, 235, 1)','rgba(54, 162, 235, 1)'],
             },
+            ## 積み重ね式のグラフ表示なら、二段目以降株のように追記していく
             # {
             #     label: '勉強時間',
             #     data: [gon.time6, gon.time5, gon.time4, gon.time3, gon.time2, gon.time1, gon.time0],
