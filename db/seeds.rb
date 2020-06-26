@@ -43,7 +43,7 @@ kana_first_names =  ["ショウタ", "レン", "ショウ", "リク", "ソウタ
 # Faker日本語設定z 
 Faker::Config.locale = :ja
 
-30.times do |n|
+50.times do |n|
     first_name_random = rand(first_names.length)
     last_name_random = rand(last_names.length)
     first_name = first_names[first_name_random]
