@@ -16,6 +16,8 @@
 end
 
 
+
+
 # テストユーザー1
 User.create!(
     last_name: "支援",
