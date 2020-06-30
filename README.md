@@ -24,6 +24,13 @@
 - 勉強の進捗の管理
 - 日々の学習記録
 
+### 作成環境
+
+docker
+ruby '2.5.7'
+rails, '~> 5.2.3'
+mysql2
+
 ### 機能一覧
 
 https://docs.google.com/spreadsheets/d/1bA42QbMgT3bWOHPbRyIiFXhN-48xaL2RX58cjw6TnaI/edit#gid=0
