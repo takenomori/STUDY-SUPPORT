@@ -24,12 +24,17 @@
 - 勉強の進捗の管理
 - 日々の学習記録
 
-### 作成環境
+### 環境
 
-docker
-ruby '2.5.7'
-rails, '~> 5.2.3'
-mysql2
+- docker
+- ruby 2.5.7
+- rails 5.2.3
+- mysql2
+- Nginx
+- Puma
+- AWS(EC2,RDS)
+- Bootstrap, jQuery
+- その他 gem
 
 ### 機能一覧
 
