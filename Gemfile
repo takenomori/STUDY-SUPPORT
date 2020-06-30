@@ -38,6 +38,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 # 追加のgem
 gem 'devise'
+# # 日本語化
+# gem 'rails-i18n', '~> 5.1' 
 
 # 画像登録
 gem "refile", require: "refile/rails", github: 'manfe/refile'
