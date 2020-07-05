@@ -18,4 +18,13 @@ class User < ApplicationRecord
     u.validates :kana_first_name
     u.validates :kana_last_name
   end
+
+  FactoryBot.define do 
+    factory :user do 
+        name {"hiro"}
+        sequence(:email) { |n| "hiro#{n}@example.com"}
+        password {"password"}
+    end 
+  end 
+
 end
