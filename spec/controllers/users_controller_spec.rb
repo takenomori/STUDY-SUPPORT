@@ -13,6 +13,6 @@ RSpec.describe User, type: :model do
     it "パスワードがなければ登録できない"
   
     it "パスワードが暗号化されているか"
-  
+
   
   end
