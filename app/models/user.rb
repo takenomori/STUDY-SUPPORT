@@ -19,12 +19,12 @@ class User < ApplicationRecord
     u.validates :kana_last_name
   end
 
-  FactoryBot.define do 
-    factory :user do 
-        name {"sample"}
-        sequence(:email) { |n| "sample#{n}@example.com"}
-        password {"password"}
-    end 
-  end 
+  # FactoryBot.define do 
+  #   factory :user do 
+  #       name {"sample"}
+  #       sequence(:email) { |n| "sample#{n}@example.com"}
+  #       password {"password"}
+  #   end 
+  # end 
 
 end
