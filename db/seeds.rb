@@ -32,18 +32,18 @@ User.create!(
 TextBook.create!(
     user_id: 1,
     textbook_tag_id: ,
-    title: "シエン",
-    status: "ベンキョウ",
-    note: "guest@mail.com",
+    title: ,
+    status: ,
+    note: ,
 )
 
 StudyTime.create!(
     user_id: 1,
     day: ,
-    time: "シエン",
-    genre: "ベンキョウ"
-    comment: "guest@mail.com",
-    point: ,
+    time: ,
+    genre: ,
+    comment: ,
+    # point: 1,
 )
 
 
