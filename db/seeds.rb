@@ -29,22 +29,26 @@ User.create!(
     password_confirmation: "password",
 )
 
-TextBook.create!(
-    user_id: 1,
-    textbook_tag_id: ,
-    title: ,
-    status: ,
-    note: ,
-)
+100.times do |n|
+    TextBook.create!(
+        user_id: 1,
+        textbook_tag_id: ,
+        title: ,
+        status: ,
+        note: ,
+    )
+end
 
-StudyTime.create!(
-    user_id: 1,
-    day: ,
-    time: ,
-    genre: ,
-    comment: ,
-    # point: 1,
-)
+100.times do |n|
+    StudyTime.create!(
+        user_id: 1,
+        day: ,
+        time: ,
+        genre: ,
+        comment: ,
+        # point: 1,
+    )
+end
 
 
 
