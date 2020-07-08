@@ -29,15 +29,15 @@ User.create!(
     password_confirmation: "password",
 )
 
-100.times do |n|
-    TextBook.create!(
-        user_id: 1,
-        textbook_tag_id: ,
-        title: ,
-        status: ,
-        note: ,
-    )
-end
+# 100.times do |n|
+#     TextBook.create!(
+#         user_id: 1,
+#         textbook_tag_id: ,
+#         title: ,
+#         status: ,
+#         note: ,
+#     )
+# end
 
 100.times do |n|
     StudyTime.create!(
@@ -45,7 +45,7 @@ end
         day: ,
         time: ,
         genre: ,
-        comment: ,
+        comment: "コメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメント",
         # point: 1,
     )
 end
