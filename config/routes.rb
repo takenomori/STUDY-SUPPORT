@@ -1,14 +1,7 @@
 Rails.application.routes.draw do
   root 'home#front'
 
-  devise_for :users, controllers: {
-    sessions: 'users/sessions',
-    registrations: 'users/registrations',
-    passwords: 'users/passwords',
-  }
-
-  # devise_scope :user do
-  # end
+  devise_for :users
 
   resources :events
 
