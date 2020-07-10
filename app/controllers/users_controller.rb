@@ -19,7 +19,7 @@ class UsersController < ApplicationController
   def destroy
     @user = User.find(params[:id])
     @user.destroy
-    redirect_to root_path, success: "削除されました"
+    redirect_to root_path, success: '削除されました'
   end
 
   private

@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   resources :events
 
-  resources :users, only: [:edit, :show, :update, :destroy] do
+  resources :users, only: %i[edit show update destroy] do
     collection do
       get 'top'
     end
@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   resources :textbooks
   # , only: [:edit, :index, :new, :show, :create, :update, :destroy]
-  
+
   resources :study_times
   # , only: [:edit, :index, :new, :show, :create, :update]
 
