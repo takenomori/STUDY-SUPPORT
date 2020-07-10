@@ -39,6 +39,7 @@ User.create!(
 #     )
 # end
 
+# 昨年から２年分の学習時間記録
     for i in 1..730
         StudyTime.create!(
             user_id: 1,
