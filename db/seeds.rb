@@ -39,12 +39,12 @@ User.create!(
 #     )
 # end
 
-    for i in 1..100
+    for i in 1..730
         StudyTime.create!(
             user_id: 1,
             time: Random.rand(11) + 1,
             comment: "コメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメント",
-            created_at: Time.now + i,
+            created_at:  Time.current.prev_year + i*3600*24,
         )
     end
 
