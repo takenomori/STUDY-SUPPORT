@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  #画像投稿のrefile/gem
+  # 画像投稿のrefile/gem
   attachment :image
 
   has_many :level_setting
@@ -19,12 +19,11 @@ class User < ApplicationRecord
     u.validates :kana_last_name
   end
 
-  # FactoryBot.define do 
-  #   factory :user do 
+  # FactoryBot.define do
+  #   factory :user do
   #       name {"sample"}
   #       sequence(:email) { |n| "sample#{n}@example.com"}
   #       password {"password"}
-  #   end 
-  # end 
-
+  #   end
+  # end
 end

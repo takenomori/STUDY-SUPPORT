@@ -11,7 +11,7 @@ class TextbooksController < ApplicationController
     @textbook = Textbook.new(textbook_params)
     @textbook.user_id = current_user.id
     if @textbook.save
-      redirect_to textbooks_path(current_user.id), success: "登録されました"
+      redirect_to textbooks_path(current_user.id), success: '登録されました'
     else
       @textbook = Textbook.new
       render action: :new, danger: '登録に失敗しました'
@@ -29,7 +29,7 @@ class TextbooksController < ApplicationController
   def update
     @textbook = Textbook.find(params[:id])
     if @textbook.update(textbook_params)
-      redirect_to textbook_path(@textbook.id), success: "更新されました"
+      redirect_to textbook_path(@textbook.id), success: '更新されました'
     else
       render action: :edit, danger: '更新に失敗しました'
     end

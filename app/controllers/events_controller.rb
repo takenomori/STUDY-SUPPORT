@@ -1,30 +1,29 @@
 class EventsController < ApplicationController
-  before_action :set_event, only: [:show, :edit, :update, :destroy]
+  before_action :set_event, only: %i[show edit update destroy]
 
   # GET /events
   # GET /events.json
   def index
-  ## レベルアップシステム
+    ## レベルアップシステム
     user = User.find(current_user.id)
-    user.experience_point= StudyTime.where(user_id: current_user.id).sum(:time)
+    user.experience_point = StudyTime.where(user_id: current_user.id).sum(:time)
     user.update(experience_point: user.experience_point)
-    #経験値を更新
-  
+    # 経験値を更新
+
     levelSetting = LevelSetting.find_by(level: user.level + 1)
-    #levelsettingモデルから、自分のレベルより1高いレコードを探す
-  
+    # levelsettingモデルから、自分のレベルより1高いレコードを探す
+
     if levelSetting.thresold <= user.experience_point
-    #探してきたレコードの閾値よりもユーザーの総経験値が高かった場合
+      # 探してきたレコードの閾値よりもユーザーの総経験値が高かった場合
       user.level = user.level + 1
       user.update(level: user.level)
-    #レベルを1増やして更新
+      # レベルを1増やして更新
     end
-  ##
+    ##
 
-  levelSetting = LevelSetting.find_by(level: user.level + 1)
-  levelSetting.thresold -= user.experience_point
+    levelSetting = LevelSetting.find_by(level: user.level + 1)
+    levelSetting.thresold -= user.experience_point
     @user_experience = levelSetting.thresold
-
 
     @user = User.find(current_user.id)
     study_time = StudyTime.where(user_id: current_user.id)
@@ -38,10 +37,10 @@ class EventsController < ApplicationController
     # 今日の勉強時間
     @total_study_time0 = study_time0
     # 今週の勉強時間
-    array = [study_time0,study_time1,study_time2,study_time3,study_time4,study_time5,study_time6]
+    array = [study_time0, study_time1, study_time2, study_time3, study_time4, study_time5, study_time6]
     @week_study_time = array.sum
     # 総計勉強時間
-    @all_study_time = StudyTime.where(user_id: current_user.id).sum(:time)    
+    @all_study_time = StudyTime.where(user_id: current_user.id).sum(:time)
     ## 勉強時間グラフ events.coffeeで使用
     gon.time0 = study_time0
     gon.time1 = study_time1
@@ -52,14 +51,11 @@ class EventsController < ApplicationController
     gon.time6 = study_time6
     # カレンダー
     @events = Event.where(user_id: current_user.id)
-
-    
   end
 
   # GET /events/1
   # GET /events/1.json
-  def show
-  end
+  def show; end
 
   # GET /events/new
   def new
@@ -67,8 +63,7 @@ class EventsController < ApplicationController
   end
 
   # GET /events/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /events
   # POST /events.json
@@ -111,17 +106,18 @@ class EventsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_event
-      @event = Event.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def event_params
-      params.require(:event).permit(:user_id ,:title, :description, :start_date, :end_date)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_event
+    @event = Event.find(params[:id])
+  end
 
-    def user_params
-      params.require(:user).permit(:email, :image, :last_name, :first_name, :kana_last_name, :kana_first_name)
-    end
+  # Only allow a list of trusted parameters through.
+  def event_params
+    params.require(:event).permit(:user_id, :title, :description, :start_date, :end_date)
+  end
+
+  def user_params
+    params.require(:user).permit(:email, :image, :last_name, :first_name, :kana_last_name, :kana_first_name)
+  end
 end

@@ -47,6 +47,4 @@ class StudyTimesController < ApplicationController
   def study_time_params
     params.require(:study_time).permit(:user_id, :day, :time, :genre, :comment)
   end
-
-  
 end
