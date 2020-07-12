@@ -29,15 +29,15 @@ User.create!(
   password_confirmation: 'password'
 )
 
-# 100.times do |n|
-#     TextBook.create!(
-#         user_id: 1,
-#         textbook_tag_id: ,
-#         title: ,
-#         status: ,
-#         note: ,
-#     )
-# end
+100.times do |n|
+    TextBook.create!(
+        user_id: 1,
+        textbook_tag_id: ,
+        title: ,
+        status: ,
+        note: ,
+    )
+end
 
 # 昨年から２年分の学習時間記録
 (1..730).each do |i|
