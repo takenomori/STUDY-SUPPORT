@@ -32,10 +32,10 @@ User.create!(
 100.times do |n|
     TextBook.create!(
         user_id: 1,
-        textbook_tag_id: ,
-        title: ,
-        status: ,
-        note: ,
+        # textbook_tag_id: ,
+        title: タイトル,
+        status: 1,
+        note: 'コメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメント',
     )
 end
 
