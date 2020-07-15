@@ -30,22 +30,19 @@ User.create!(
 )
 
 100.times do |n|
-    Textbook.create!(
-        user_id: 1,
-        textbook_tag_id: ,
-        title: タイトル,
-        status: 1,
-        note: 'コメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメント',
-    )
+  Textbook.create!(
+      user_id: 1,
+      textbook_tag_id: 1,
+      title: "タイトル",
+      status: 1,
+      note: 'コメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメント',
+  )
 end
 
-# 上のtestbookと作成数合わせること
-(1..100).each do |i|
-    TextbookTag.create!(
-    Textbook_id: i,
-    title: 'その他',
-    )
-end
+# TextbookTag.create!(
+#   textbook_id: 1,
+#   title: 'その他',
+# )
 
 # 昨年から２年分の学習時間記録
 (1..730).each do |i|
