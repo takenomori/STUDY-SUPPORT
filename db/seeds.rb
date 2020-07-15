@@ -39,10 +39,12 @@ User.create!(
   )
 end
 
-# TextbookTag.create!(
-#   textbook_id: 1,
-#   title: 'その他',
-# )
+TextbookTag.create!(
+  title: 'その他',
+)
+TextbookTag.create!(
+  title: '数学',
+)
 
 # 昨年から２年分の学習時間記録
 (1..730).each do |i|
