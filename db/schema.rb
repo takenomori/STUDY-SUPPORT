@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_14_071029) do
+ActiveRecord::Schema.define(version: 2020_07_15_031614) do
 
   create_table "events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
@@ -41,7 +41,6 @@ ActiveRecord::Schema.define(version: 2020_07_14_071029) do
   end
 
   create_table "textbook_tags", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "textbook_id"
     t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
