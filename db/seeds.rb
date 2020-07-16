@@ -29,24 +29,26 @@ User.create!(
   password_confirmation: 'password'
 )
 
+# タグ
+Tag.create!(name: 'その他')
+Tag.create!(name: '数学')
+Tag.create!(name: '理科')
+Tag.create!(name: '社会')
+Tag.create!(name: '英語')
+Tag.create!(name: '国語')
+
+# Textbook
 100.times do |n|
   Textbook.create!(
       user_id: 1,
-      textbook_tag_id: 1,
+      tag_id: 1,
       title: "タイトル",
       status: 1,
       note: 'コメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメント',
   )
 end
 
-TextbookTag.create!(
-  title: 'その他',
-)
-TextbookTag.create!(
-  title: '数学',
-)
-
-# 昨年から２年分の学習時間記録
+# StudyTime 昨年から２年分の学習時間仮作成
 (1..730).each do |i|
   StudyTime.create!(
     user_id: 1,
