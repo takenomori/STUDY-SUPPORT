@@ -1,6 +1,6 @@
 class TextbooksController < ApplicationController
   def index
-    @textbooks = Textbook.where(user_id: current_user.id).page(params[:page]).per(5)
+    @textbooks = Textbook.where(user_id: current_user.id).page(params[:page]).per(9)
   end
 
   def new
@@ -44,7 +44,11 @@ class TextbooksController < ApplicationController
   private
 
   def textbook_params
-    params.require(:textbook).permit(:user_id, :textbook_tag_id, :title, :status, :note)
+    params.require(:textbook).permit(:user_id, :tag_id, :title, :book_image, :status, :note)
+  end
+
+  def tag_params
+    params.require(:textbook_tag).permit(:title)
   end
 
   def user_params
