@@ -88,3 +88,15 @@ kana_first_names = %W[\u30B7\u30E7\u30A6\u30BF \u30EC\u30F3 \u30B7\u30E7\u30A6 \
     password_confirmation: 'password'
   )
 end
+
+# 各ユーザー  StudyTime 習時間仮作成
+(1..50).each do |n|
+  (1..500).each do |i|
+    StudyTime.create!(
+      user_id: n,
+      time: Random.rand(1..8),
+      comment: 'コメント。コメント。コメント。コメント。コメント。コメント。コメント。コメント。',
+      created_at: Time.current.prev_year + i * 3600 * 24
+    )
+  end
+end
