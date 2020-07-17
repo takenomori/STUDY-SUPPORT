@@ -30,22 +30,27 @@ User.create!(
 )
 
 # タグ
-Tag.create!(name: 'その他')
-Tag.create!(name: '数学')
+Tag.create!(name: '国語')
 Tag.create!(name: '理科')
 Tag.create!(name: '社会')
+Tag.create!(name: '数学')
 Tag.create!(name: '英語')
-Tag.create!(name: '国語')
 
 # Textbook
-100.times do |n|
-  Textbook.create!(
-      user_id: 1,
-      tag_id: 1,
-      title: "タイトル",
-      status: 1,
-      note: 'コメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメント',
-  )
+degree = ["基礎","標準","応用","センター"]
+subject = ["国語", "理科", "社会", "数学", "英語"]
+4.times do |n|
+  5.times do |i|
+    title = degree[n] + subject[i] 
+      Textbook.create!(
+          user_id: 1,
+          tag_id: i + 1,
+          title: title,
+          status: Random.rand(0..2),
+          note: 'ノート。ノート。ノート。ノート。ノート。ノート。ノート。ノート。ノート。ノート。ノート。ノート。ノート。ノート。ノート。ノート。ノート。ノート。ノート。ノート。ノート。ノート。ノート。ノート。',
+          book_image: File.open("./app/assets/images/kyoka#{i + 1}.gif")
+      )
+  end
 end
 
 # StudyTime 昨年から２年分の学習時間仮作成
@@ -53,7 +58,7 @@ end
   StudyTime.create!(
     user_id: 1,
     time: Random.rand(1..11),
-    comment: 'コメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメント',
+    comment: 'コメント。コメント。コメント。コメント。コメント。コメント。コメント。コメント。',
     created_at: Time.current.prev_year + i * 3600 * 24
   )
 end
