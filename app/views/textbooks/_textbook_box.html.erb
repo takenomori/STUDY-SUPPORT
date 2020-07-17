@@ -1,0 +1,21 @@
+<% @textbooks.each do |textbook| %>
+    <div class="col-md-4">
+        <div class="disp-area">
+            <%= link_to(textbook_path(textbook.id)) do %>
+                <div id="smallArea">
+                    <span><%= textbook.title %></span>
+                </div>
+                <div id="largeArea">
+                    <span><%= textbook.note %></span>
+                </div>
+            <% end %>
+            <div id="underArea">
+                <%= textbook.status %>
+                <span class="badge badge-info text-wrap">
+                    <%= textbook.tag.name %>
+                </span>
+            </div>
+        </div>
+    </div>
+
+<% end %>
