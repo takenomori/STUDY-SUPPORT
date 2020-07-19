@@ -95,7 +95,7 @@ end
     StudyTime.create!(
       user_id: n,
       time: Random.rand(1..8),
-      comment: 'コメント。コメント。コメント。コメント。コメント。コメント。コメント。コメント。',
+      comment: 'コメント。コメント。コメント。コメント。コメント。コメント。コメント。コメント。コメント。コメント。コメント。',
       created_at: Time.current.prev_year + i * 3600 * 24
     )
   end
