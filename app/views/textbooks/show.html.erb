@@ -2,12 +2,8 @@
 	<div class="container">
 		<%# 教材詳細表示 %>
 		<div class="row">
-			<div class="col-md-6 col-md-offset-0">
-				<h1>教材詳細</h1>
-			</div>
 		</div>
-		<div class="field row">
-			<%=	@textbook.title %>
+		<h1><%=	@textbook.title %></h1>
 		</div>
 		<div class="field row">
 			<%= @textbook.note %>
@@ -15,9 +11,9 @@
 		<div class="field row">
 			<%= @textbook.status %>
 		</div>
-		<div class="field row">
+		<span class="badge badge-info text-wrap">		
 			<%= @textbook.tag.name %>
-		</div>
+		</span>
 		<%# 編集、消去ボタン %>
 		<div class="row">
 			<div class="col-md-2">
