@@ -43,11 +43,11 @@ $(function () {
         titleFormat: "YYYY年 M月",
         //曜日を日本語表示
         dayNamesShort: ["日", "月", "火", "水", "木", "金", "土"],
-        //ボタンのレイアウト
+        // ヘッダーのタイトルとボタン
         header: {
-          left: "",
+          left: "prev,next today",
           center: "title",
-          right: "today prev,next",
+          right: "month agendaWeek agendaDay",
         },
         //終了時刻がないイベントの表示間隔
         defaultTimedEventDuration: "03:00:00",
@@ -61,7 +61,8 @@ $(function () {
           week: "週",
           day: "日",
         },
-        height: 500,
+        // 高さ(px)
+        height: 400,
         //イベントの時間表示を２４時間に
         timeFormat: "HH:mm",
         //イベントの色を変える
