@@ -11,7 +11,7 @@ Faker::Config.locale = :ja
 
 # level_setting とりあえず10年✖️365日✖️24時間
 [
-  %w[2 2], %w[3 4], %w[4 8], %w[5 16], %w[6 32], %w[7 64], %w[8 128], %w[9 256], %w[10 512], %w[11 1024], %w[12 2028], %w[13 4056], %w[14 8112], %w[15 16224], %w[16 32448], %w[17 64896], %w[18 129792]
+  %w[2 2], %w[3 4], %w[4 8], %w[5 16], %w[6 32], %w[7 64], %w[8 128], %w[9 256], %w[10 512], %w[11 1024], %w[12 2028], %w[13 4056], %w[14 8112], %w[15 16224], %w[16 32448], %w[17 64896], %w[18 129792],%w[19 999999]
 ].each do |level, thresold|
   LevelSetting.create!(
     { level: level, thresold: thresold }
@@ -29,22 +29,36 @@ User.create!(
   password_confirmation: 'password'
 )
 
-# 100.times do |n|
-#     TextBook.create!(
-#         user_id: 1,
-#         textbook_tag_id: ,
-#         title: ,
-#         status: ,
-#         note: ,
-#     )
-# end
+# タグ
+Tag.create!(name: '国語')
+Tag.create!(name: '理科')
+Tag.create!(name: '社会')
+Tag.create!(name: '数学')
+Tag.create!(name: '英語')
 
-# 昨年から２年分の学習時間記録
+# Textbook
+degree = ["基礎","標準","応用","センター"]
+subject = ["国語", "理科", "社会", "数学", "英語"]
+4.times do |n|
+  5.times do |i|
+    title = degree[n] + subject[i] 
+      Textbook.create!(
+          user_id: 1,
+          tag_id: i + 1,
+          title: title,
+          status: Random.rand(0..2),
+          note: 'サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。',
+          book_image: File.open("./app/assets/images/kyoka#{i + 1}.gif")
+      )
+  end
+end
+
+# StudyTime 昨年から２年分の学習時間仮作成
 (1..730).each do |i|
   StudyTime.create!(
     user_id: 1,
     time: Random.rand(1..11),
-    comment: 'コメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメントコメント',
+    comment: 'コメント。コメント。コメント。コメント。コメント。コメント。コメント。コメント。',
     created_at: Time.current.prev_year + i * 3600 * 24
   )
 end
@@ -73,4 +87,16 @@ kana_first_names = %W[\u30B7\u30E7\u30A6\u30BF \u30EC\u30F3 \u30B7\u30E7\u30A6 \
     password: 'password',
     password_confirmation: 'password'
   )
+end
+
+# 各ユーザー  StudyTime 習時間仮作成
+(1..50).each do |n|
+  (1..500).each do |i|
+    StudyTime.create!(
+      user_id: n,
+      time: Random.rand(1..8),
+      comment: 'コメント。コメント。コメント。コメント。コメント。コメント。コメント。コメント。コメント。コメント。コメント。',
+      created_at: Time.current.prev_year + i * 3600 * 24
+    )
+  end
 end

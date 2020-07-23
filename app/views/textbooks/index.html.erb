@@ -1,33 +1,15 @@
-<div class="container">
+<div class="container">	
 	<%# 教材一覧表示 %>
 	<div class="row">
-		<table class="table table-hover table-bordered"  BORDER='2' style="table-layout:fixed;width:100%;" >
-			<thead>
-				<tr class="active">
-					<th>タイトル</th>
-					<th>メモ</th>
-					<th>教材状況</th>
-					<th colspan="1"></th>
-				</tr>
-			</thead>
-			<tbody>
-			<% @textbooks.each do |textbook| %>
-				<tr>
-					<td><%= textbook.title %></td>
-					<td><%= textbook.note %></td>
-					<td><%= textbook.status %></td>
-					<td><strong><%= link_to '詳細', textbook_path(textbook.id) %></strong></td>
-				</tr>
-			<% end %>
-			</tbody>
-		</table>
+        <%= render 'textbooks/textbook_box' %>
     </div>
-	<br>
+
+<br>
+	<div class="row">
+		<div class="col-md-12">
 	<%# 教材一覧ページネーション %>
 	<%= paginate(@textbooks) %>
 	<%# 教材追加ボタン %>
-	<div class="row">
-		<div class="col-md-12">
 			<%= link_to '教材を追加', new_textbook_path, class:"btn btn-success form-control" %>	
 		</div>
 	</div>
