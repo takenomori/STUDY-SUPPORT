@@ -7,20 +7,17 @@ class EventsController < ApplicationController
     ## レベルアップシステム
     user = User.find(current_user.id)
     user.experience_point = StudyTime.where(user_id: current_user.id).sum(:time)
-    user.update(experience_point: user.experience_point)
     # 経験値を更新
-
-    levelSetting = LevelSetting.find_by(level: user.level + 1)
+    user.update(experience_point: user.experience_point)
     # levelsettingモデルから、自分のレベルより1高いレコードを探す
-
+    levelSetting = LevelSetting.find_by(level: user.level + 1)
+    # 探してきたレコードの閾値よりもユーザーの総経験値が高かった場合
     if levelSetting.thresold <= user.experience_point
-      # 探してきたレコードの閾値よりもユーザーの総経験値が高かった場合
+      # レベルを1増やして更新
       user.level = user.level + 1
       user.update(level: user.level)
-      # レベルを1増やして更新
     end
     ##
-
     levelSetting = LevelSetting.find_by(level: user.level + 1)
     levelSetting.thresold -= user.experience_point
     @user_experience = levelSetting.thresold
