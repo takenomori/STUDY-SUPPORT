@@ -20,10 +20,10 @@ end
 
 # テストユーザー1
 User.create!(
-  last_name: '支援',
-  first_name: '勉強',
-  kana_first_name: 'シエン',
-  kana_last_name: 'ベンキョウ',
+  last_name: 'ゲスト',
+  first_name: 'ユーザー',
+  kana_first_name: 'ゲスト',
+  kana_last_name: 'ユーザー',
   email: 'guest@mail.com',
   password: 'password',
   password_confirmation: 'password'
