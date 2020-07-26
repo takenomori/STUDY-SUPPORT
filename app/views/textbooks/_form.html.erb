@@ -7,17 +7,17 @@
   </div>
   <div class="field row">
     <%= f.label :note, "メモ" %>
-    <%= f.text_area :note, class: 'col-xs-12 book_body'%>
+    <%= f.text_area :note, class: 'col-xs-12 book_memo'%>
   </div>
 
   <div class="field row">
     <%= f.label :tag, "タグ" %>
-    <%= f.text_area :tag, class: 'col-xs-12 book_body' %>
+    <%= f.text_area :tag, class: 'col-xs-12 book_tag' %>
   </div>
 
   <div class="field row">
     <%= f.label :status, '教材状況' %>
-    <%= f.select :status, Textbook.statuses.keys, class: 'col-xs-12 book_body' %>
+    <%= f.select :status, Textbook.statuses.keys, class: 'col-xs-12 book_status' %>
   </div>
 
   <div class="actions row">
