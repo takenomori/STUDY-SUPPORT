@@ -97,57 +97,57 @@ li {
   color: white;
 }
 
-/* _textbook_box.html.erb
-/* タブエリアのdivへの適用 */
-#smallArea {
-  /* 基本的なサイズの設定 */
-  background-color: #bbedce;
-  //   width: 80px;
-  //   height: 26px;
-  //   padding-top: 4px;
+// /* _textbook_box.html.erb
+// /* タブエリアのdivへの適用 */
+// #smallArea {
+//   /* 基本的なサイズの設定 */
+//   background-color: #bbedce;
+//   //   width: 80px;
+//   //   height: 26px;
+//   //   padding-top: 4px;
 
-  /* borderに関する設定 */
-  border: 1px solid; /* 線の太さと可視化 */
-  border-bottom: transparent; /* 下辺を透明に */
-  border-top-left-radius: 8px; /* 左上を角丸に */
-  border-top-right-radius: 8px; /* 右上を角丸に */
+//   /* borderに関する設定 */
+//   border: 1px solid; /* 線の太さと可視化 */
+//   border-bottom: transparent; /* 下辺を透明に */
+//   border-top-left-radius: 8px; /* 左上を角丸に */
+//   border-top-right-radius: 8px; /* 右上を角丸に */
 
-  /* メイン表示エリアの線の太さだけ下にずらす */
-  margin-bottom: -1px;
+//   /* メイン表示エリアの線の太さだけ下にずらす */
+//   margin-bottom: -1px;
 
-  /* その他の設定 */
-  position: relative;
-  text-align: center;
-}
+//   /* その他の設定 */
+//   position: relative;
+//   text-align: center;
+// }
 
-/* メイン表示エリアのdivへの適用 */
-#largeArea {
-  /* 基本的なサイズの設定 */
-  background-color: #fff;
-  //   width: 200px;
-  //   height: 40px;
-  //   padding: 20px;
+// /* メイン表示エリアのdivへの適用 */
+// #largeArea {
+//   /* 基本的なサイズの設定 */
+//   background-color: #fff;
+//   //   width: 200px;
+//   //   height: 40px;
+//   //   padding: 20px;
 
-  /* 枠線を太さ1pxで表示 */
-  border: 1px solid;
-  border-bottom-left-radius: 8px; /* 左下を角丸に */
-  border-bottom-right-radius: 8px; /* 右下を角丸に */
-}
+//   /* 枠線を太さ1pxで表示 */
+//   border: 1px solid;
+//   border-bottom-left-radius: 8px; /* 左下を角丸に */
+//   border-bottom-right-radius: 8px; /* 右下を角丸に */
+// }
 
-/* メイン表示エリアのdivへの適用 */
-#underArea {
-  /* 基本的なサイズの設定 */
-  background-color: #fff;
-  //   width: 200px;
-  //   height: 40px;
-  //   padding: 20px;
+// /* メイン表示エリアのdivへの適用 */
+// #underArea {
+//   /* 基本的なサイズの設定 */
+//   background-color: #fff;
+//   //   width: 200px;
+//   //   height: 40px;
+//   //   padding: 20px;
 
-  //   /* 枠線を太さ1pxで表示 */
-  //   border: 1px solid;
-}
+//   //   /* 枠線を太さ1pxで表示 */
+//   //   border: 1px solid;
+// }
 
-/* コンテンツを見やすく表示 */
-.disp-area {
-  margin-top: 20px;
-  margin-left: 20px;
-}
+// /* コンテンツを見やすく表示 */
+// .disp-area {
+//   margin-top: 20px;
+//   margin-left: 20px;
+// }
