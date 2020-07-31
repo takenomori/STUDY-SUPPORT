@@ -1,27 +1,27 @@
 <table class="table table-hover table-bordered"  BORDER='2' style="table-layout:fixed;width:100%;" >
-    <thead>
-        <tr class="active">
-            <th>タイトル</th>
-            <th>メモ</th>
-            <th>教材状況</th>
-            <th colspan="1"></th>
-        </tr>
-    </thead>
-    <tbody>
-        <% @textbooks.each do |textbook| %>
-            <tr>
-                <td><%= textbook.title %></td>
-                <td><%= textbook.note %></td>
-                <td><%= textbook.status %></td>
-                <td>
-                    <strong><%= link_to '詳細', textbook_path(textbook.id) %></strong>
-                    <span class="badge badge-info text-wrap">
-                        <%= textbook.tag.name %>
-                    </span>
-                </td>
-            </tr>
-        <% end %>
-    </tbody>
+	<thead>
+			<tr class="active">
+					<th>タイトル</th>
+					<th>メモ</th>
+					<th>教材状況</th>
+					<th colspan="1"></th>
+			</tr>
+	</thead>
+	<tbody>
+			<% @textbooks.each do |textbook| %>
+					<tr>
+							<td><%= textbook.title %></td>
+							<td><%= textbook.note %></td>
+							<td><%= textbook.status %></td>
+							<td>
+									<strong><%= link_to '詳細', textbook_path(textbook.id) %></strong>
+									<span class="badge badge-info text-wrap">
+											<%= textbook.tag.name %>
+									</span>
+							</td>
+					</tr>
+			<% end %>
+	</tbody>
 </table>
 
 <%
