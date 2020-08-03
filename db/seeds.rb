@@ -24,7 +24,7 @@ User.create!(
   first_name: 'ユーザー',
   kana_first_name: 'ゲスト',
   kana_last_name: 'ユーザー',
-  email: 'guest@mail.com',
+  email: 'guest@example.com',
   password: 'password',
   password_confirmation: 'password'
 )
