@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# Faker日本語設定z
+# Faker日本語設定
 Faker::Config.locale = :ja
 
 # level_setting とりあえず10年✖️365日✖️24時間
@@ -24,7 +24,7 @@ User.create!(
   first_name: 'ユーザー',
   kana_first_name: 'ゲスト',
   kana_last_name: 'ユーザー',
-  email: 'guest@mail.com',
+  email: 'guest@example.com',
   password: 'password',
   password_confirmation: 'password'
 )

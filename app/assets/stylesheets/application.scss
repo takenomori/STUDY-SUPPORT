@@ -38,16 +38,23 @@ h6 {
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, "游ゴシック体", "Yu Gothic",
     YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, "Open Sans", sans-serif;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  margin: 0px;
+  -webkit-text-size-adjust: 100%;
 }
+
+.hwrapper {
+  width: 100%;
+  background-color: #ffffff;
+}
+
 .header {
-  height: 70px;
+  margin: auto;
+  max-width: 800px;
+  padding: 10px;
   display: flex;
   align-items: center;
-  background-color: #fff;
 }
+
 nav {
   margin: 0 0 0 auto;
 }
@@ -60,6 +67,7 @@ li {
   margin: 0 0 0 15px;
   font-size: 14px;
 }
+
 .glovalNavigation {
   margin: 0px;
   padding: 15px;
@@ -69,28 +77,86 @@ li {
   text-align: center;
 }
 
-.content {
-  flex: 1;
+.container {
+  margin: auto;
+  max-width: 800px;
   background-color: #fff;
-  // text-align: center;
-  margin: 10px 0 10px 0;
-}
-// .localNavigation{
-// 	height: 70px;
-// 	text-align: center;
-// 	background-color: #888;
-// 	color: #fff;
-// }
-.footer {
-  height: 70px;
-  text-align: center;
-  background-color: rgb(230, 230, 245);
+  padding: 10px;
 }
 
+.fwrapper {
+  width: 100%;
+  background-color: #222;
+}
+
+.footer {
+  margin: auto;
+  max-width: 800px;
+  padding: 10px; /*これを書かないとフッターの下に余白ができてしまう*/
+  //   // height: 70px;
+  //   text-align: center;
+}
+
+// body {
+//   font-family: "Helvetica Neue", Helvetica, Arial, "游ゴシック体", "Yu Gothic",
+//     YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, "Open Sans", sans-serif;
+//     min-height: 100vh;
+//     display: flex;
+//     flex-direction: column;
+//     background-color: #eeeeee;
+// }
+// .header {
+//   height: 70px;
+//   display: flex;
+//   align-items: center;
+//   background-color: #fff;
+// }
+// nav {
+//   margin: 0 0 0 auto;
+// }
+// ul {
+//   list-style: none;
+//   margin: 0;
+//   display: flex;
+// }
+// li {
+//   margin: 0 0 0 15px;
+//   font-size: 14px;
+// }
+// .glovalNavigation {
+//   margin: 0px;
+//   padding: 15px;
+//   position: relative;
+//   border-bottom: #dddddd solid 1px;
+//   border-top: #dddddd solid 1px;
+//   text-align: center;
+// }
+
+// .content {
+//   flex: 1;
+//   background-color: #fff;
+//   // text-align: center;
+//   margin: 10px 0 10px 0;
+// }
+// // .localNavigation{
+// // 	height: 70px;
+// // 	text-align: center;
+// // 	background-color: #888;
+// // 	color: #fff;
+// // }
+// .footer {
+//   // height: 70px;
+//   margin: auto;
+//   max-width: 800px;
+//   padding: 10px; /*これを書かないとフッターの下に余白ができてしまう*/
+//   text-align: center;
+//   background-color: rgb(230, 230, 245);
+// }
+
 .front-image {
-  width: 98%;
-  height: 700px;
-  background-image: image-url("study.image.jpg");
+  width: 100%;
+  height: 300px;
+  background-image: image-url("book-168824_1920-400x270-MM-100.jpg");
   background-size: cover;
 }
 .front-image h1 {

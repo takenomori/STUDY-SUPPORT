@@ -3,14 +3,69 @@
   <head>
     <title>STUDY-SUPPORT</title>
     <%= favicon_link_tag('favicon.png') %>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+
+<%# <meta name="viewport" content="width=device-width, initial-scale=1.0"> %>
+
+    <%#= csrf_meta_tags %>
+    <%#= csp_meta_tag %>
+
     <!--gem gon chart.jsで使用-->
     <%= Gon::Base.render_data %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+<body>
+  <div class="hwrapper">
+    <div class="header">
+      <%= image_tag 'header.png', width: 100, height: 70 %>
+        <nav class="headerNavigation">
+          <ul>
+            <%# ログインしている場合 %>
+            <% if user_signed_in? %>
+            <li><strong><%= link_to "　トップページ　", root_path %></strong></li>
+            <li><strong><%= link_to "　ログアウト　", destroy_user_session_path, method: :delete%></strong></li>
+            <%# ログインしていない場合 %>
+            <% else %>
+              <li><%= link_to "　トップページ　", root_path %></li>
+              <li><%= link_to "　新規登録　", new_user_registration_path %></li>
+              <li><%= link_to "　ログイン　", new_user_session_path%></li>
+            <% end %>
+          </ul>
+        </nav>
+    </div>
+    <div class="glovalNavigation">
+      <div class="row">
+        <div class="col-md-12">
+          <%# ログインしている場合 %>
+          <% if user_signed_in? %>
+            <strong><%= link_to "　　本棚　　", textbooks_path%></strong>
+            <strong><%= link_to "　　メインページ　　", events_path%></strong>
+            <strong><%= link_to "　　マイページ　　", user_path(current_user.id) %></strong>
+          <%# ログインしていない場合 %>
+          <% else %>
+          <% end %>    
+        </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </div>
+
+  <div class="fwrapper">
+    <div class="footer">
+      <p> 制作日 2020.06 </p>
+      <small class="introduction">ポートフォリオ制作　　　製作者.Moriai Takeru</small>
+    </div>
+  </div>
+</body>
+
+<%
+=begin
+%>
   <body>
     <div class="container">
 
@@ -71,5 +126,8 @@
       </footer>
 
   </body>
+  <%
+=end
+%>
 
 </html>

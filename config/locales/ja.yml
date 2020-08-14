@@ -60,6 +60,11 @@ ja:
       unlocked: "アカウントを凍結解除しました。"
   views:
     pagination:
+      # first: "&laquo; 最初"
+      # last: "最後 &raquo;"
+      # previous: "&lsaquo; 前"
+      # next: "次 &rsaquo;"
+      # truncate: "..."
       first: "<<"
       last: ">>"
       previous: "<"
