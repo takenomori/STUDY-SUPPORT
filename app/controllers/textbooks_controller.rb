@@ -11,10 +11,10 @@ class TextbooksController < ApplicationController
     @textbook = Textbook.new(textbook_params)
     @textbook.user_id = current_user.id
     if @textbook.save
-      redirect_to textbook_path(current_user.id), success: '登録されました'
+      redirect_to textbook_path(current_user.id), success: '作成されました'
     else
       @textbook = Textbook.new
-      render action: :new, danger: '登録に失敗しました'
+      render action: :new, danger: '作成に失敗しました'
     end
   end
 
