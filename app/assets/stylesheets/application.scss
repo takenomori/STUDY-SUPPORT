@@ -81,7 +81,16 @@ li {
   margin: auto;
   max-width: 800px;
   background-color: #fff;
-  padding: 10px;
+}
+
+.localNavigation {
+  margin: 0px;
+  padding: 15px;
+  position: relative;
+  border-bottom: #dddddd solid 1px;
+  border-top: #dddddd solid 1px;
+  text-align: center;
+  background-color: #fff;
 }
 
 .fwrapper {
@@ -91,10 +100,21 @@ li {
 
 .footer {
   margin: auto;
+  height: 40px;
   max-width: 800px;
   padding: 10px; /*これを書かないとフッターの下に余白ができてしまう*/
-  //   // height: 70px;
-  //   text-align: center;
+  font-size: 80%;
+  color: #888;
+  text-align: center;
+}
+
+.copyright {
+  border-top: 1px solid #888;
+  text-align: right;
+  margin: 20px auto 0;
+  padding: 10px 0;
+  font-size: 0.85em;
+  color: #888;
 }
 
 // body {
@@ -138,12 +158,12 @@ li {
 //   // text-align: center;
 //   margin: 10px 0 10px 0;
 // }
-// // .localNavigation{
-// // 	height: 70px;
-// // 	text-align: center;
-// // 	background-color: #888;
-// // 	color: #fff;
-// // }
+// .localNavigation {
+//   height: 70px;
+//   text-align: center;
+//   background-color: #888;
+//   color: #fff;
+// }
 // .footer {
 //   // height: 70px;
 //   margin: auto;
@@ -153,14 +173,38 @@ li {
 //   background-color: rgb(230, 230, 245);
 // }
 
+/*トップページ画像のデザイン*/
 .front-image {
   width: 100%;
-  height: 300px;
-  background-image: image-url("book-168824_1920-400x270-MM-100.jpg");
+  height: 500px;
+  background-image: image-url("study.image.jpg");
   background-size: cover;
 }
+
 .front-image h1 {
   color: white;
+}
+
+/*ページネーションを中央に*/
+.text-center {
+  text-align: center;
+}
+
+/*ページネーション自体のデザイン*/
+.pagination > li > a {
+  border: none; /*枠線をなくす*/
+  color: #696969; /*文字の色を変える*/
+}
+
+/* 表示しているページ番号のデザイン */
+.pagination > .active > a {
+  background: #93c9ff; /*背景の色を変える*/
+  border-radius: 15px; /*角を丸くする*/
+}
+
+/*ホバー時のデザイン*/
+.pagination > li > a:hover {
+  border-radius: 15px; /*角を丸くする*/
 }
 
 // /* _textbook_box.html.erb

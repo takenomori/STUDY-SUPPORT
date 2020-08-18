@@ -1,14 +1,20 @@
 <div class="container">	
+			<div class="text-center">
+				<%# 教材一覧ページネーション %>
+				<%= paginate(@textbooks) %>
+			</div>
 	<%# 教材一覧表示 %>
 	<div class="row">
         <%= render 'textbooks/textbook_box' %>
     </div>
-<br>
+	<br>
 	<div class="row">
 		<div class="col-md-12">
-	<%# 教材一覧ページネーション %>
-	<%= paginate(@textbooks) %>
-	<%# 教材追加ボタン %>
+			<div class="text-center">
+				<%# 教材一覧ページネーション %>
+				<%= paginate(@textbooks) %>
+			</div>
+			<%# 教材追加ボタン %>
 			<%= link_to '教材を追加', new_textbook_path, class:"btn btn-success form-control" %>	
 		</div>
 	</div>
