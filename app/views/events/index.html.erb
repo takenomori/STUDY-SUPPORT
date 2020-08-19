@@ -49,45 +49,6 @@
   <div class="row">
     <%# カレンダー、予定一覧 %>
     <div class="col-md-12">
-<%
-=begin
-%>
-      <table class="table table-hover table-bordered"  BORDER='2' style="table-layout:fixed;width:100%;" >
-        <thead>
-          <tr class="active">
-            <th>予定</th>
-            <th>内容</th>
-            <th>開始時間</th>
-            <th>終了時間</th>
-					<th colspan="1"></th>
-          </tr>
-        </thead>
-        <tbody>
-          <% @events.each do |event| %>
-            <tr>
-              <td>
-                <%= event.title %>
-              </td>
-              <td>
-                <%= event.description %>
-              </td>
-              <td>
-                <%= event.start_date.strftime("%Y/%m/%d %H:%M") %>
-              </td>
-              <td>
-                <%= event.end_date.strftime("%Y/%m/%d %H:%M") %>
-              </td>
-              <td>
-                <strong><%= link_to '詳細', event_path(event.id) %></strong>
-              </td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
-<%
-=end
-%>
-
       <%= link_to '新しい予定', new_event_path, class:"btn btn-success form-control" %>	
     </div>
   </div>
