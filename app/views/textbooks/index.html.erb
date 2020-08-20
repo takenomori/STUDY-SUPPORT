@@ -1,8 +1,8 @@
 <div class="container">	
-			<div class="text-center">
-				<%# 教材一覧ページネーション %>
-				<%= paginate(@textbooks) %>
-			</div>
+		<div class="text-center">
+			<%# 教材一覧ページネーション %>
+			<%= paginate(@textbooks) %>
+		</div>
 	<%# 教材一覧表示 %>
 	<div class="row">
         <%= render 'textbooks/textbook_box' %>
@@ -10,8 +10,8 @@
 	<br>
 	<div class="row">
 		<div class="col-md-12">
+			<%# 教材一覧ページネーション %>
 			<div class="text-center">
-				<%# 教材一覧ページネーション %>
 				<%= paginate(@textbooks) %>
 			</div>
 			<%# 教材追加ボタン %>
