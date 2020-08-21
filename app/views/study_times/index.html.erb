@@ -11,11 +11,11 @@
 			</thead>
 			<tbody>
                 <% @study_times.each do |study_time| %>
-				<tr>
+					<tr>
 					<td><%= study_time.created_at.strftime("%Y/%m/%d") %></td>
 					<td><%= study_time.time %>　(h)</td>
 					<td><%= study_time.comment %></td>
-			<% end %>
+				<% end %>
 			</tbody>
 		</table>
     </div>
