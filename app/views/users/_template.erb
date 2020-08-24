@@ -3,10 +3,8 @@
   　次のレベルまで残り　<%= @user_experience %>時間
 </div>
 <div style="border:1px solid #3D58A8;padding:10px;">
-  <%= attachment_image_tag @user, :image, format: 'jpg', fallback: "no-image.gif", size:'100' %>
+  <%= attachment_image_tag @user, :image, format: 'jpg', fallback: "no-image.gif", size:'100', class: "UserIcon-image" %>
   <%= @user.last_name %>
   <%= @user.first_name %> 
   <%= @user.email %>
 </div>
-
-
