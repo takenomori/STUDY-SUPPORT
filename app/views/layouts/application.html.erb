@@ -15,7 +15,7 @@
     <!-- Bootstrap JavaScript読み込みコード-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
-
+  
   <body>
     <div class="hwrapper">
       <div class="header">
@@ -37,6 +37,7 @@
           </ul>
         </nav>
       </div>
+
       <div class="glovalNavigation">
         <div class="row">
           <div class="col-md-12">
@@ -52,11 +53,10 @@
         </div>
       </div>
     </div>
-  <%# <div class="jumbotron"> %>
+
     <div class="container">
       <%= yield %>
     </div>
-  <%# </div> %>
 
     <div class="fwrapper">
     <!-- 
@@ -76,18 +76,19 @@
       </div>
       -->
       <div class="footer">
-          当サイトは、2ヶ月ほどプログラムミングを学んだ技術をもとに作成したポートフォリオとなっております。
+        当サイトは学習教材・時間・日程を管理を補助するサイトです。
       </div>
+
       <div class="copyright">
         NO Right Reserved.
       </div>
     </div>
   </body>
+</html>
 
 <!--
   <body>
     <div class="container">
-
       <header class="header">
         <%= image_tag 'header.png', width: 100, height: 70 %>
         <nav class="headerNavigation">
@@ -105,7 +106,6 @@
           </ul>
         </nav>
       </header>
-
       <div class="glovalNavigation">
         <div class="row">
           <div class="col-md-12">
@@ -119,7 +119,6 @@
             <% end %>    
           </div>
         </div>
-        
         <div class="row">
           <div class="col-md-12">
             <% flash.each do |key, value| %>
@@ -130,21 +129,15 @@
           </div>
         </div>
       </div>
-
       <div class="content">
         <%= yield %>
       </div>
-
       <%# <div class="localNavigation">
           <p>ローカルナビゲーション</p>
       </div> %>
-
       <footer class="footer">
           <p> 制作日 2020.06 </p>
           <small class="introduction">ポートフォリオ制作　　　製作者.Moriai Takeru</small>
       </footer>
-
   </body>
 -->
-
-</html>
