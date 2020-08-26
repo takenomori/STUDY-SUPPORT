@@ -15,7 +15,7 @@
     <!-- Bootstrap JavaScript読み込みコード-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
-  
+
   <body>
     <div class="hwrapper">
       <div class="header">
@@ -26,13 +26,13 @@
           <ul>
             <!-- ログインしている場合 -->
             <% if user_signed_in? %>
-            <li><strong><%= link_to "　トップページ　", root_path %></strong></li>
-            <li><strong><%= link_to "　ログアウト　", destroy_user_session_path, method: :delete%></strong></li>
+              <li><strong><%= link_to "　トップページ　", root_path %></strong></li>
+              <li><strong><%= link_to "　ログアウト　", destroy_user_session_path, method: :delete%></strong></li>
             <!-- ログインしていない場合 -->
             <% else %>
-              <li><%= link_to "　トップページ　", root_path %></li>
-              <li><%= link_to "　新規登録　", new_user_registration_path %></li>
-              <li><%= link_to "　ログイン　", new_user_session_path%></li>
+              <li><strong><%= link_to "　トップページ　", root_path %></strong></li>
+              <li><strong><%= link_to "　新規登録　", new_user_registration_path %></strong></li>
+              <li><strong><%= link_to "　ログイン　", new_user_session_path%></strong></li>
             <% end %>
           </ul>
         </nav>
