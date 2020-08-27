@@ -1,26 +1,24 @@
-<div class="container">
-	<%# 学習時間一覧 %>
-    <div class="row">
-		<table class="table table-hover table-bordered"  BORDER='2' style="table-layout:fixed;width:100%;" >
-			<thead>
-				<tr class="active">
-					<th>記録日</th>
-					<th>学習時間</th>
-					<th>内容</th>
-				</tr>
-			</thead>
-			<tbody>
-                <% @study_times.each do |study_time| %>
-					<tr>
-					<td><%= study_time.created_at.strftime("%Y/%m/%d") %></td>
-					<td><%= study_time.time %>　(h)</td>
-					<td><%= study_time.comment %></td>
-				<% end %>
-			</tbody>
-		</table>
-    </div>
-	<div class="text-center">
-		<%# 学習時間一覧ページネーション %>
-		<%= paginate(@study_times) %>
-	</div>
+<%# 学習時間一覧 %>
+<div class="row">
+	<table class="table table-hover table-bordered"  BORDER='2' style="table-layout:fixed;width:100%;" >
+		<thead>
+			<tr class="active">
+				<th>記録日</th>
+				<th>学習時間</th>
+				<th>内容</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @study_times.each do |study_time| %>
+				<tr>
+				<td><%= study_time.created_at.strftime("%Y/%m/%d") %></td>
+				<td><%= study_time.time %>　(h)</td>
+				<td><%= study_time.comment %></td>
+			<% end %>
+		</tbody>
+	</table>
+</div>
+<div class="text-center">
+	<%# 学習時間一覧ページネーション %>
+	<%= paginate(@study_times) %>
 </div>
