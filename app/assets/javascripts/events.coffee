@@ -36,8 +36,8 @@ window.draw_graph = ->
             ]
         },
         options: {
-            responsive: true,
-            maintainAspectRatio: false
+            responsive: false,
+            maintainAspectRatio: true,
             title: {
                 display: false,
                 text: '勉強時間', #グラフの見出し#
