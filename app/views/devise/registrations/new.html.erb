@@ -8,16 +8,14 @@
       <div class="form-group">
         <div class="col-xs-3">
           <span><b>名前</b></span>
-            <%= f.label :last_name, "(姓)", style: "float: right;" %>
         </div>
 
         <div class="col-xs-4">
-          <%= f.text_field :last_name, autofocus: true, placeholder: "(例)勉強" %>
-          <%= f.label :first_name, "(名)", style: "float: right;" %>
+          <%= f.text_field :last_name, autofocus: true, placeholder: "姓" %>
         </div>
 
         <div class="col-xs-4">
-          <%= f.text_field :first_name, placeholder: "(例)援助" %>
+          <%= f.text_field :first_name, placeholder: "名" %>
         </div>
       </div>
     </div>
@@ -27,16 +25,14 @@
       <div class="form-group">
         <div class="col-xs-3">
           <span><b>フリガナ</b></span>
-            <%= f.label :kana_last_name, "(セイ)", style: "float: right;" %>
         </div>
 
         <div class="col-xs-4">
-          <%= f.text_field :kana_last_name, autofocus: true, placeholder: "(例)ベンキョウ" %>
-          <%= f.label :kana_first_name, "(メイ)", style: "float: right;" %>
+          <%= f.text_field :kana_last_name, autofocus: true, placeholder: "セイ" %>
         </div>
 
         <div class="col-xs-4">
-          <%= f.text_field :kana_first_name, placeholder: "(例)エンジョ" %>
+          <%= f.text_field :kana_first_name, placeholder: "メイ" %>
         </div>
       </div>
     </div>
@@ -89,6 +85,8 @@
   <% end %>
 </div>
 
+<br>
+
 <div class="text-left">
   <p style="font-size: 15px">
     登録がお済みの方は
@@ -98,3 +96,5 @@
 <div class="text-left">
   <%= link_to "こちら", user_session_path %>からログインを行なってください。
 </div>
+<br>
+<br>
