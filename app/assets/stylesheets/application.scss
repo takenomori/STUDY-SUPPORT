@@ -49,7 +49,7 @@ body {
 
 .header {
   margin: auto;
-  max-width: 800px;
+  max-width: 1000px;
   padding: 10px;
   display: flex;
   align-items: center;
@@ -79,7 +79,7 @@ li {
 
 .container {
   margin: auto;
-  max-width: 800px;
+  max-width: 1000px;
   background-color: #fff;
 }
 
@@ -101,7 +101,7 @@ li {
 .footer {
   margin: auto;
   height: 40px;
-  max-width: 800px;
+  max-width: 1000px;
   padding: 10px; /*これを書かないとフッターの下に余白ができてしまう*/
   font-size: 80%;
   color: #888;

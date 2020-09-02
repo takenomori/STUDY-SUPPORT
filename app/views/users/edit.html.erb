@@ -8,39 +8,54 @@
 <%# フォーム %>
 <%= form_for(@user) do |f| %>
   <%= render 'layouts/error_messages', model: f.object %>
+    <div class="item-image">
+      <%= attachment_image_tag @user, :image, fallback: "no-image.gif", size:'250x250', class: "UserIcon-image" %>
+    </div>
+    <div class="image">
+      <%= f.attachment_field :image, placeholder: "画像" %>
+    </div>
+
+    <script>
+      $(function(){
+        // inputのidから情報の取得
+        $('#item_image').on('change', function (e) {
+          // ここから既存の画像のurlの取得
+          var reader = new FileReader();
+          reader.onload = function (e) {
+              $(".image").attr('src', e.target.result);
+          }
+          // ここまで
+          reader.readAsDataURL(e.target.files[0]); //取得したurlにアップロード画像のurlを挿入
+        });
+      });
+    </script>
+
   <div class="field row">
-    <%= attachment_image_tag @user, :image, format: 'jpg', fallback: "no-image.gif", size:'250x250', class: "UserIcon-image " %>
-    <%= f.attachment_field :image, direct: true %>
+    <%= f.label :email, 'メールアドレス', class: 'col-md-2' %>
+    <%= f.text_field :email, class: 'col-md-10' %>
   </div>
 
   <div class="field row">
-    <%= f.label :email, 'メールアドレス' %>
-    <%= f.text_field :email, class: 'col-md-12 user_email' %>
+    <%= f.label :last_name, '　　　姓　　　', class: 'col-md-2' %>
+    <%= f.text_area :last_name, class: 'col-md-10'%>
   </div>
 
   <div class="field row">
-    <%= f.label :last_name, '姓' %>
-    <%= f.text_area :last_name, class: 'col-md-12 user_last_name'%>
+    <%= f.label :first_name, '　　　名　　　' , class: 'col-md-2'%>
+    <%= f.text_area :first_name, class: 'col-md-10'%>
   </div>
 
   <div class="field row">
-    <%= f.label :first_name, '名' %>
-    <%= f.text_area :first_name, class: 'col-md-12 user_first_name'%>
+    <%= f.label :kana_last_name, '　　　セイ　　', class: 'col-md-2' %>
+    <%= f.text_area :kana_last_name, class: 'col-md-10' %>
   </div>
 
   <div class="field row">
-    <%= f.label :kana_last_name, 'セイ' %>
-    <%= f.text_area :kana_last_name, class: 'col-md-12 user_kana_last_name' %>
+    <%= f.label :kana_first_name, '　　　メイ　　', class: 'col-md-2' %>
+    <%= f.text_area :kana_first_name, class: 'col-md-10' %>
   </div>
 
-  <div class="field row">
-    <%= f.label :kana_first_name, 'メイ' %>
-    <%= f.text_area :kana_first_name, class: 'col-xs-md user_kana_first_name' %>
-  </div>
-
-  <div class="actions row">
-    <%= f.submit class: 'btn btn-primary col-md-12'%>
-  </div>
+    <%= f.submit class: 'btn btn-primary col-md-3'%>
 <% end %>
 
 <%# 退会ボタン %>
