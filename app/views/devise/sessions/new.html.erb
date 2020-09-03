@@ -4,35 +4,35 @@
       <p style="font-size: 15px">
         会員の方はこちらからログイン
       </p>
+      <br>
     </div>
-    <br>
 
     <div>
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <div class="text-right">
-        <%= f.label :email, "メールアドレス" %>
-        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-      </div>
-      <br>
+        <div class="text-right">
+          <%= f.label :email, "メールアドレス" %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        </div>
+        <br>
 
-      <div class="text-right">
-        <%= f.label :password, "パスワード" %>
-        <%= f.password_field :password, autocomplete: "current-password" %>
-      </div>
+        <div class="text-right">
+          <%= f.label :password, "パスワード" %>
+          <%= f.password_field :password, autocomplete: "current-password" %>
+        </div>
 
-      <div class="text-right">
-        <%= link_to "⇒パスワードを忘れた方はこちら", new_password_path(resource_name) %>
-      </div>
-      <br>
-      
-      <div class="text-center">
-        <%= f.submit "ログイン", class: "btn btn-primary" %>
-      </div>
+        <div class="text-right">
+          <%= link_to "⇒パスワードを忘れた方はこちら", new_password_path(resource_name) %>
+        </div>
+        <br>
+        
+        <div class="text-center">
+          <%= f.submit "ログイン", class: "btn btn-primary" %>
+        </div>
       <% end %>
+      <br>
+      <br>
+      <br>
     </div>
-    <br>
-    <br>
-    <br>
 
     <div class="text-left">
       <p style="font-size: 15px">

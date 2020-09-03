@@ -43,6 +43,7 @@
         <div class="col-xs-3">
           <%= f.label :email, "メールアドレス" %>
         </div>
+
         <div class="col-xs-4">
           <%= f.email_field :email, placeholder: "(例)sample@example.com" %>
         </div>
@@ -55,6 +56,7 @@
         <div class="col-xs-3">
           <%= f.label :password, "パスワード(6文字以上)" %>
         </div>
+
         <div class="col-xs-4">
           <%= f.password_field :password, placeholder: "パスワード" %>
         </div>
@@ -67,6 +69,7 @@
         <div class="col-xs-3">
           <%= f.label :password_confirmation, "パスワード(確認用)" %>
         </div>
+
         <div class="col-xs-4">
           <%= f.password_field :password_confirmation, placeholder: "パスワード確認用" %>
         </div>
@@ -84,7 +87,6 @@
     </div>
   <% end %>
 </div>
-
 <br>
 
 <div class="text-left">
