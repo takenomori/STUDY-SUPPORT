@@ -36,6 +36,9 @@
 - Bootstrap, jQuery
 - その他 gem
 
+<!-- ### テストの確認方法 -->
+<!-- rspec -->
+
 ### 機能一覧
 
 https://docs.google.com/spreadsheets/d/1bA42QbMgT3bWOHPbRyIiFXhN-48xaL2RX58cjw6TnaI/edit#gid=0
