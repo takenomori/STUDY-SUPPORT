@@ -8,27 +8,28 @@
 <%# フォーム %>
 <%= form_for(@user) do |f| %>
   <%= render 'layouts/error_messages', model: f.object %>
-    <div class="item-image">
-      <%= attachment_image_tag @user, :image, fallback: "no-image.gif", size:'250x250', class: "UserIcon-image" %>
-    </div>
-    <div class="image">
-      <%= f.attachment_field :image, placeholder: "画像" %>
-    </div>
+  <div class="item-image">
+    <%= attachment_image_tag @user, :image, fallback: "no-image.gif", size:'250x250', class: "UserIcon-image" %>
+  </div>
+  
+  <div class="image">
+    <%= f.attachment_field :image, placeholder: "画像" %>
+  </div>
 
-    <script>
-      $(function(){
-        // inputのidから情報の取得
-        $('#item_image').on('change', function (e) {
-          // ここから既存の画像のurlの取得
-          var reader = new FileReader();
-          reader.onload = function (e) {
-              $(".image").attr('src', e.target.result);
-          }
-          // ここまで
-          reader.readAsDataURL(e.target.files[0]); //取得したurlにアップロード画像のurlを挿入
-        });
+  <script>
+    $(function(){
+      // inputのidから情報の取得
+      $('#item_image').on('change', function (e) {
+        // ここから既存の画像のurlの取得
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            $(".image").attr('src', e.target.result);
+        }
+        // ここまで
+        reader.readAsDataURL(e.target.files[0]); //取得したurlにアップロード画像のurlを挿入
       });
-    </script>
+    });
+  </script>
 
   <div class="field row">
     <%= f.label :email, 'メールアドレス', class: 'col-md-2' %>
@@ -55,7 +56,7 @@
     <%= f.text_area :kana_first_name, class: 'col-md-10' %>
   </div>
 
-    <%= f.submit class: 'btn btn-primary col-md-3'%>
+  <%= f.submit class: 'btn btn-primary col-md-3'%>
 <% end %>
 
 <%# 退会ボタン %>

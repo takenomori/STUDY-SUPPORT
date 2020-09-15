@@ -74,8 +74,8 @@
           <%= f.password_field :password_confirmation, placeholder: "パスワード確認用" %>
         </div>
       </div>
-    </div>
     <br>
+    </div>
 
     <%# 「新規登録」ボタン %>
     <div class="row">
@@ -86,17 +86,19 @@
       </div>
     </div>
   <% end %>
-</div>
 <br>
-
-<div class="text-left">
-  <p style="font-size: 15px">
-    登録がお済みの方は
-  </p>
 </div>
 
-<div class="text-left">
-  <%= link_to "こちら", user_session_path %>からログインを行なってください。
+<div class="row">
+  <div class="text-left">
+    <p style="font-size: 15px">
+      登録がお済みの方は
+    </p>
+  </div>
+
+  <div class="text-left">
+    <%= link_to "こちら", user_session_path %>からログインを行なってください。
+  </div>
+  <br>
+  <br>
 </div>
-<br>
-<br>

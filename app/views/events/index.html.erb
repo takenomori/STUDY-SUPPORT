@@ -4,8 +4,8 @@
   <div class="col-md-12">
     <%= render 'users/template', user: @user%>
   </div>
+  <hr>
 </div>
-<hr>
 
 <div class="row">
   <%# 学習時間表示 %>
@@ -42,11 +42,11 @@
 
   <%# 勉強時間グラフ呼び出し、chart.js、event.coffeeに記載 %>
   <div class="col-md-12">
-      <canvas id="myChart"></canvas> 
-      <script>draw_graph();</script> 
+    <canvas id="myChart"></canvas> 
+    <script>draw_graph();</script> 
   </div>
+  <hr>
 </div>
-<hr>
 
 <%# カレンダー、予定一覧 %>
 <div class="row">
@@ -61,6 +61,5 @@
       <div id="calendar" ></div>
   </div>
   <hr>
+  <br>
 </div>
-
-<br>

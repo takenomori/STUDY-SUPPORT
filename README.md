@@ -16,7 +16,7 @@
 
 ### ターゲットユーザ
 
-学生などの継続的な勉学者
+学生などの継続的な学習を記録したい人
 
 ### 主な利用シーン
 
@@ -35,6 +35,10 @@
 - AWS(EC2,RDS)
 - Bootstrap, jQuery
 - その他 gem
+
+### テストの確認方法
+
+docker-compose exec web rspec spec
 
 ### 機能一覧
 
