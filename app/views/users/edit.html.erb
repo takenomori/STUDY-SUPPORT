@@ -11,12 +11,12 @@
   <div class="item-image">
     <%= attachment_image_tag @user, :image, fallback: "no-image.gif", size:'250x250', class: "UserIcon-image" %>
   </div>
-  
+
   <div class="image">
     <%= f.attachment_field :image, placeholder: "画像" %>
   </div>
 
-  <script>
+  <%# <script>
     $(function(){
       // inputのidから情報の取得
       $('#item_image').on('change', function (e) {
@@ -29,7 +29,7 @@
         reader.readAsDataURL(e.target.files[0]); //取得したurlにアップロード画像のurlを挿入
       });
     });
-  </script>
+  </script> %>
 
   <div class="field row">
     <%= f.label :email, 'メールアドレス', class: 'col-md-2' %>
