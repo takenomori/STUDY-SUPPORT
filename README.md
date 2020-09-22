@@ -38,6 +38,8 @@
 
 ### テストの確認方法
 
+<!-- docker-compose up -->
+
 docker-compose exec web rspec spec
 
 ### 機能一覧
