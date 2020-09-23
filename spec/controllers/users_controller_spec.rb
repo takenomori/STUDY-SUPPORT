@@ -4,7 +4,7 @@ RSpec.describe User, type: :model do
   it '名前first_nameがなければ登録できない' do
     expect(FactoryBot.build(:user, first_name: '')).to_not be_valid
   end
-  
+
   it '名前last_nameがなければ登録できない' do
     expect(FactoryBot.build(:user, last_name: '')).to_not be_valid
   end
