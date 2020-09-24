@@ -4,7 +4,7 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    ## レベルアップシステム
+    ## レベルアップ
     user = User.find(current_user.id)
     user.experience_point = StudyTime.where(user_id: current_user.id).sum(:time)
     # 経験値を更新
@@ -17,7 +17,7 @@ class EventsController < ApplicationController
       user.level = user.level + 1
       user.update(level: user.level)
     end
-    ##
+    
     levelSetting = LevelSetting.find_by(level: user.level + 1)
     levelSetting.thresold -= user.experience_point
     @user_experience = levelSetting.thresold
