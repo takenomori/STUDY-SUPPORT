@@ -17,7 +17,7 @@ class EventsController < ApplicationController
       user.level = user.level + 1
       user.update(level: user.level)
     end
-    ## レベルアップ ##
+    ## ##
     
     levelSetting = LevelSetting.find_by(level: user.level + 1)
     levelSetting.thresold -= user.experience_point
