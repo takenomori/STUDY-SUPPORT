@@ -36,9 +36,7 @@
 - Bootstrap, jQuery
 - その他 gem
 
-### テストの確認方法
-
-<!-- docker-compose up -->
+### rspec での簡易テストの確認方法
 
 docker-compose exec web rspec spec
 
