@@ -39,6 +39,8 @@
 ### アプリの立ち上げ手順
 
 docker-compose up
+別タブにて
+docker-compose exec web rails db:create
 
 ### rspec での簡易テストの確認方法
 
