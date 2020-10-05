@@ -16,7 +16,7 @@
 
 ### ターゲットユーザ
 
-学生などの継続的な学習を記録したい人
+学生など日々の学習記録をする人
 
 ### 主な利用シーン
 
@@ -36,7 +36,13 @@
 - Bootstrap, jQuery
 - その他 gem
 
-### テストの確認方法
+### アプリの立ち上げ手順
+
+docker-compose up
+別タブにて
+docker-compose exec web rails db:create
+
+### rspec での簡易テストの確認方法
 
 docker-compose exec web rspec spec
 

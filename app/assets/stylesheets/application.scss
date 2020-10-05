@@ -119,55 +119,7 @@ li {
   color: #888;
 }
 
-// body {
-//   font-family: "Helvetica Neue", Helvetica, Arial, "游ゴシック体", "Yu Gothic",
-//     YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, "Open Sans", sans-serif;
-//     min-height: 100vh;
-//     display: flex;
-//     flex-direction: column;
-//     background-color: #eeeeee;
-// }
-// .header {
-//   height: 70px;
-//   display: flex;
-//   align-items: center;
-//   background-color: #fff;
-// }
-// nav {
-//   margin: 0 0 0 auto;
-// }
-// ul {
-//   list-style: none;
-//   margin: 0;
-//   display: flex;
-// }
-// li {
-//   margin: 0 0 0 15px;
-//   font-size: 14px;
-// }
-// .glovalNavigation {
-//   margin: 0px;
-//   padding: 15px;
-//   position: relative;
-//   border-bottom: #dddddd solid 1px;
-//   border-top: #dddddd solid 1px;
-//   text-align: center;
-// }
-
-// .content {
-//   flex: 1;
-//   background-color: #fff;
-//   // text-align: center;
-//   margin: 10px 0 10px 0;
-// }
-// .localNavigation {
-//   height: 70px;
-//   text-align: center;
-//   background-color: #888;
-//   color: #fff;
-// }
-
-/*トップページ画像のデザイン*/
+// トップページ画像のデザイン
 .front-image {
   width: 100%;
   height: 500px;
@@ -179,29 +131,84 @@ li {
   color: white;
 }
 
-/*ページネーションを中央に*/
+// ページネーションを中央に
 .text-center {
   text-align: center;
 }
 
-/*ページネーション自体のデザイン*/
+// ページネーション自体のデザイン
 .pagination > li > a {
   border: none; /*枠線をなくす*/
   color: #696969; /*文字の色を変える*/
 }
 
-/* 表示しているページ番号のデザイン */
+// 表示しているページ番号のデザイン
 .pagination > .active > a {
   background: #93c9ff; /*背景の色を変える*/
   border-radius: 15px; /*角を丸くする*/
 }
 
-/*ホバー時のデザイン*/
+// ホバー時のデザイン
 .pagination > li > a:hover {
   border-radius: 15px; /*角を丸くする*/
 }
 
-// /* _textbook_box.html.erb
+// ユーザーアイコンのデザイン
+.UserIcon-image {
+  border-radius: 50%; /* 角丸半径を50%にする(=円形にする) */
+}
+
+/*
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, "游ゴシック体", "Yu Gothic",
+    YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, "Open Sans", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #eeeeee;
+}
+.header {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+}
+nav {
+  margin: 0 0 0 auto;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  display: flex;
+}
+li {
+  margin: 0 0 0 15px;
+  font-size: 14px;
+}
+.glovalNavigation {
+  margin: 0px;
+  padding: 15px;
+  position: relative;
+  border-bottom: #dddddd solid 1px;
+  border-top: #dddddd solid 1px;
+  text-align: center;
+}
+
+.content {
+  flex: 1;
+  background-color: #fff;
+  // text-align: center;
+  margin: 10px 0 10px 0;
+}
+.localNavigation {
+  height: 70px;
+  text-align: center;
+  background-color: #888;
+  color: #fff;
+}
+*/
+
+// /*_textbook_box.html.erb*/
 // /* タブエリアのdivへの適用 */
 // #smallArea {
 //   /* 基本的なサイズの設定 */
@@ -210,21 +217,21 @@ li {
 //   //   height: 26px;
 //   //   padding-top: 4px;
 
-//   /* borderに関する設定 */
+//   // borderに関する設定
 //   border: 1px solid; /* 線の太さと可視化 */
 //   border-bottom: transparent; /* 下辺を透明に */
 //   border-top-left-radius: 8px; /* 左上を角丸に */
 //   border-top-right-radius: 8px; /* 右上を角丸に */
 
-//   /* メイン表示エリアの線の太さだけ下にずらす */
+//   // メイン表示エリアの線の太さだけ下にずらす
 //   margin-bottom: -1px;
 
-//   /* その他の設定 */
+//   // その他設定
 //   position: relative;
 //   text-align: center;
 // }
 
-// /* メイン表示エリアのdivへの適用 */
+// // メイン表示エリアのdivへの適用
 // #largeArea {
 //   /* 基本的なサイズの設定 */
 //   background-color: #fff;
@@ -238,7 +245,7 @@ li {
 //   border-bottom-right-radius: 8px; /* 右下を角丸に */
 // }
 
-// /* メイン表示エリアのdivへの適用 */
+// // メイン表示エリアのdivへの適用
 // #underArea {
 //   /* 基本的なサイズの設定 */
 //   background-color: #fff;
@@ -250,16 +257,8 @@ li {
 //   //   border: 1px solid;
 // }
 
-// /* コンテンツを見やすく表示 */
+// // コンテンツを見やすく表示
 // .disp-area {
 //   margin-top: 20px;
 //   margin-left: 20px;
 // }
-
-.UserIcon-image {
-  // width: 180px; /* ※縦横を同値に */
-  // height: 180px; /* ※縦横を同値に */
-  border-radius: 50%; /* 角丸半径を50%にする(=円形にする) */
-  // background-position: left top; /* 横長画像の左上を基準に表示 */
-  // display: inline-block; /* 複数の画像を横に並べたい場合 */
-}

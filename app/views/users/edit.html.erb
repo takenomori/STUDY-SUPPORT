@@ -5,7 +5,7 @@
   </div>
 </div>
 
-<%# フォーム %>
+<%# ユーザー編集フォーム %>
 <%= form_for(@user) do |f| %>
   <%= render 'layouts/error_messages', model: f.object %>
   <div class="item-image">
@@ -15,21 +15,6 @@
   <div class="image">
     <%= f.attachment_field :image, placeholder: "画像" %>
   </div>
-
-  <%# <script>
-    $(function(){
-      // inputのidから情報の取得
-      $('#item_image').on('change', function (e) {
-        // ここから既存の画像のurlの取得
-        var reader = new FileReader();
-        reader.onload = function (e) {
-            $(".image").attr('src', e.target.result);
-        }
-        // ここまで
-        reader.readAsDataURL(e.target.files[0]); //取得したurlにアップロード画像のurlを挿入
-      });
-    });
-  </script> %>
 
   <div class="field row">
     <%= f.label :email, 'メールアドレス', class: 'col-md-2' %>
@@ -55,13 +40,12 @@
     <%= f.label :kana_first_name, '　　　メイ　　', class: 'col-md-2' %>
     <%= f.text_area :kana_first_name, class: 'col-md-10' %>
   </div>
-
   <%= f.submit class: 'btn btn-primary col-md-3'%>
 <% end %>
 
-<%# 退会ボタン %>
+<%# ユーザー退会ボタン %>
 <div class="row">
-  <div class="col-md-3">
+  <div class="col-md-4">
     <%= link_to '退会する', @user, method: :delete, data: { confirm: '本当に消しますか？' }, class: " btn btn-default"%>
   </div>
 </div>

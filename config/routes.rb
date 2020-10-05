@@ -12,10 +12,8 @@ Rails.application.routes.draw do
   end
 
   resources :textbooks
-  # , only: [:edit, :index, :new, :show, :create, :update, :destroy]
 
   resources :study_times
-  # , only: [:edit, :index, :new, :show, :create, :update]
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
