@@ -1,4 +1,4 @@
-<%# 教材詳細表示 %>
+<!-- 教材詳細表示 -->
 <div class="row">
 	<h1><%=	@textbook.title %></h1>
 </div>
@@ -15,7 +15,7 @@
 	<%= @textbook.tag.name %>
 </span>
 
-<%# 編集、消去ボタン %>
+<!-- 編集、消去ボタン -->
 <div class="row">
 	<div class="col-md-2">
 		<%= link_to "編集", edit_textbook_path %> |	<%= link_to '削除', @user, method: :delete, data: { confirm: '本当に消しますか？' } %>
