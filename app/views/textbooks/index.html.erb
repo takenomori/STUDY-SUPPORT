@@ -1,24 +1,22 @@
-<div class="container">	
-	<!-- 教材一覧ページネーション -->
-	<div class="text-center">
-		<%= paginate(@textbooks) %>
-	</div>
-	
-	<!-- 教材一覧表示 -->
-	<div class="row">
-		<%= render 'textbooks/textbook_box' %>
-		<br>
-	</div>
+<!-- 教材一覧ページネーション -->
+<div class="text-center">
+	<%= paginate(@textbooks) %>
+</div>
 
-	<div class="row">
-		<div class="col-md-12">
-			<!-- 教材一覧ページネーション -->
-			<div class="text-center">
-				<%= paginate(@textbooks) %>
-			</div>
+<!-- 教材一覧表示 -->
+<div class="row">
+	<%= render 'textbooks/textbook_box' %>
+	<br>
+</div>
 
-			<!-- 教材追加ボタン -->
-			<%= link_to '教材を追加', new_textbook_path, class:"btn btn-success form-control" %>	
+<div class="row">
+	<div class="col-md-12">
+		<!-- 教材一覧ページネーション -->
+		<div class="text-center">
+			<%= paginate(@textbooks) %>
 		</div>
+
+		<!-- 教材追加ボタン -->
+		<%= link_to '教材を追加', new_textbook_path, class:"btn btn-success form-control" %>	
 	</div>
 </div>
