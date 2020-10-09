@@ -41,6 +41,7 @@
 docker-compose up
 別タブにて
 docker-compose exec web rails db:create
+docker-compose exec web bin/rails db:migrate RAILS_ENV=development
 
 ### rspec での簡易テストの確認方法
 
