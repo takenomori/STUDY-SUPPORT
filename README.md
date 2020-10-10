@@ -42,6 +42,12 @@ docker-compose up
 別タブにて
 docker-compose exec web rails db:create
 docker-compose exec web bin/rails db:migrate RAILS_ENV=development
+docker-compose exec web rails db:seed
+
+$ rake db:drop
+$ rake db:create
+$ rake db:schema:load
+$ rake db:seed
 
 ### rspec での簡易テストの確認方法
 
