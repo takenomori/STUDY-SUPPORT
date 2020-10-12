@@ -1,4 +1,4 @@
-<!-- 教材一覧ページネーション -->
+<!-- 上部 教材一覧ページネーション -->
 <div class="text-center">
 	<%= paginate(@textbooks) %>
 </div>
@@ -9,14 +9,14 @@
 	<br>
 </div>
 
+<!-- 下部 教材一覧ページネーション -->
 <div class="row">
-	<div class="col-md-12">
-		<!-- 教材一覧ページネーション -->
-		<div class="text-center">
-			<%= paginate(@textbooks) %>
-		</div>
-
-		<!-- 教材追加ボタン -->
-		<%= link_to '教材を追加', new_textbook_path, class:"btn btn-success form-control" %>	
+	<div class="text-center">
+		<%= paginate(@textbooks) %>
 	</div>
+</div>
+
+<!-- 教材追加ボタン -->
+<div class="row">
+	<%= link_to '教材を追加', new_textbook_path, class:"btn btn-success form-control" %>	
 </div>
