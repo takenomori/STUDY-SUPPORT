@@ -41,7 +41,9 @@
 $docker-compose up
 別タブにて
 $docker-compose exec web rails db:create
-\$docker-compose exec web bin/rails db:migrate RAILS_ENV=development
+\$docker-compose exec web rails db:migrate RAILS_ENV=development
+
+### アプリのデモデータ読み込み
 
 $docker-compose exec web rails db:drop
 $docker-compose exec web rails db:create
