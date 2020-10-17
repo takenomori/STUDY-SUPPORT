@@ -1,12 +1,11 @@
-<div class="jumbotron">
-  <div class="container">
-    <%# 学習時間新規登録ページ %>
-    <div class="row">
-      <div class="col-md-12 col-md-offset-0">
-        <h1>今日の学習時間</h1>
-      </div>
-    </div>
-    <%# 登録がフォーム呼び出し %>
-    <%= render 'form', study_time: @study_time%>
-  </div> 
+<%# 学習時間新規登録ページ %>
+<div class="row">
+  <div class="col-md-12 col-md-offset-0">
+    <h1>今日の学習時間</h1>
+  </div>
+</div>
+
+<%# 登録がフォーム呼び出し %>
+<div class="row">
+  <%= render 'form', study_time: @study_time%>
 </div>
