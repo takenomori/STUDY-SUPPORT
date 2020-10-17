@@ -8,6 +8,7 @@
 				<th>内容</th>
 			</tr>
 		</thead>
+
 		<tbody>
 			<% @study_times.each do |study_time| %>
 				<tr>
@@ -18,7 +19,8 @@
 		</tbody>
 	</table>
 </div>
+
+<%# 学習時間一覧ページネーション %>
 <div class="text-center">
-	<%# 学習時間一覧ページネーション %>
 	<%= paginate(@study_times) %>
 </div>
