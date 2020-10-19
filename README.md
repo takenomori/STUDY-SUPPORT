@@ -33,7 +33,8 @@
 - Nginx
 - Puma
 - AWS(EC2,RDS)
-- Bootstrap, jQuery
+- Bootstrap
+- jQuery
 - その他 gem
 
 ### アプリの立ち上げ手順
