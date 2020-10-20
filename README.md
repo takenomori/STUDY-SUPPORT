@@ -55,7 +55,7 @@ $docker-compose exec web rails db:drop
 $docker-compose exec web rails db:reset
 \$docker-compose exec web rails db:seed
 
-### rspec での簡易テストの確認方法
+### rspec での簡易テストの確認方法(一部)
 
 docker-compose exec web rspec spec
 
