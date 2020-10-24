@@ -1,51 +1,53 @@
-<%# ユーザー編集画面 %>
-<div class="row">
-  <div class="col-md-6 col-md-offset-0">
-    <h2>ユーザー編集</h2>
-  </div>
-</div>
-
-<%# ユーザー編集フォーム %>
-<%= form_for(@user) do |f| %>
-  <%= render 'layouts/error_messages', model: f.object %>
-  <div class="item-image">
-    <%= attachment_image_tag @user, :image, fallback: "no-image.gif", size:'250x250', class: "UserIcon-image" %>
+<div class="container">
+  <%# ユーザー編集画面 %>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-0">
+      <h2>ユーザー編集</h2>
+    </div>
   </div>
 
-  <div class="image">
-    <%= f.attachment_field :image, placeholder: "画像" %>
-  </div>
+  <%# ユーザー編集フォーム %>
+  <%= form_for(@user) do |f| %>
+    <%= render 'layouts/error_messages', model: f.object %>
+    <div class="item-image">
+      <%= attachment_image_tag @user, :image, fallback: "no-image.gif", size:'250x250', class: "UserIcon-image" %>
+    </div>
 
-  <div class="field row">
-    <%= f.label :email, 'メールアドレス', class: 'col-md-2' %>
-    <%= f.text_field :email, class: 'col-md-10' %>
-  </div>
+    <div class="image">
+      <%= f.attachment_field :image, placeholder: "画像" %>
+    </div>
 
-  <div class="field row">
-    <%= f.label :last_name, '　　　姓　　　', class: 'col-md-2' %>
-    <%= f.text_area :last_name, class: 'col-md-10'%>
-  </div>
+    <div class="field row">
+      <%= f.label :email, 'メールアドレス', class: 'col-md-2' %>
+      <%= f.text_field :email, class: 'col-md-10' %>
+    </div>
 
-  <div class="field row">
-    <%= f.label :first_name, '　　　名　　　' , class: 'col-md-2'%>
-    <%= f.text_area :first_name, class: 'col-md-10'%>
-  </div>
+    <div class="field row">
+      <%= f.label :last_name, '　　　姓　　　', class: 'col-md-2' %>
+      <%= f.text_area :last_name, class: 'col-md-10'%>
+    </div>
 
-  <div class="field row">
-    <%= f.label :kana_last_name, '　　　セイ　　', class: 'col-md-2' %>
-    <%= f.text_area :kana_last_name, class: 'col-md-10' %>
-  </div>
+    <div class="field row">
+      <%= f.label :first_name, '　　　名　　　' , class: 'col-md-2'%>
+      <%= f.text_area :first_name, class: 'col-md-10'%>
+    </div>
 
-  <div class="field row">
-    <%= f.label :kana_first_name, '　　　メイ　　', class: 'col-md-2' %>
-    <%= f.text_area :kana_first_name, class: 'col-md-10' %>
-  </div>
-  <%= f.submit class: 'btn btn-primary col-md-3'%>
-<% end %>
+    <div class="field row">
+      <%= f.label :kana_last_name, '　　　セイ　　', class: 'col-md-2' %>
+      <%= f.text_area :kana_last_name, class: 'col-md-10' %>
+    </div>
 
-<%# ユーザー退会ボタン %>
-<div class="row">
-  <div class="col-md-4">
-    <%= link_to '退会する', @user, method: :delete, data: { confirm: '本当に消しますか？' }, class: " btn btn-default"%>
+    <div class="field row">
+      <%= f.label :kana_first_name, '　　　メイ　　', class: 'col-md-2' %>
+      <%= f.text_area :kana_first_name, class: 'col-md-10' %>
+    </div>
+    <%= f.submit class: 'btn btn-primary col-md-3'%>
+  <% end %>
+
+  <%# ユーザー退会ボタン %>
+  <div class="row">
+    <div class="col-md-4">
+      <%= link_to '退会する', @user, method: :delete, data: { confirm: '本当に消しますか？' }, class: " btn btn-default"%>
+    </div>
   </div>
 </div>
