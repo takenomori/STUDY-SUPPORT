@@ -10,23 +10,25 @@
 		<%= attachment_image_tag @user, :image, fallback: "no-image.gif", size:'250', class: "UserIcon-image " %>
 	</div>
 
-	<div class="table-responsive">
-		<table class="table text-nowrap">
-			<tbody>
-				<tr>
-					<td>メールアドレス</td>
-					<td> <%= @user.email %> </td>
-				</tr>
-				<tr>
-					<td>姓　名</td>
-					<td> <%= @user.last_name %> <%= @user.first_name %> </td>
-				</tr>
-				<tr>
-					<td>セイ　メイ</td>
-					<td> <%= @user.kana_last_name %> <%= @user.kana_first_name %> </td>
-				</tr>
-			</tbody>
-		</table>
+	<div class="row">
+		<div class="table-responsive">
+			<table class="table text-nowrap">
+				<tbody>
+					<tr>
+						<td>メールアドレス</td>
+						<td> <%= @user.email %> </td>
+					</tr>
+					<tr>
+						<td>姓　名</td>
+						<td> <%= @user.last_name %> <%= @user.first_name %> </td>
+					</tr>
+					<tr>
+						<td>セイ　メイ</td>
+						<td> <%= @user.kana_last_name %> <%= @user.kana_first_name %> </td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 	</div>
 
 	<%# 編集ボタン %>
