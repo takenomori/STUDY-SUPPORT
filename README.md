@@ -35,7 +35,7 @@
 - AWS(EC2,RDS)
 - Bootstrap
 - jQuery
-- その他 gem
+- gem chart.js
 
 ### アプリの立ち上げ手順
 
