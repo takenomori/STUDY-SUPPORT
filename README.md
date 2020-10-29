@@ -40,7 +40,7 @@
 ### アプリの立ち上げ手順
 
 $docker-compose up
-別タブにて
+別タブで
 $docker-compose exec web rails db:create
 \$docker-compose exec web rails db:migrate RAILS_ENV=development
 
