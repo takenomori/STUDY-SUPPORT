@@ -39,16 +39,16 @@
 
 ### アプリの立ち上げ手順
 
-$docker-compose up
+docker-compose up
 別タブで
-$docker-compose exec web rails db:create
-\$docker-compose exec web rails db:migrate RAILS_ENV=development
+docker-compose exec web rails db:create
+docker-compose exec web rails db:migrate RAILS_ENV=development
 
 ### アプリのデモデータ読み込み
 
-$docker-compose exec web rails db:drop
-$docker-compose exec web rails db:reset
-\$docker-compose exec web rails db:seed
+docker-compose exec web rails db:drop
+docker-compose exec web rails db:reset
+docker-compose exec web rails db:seed
 
 ### rspec での簡易テストの確認方法(一部)
 
