@@ -16,23 +16,23 @@
           <tr class="active">
             <td class="active text-center">
               <%= link_to study_times_path(current_user.id) do %>
-                <h3><strong>
-                  今日 <%= @total_study_time0 %> h
-                </strong></h3>
+                <h3>
+                  <strong>今日 <%= @total_study_time0 %> h</strong>
+                </h3>
               <% end %>  
             </td>
             <td class="active text-center">
               <%= link_to study_times_path(current_user.id) do %>
-                <h3><strong>
-                  今週 <%= @week_study_time %>  h
-                </strong></h3>
+                <h3>
+                  <strong>今週 <%= @week_study_time %>  h</strong>
+                </h3>
               <% end %>  
             </td>
             <td class="active text-center">
               <%= link_to study_times_path(current_user.id) do %>
-                <h3><strong>
-                  累計 <%= @all_study_time %> h
-                </strong></h3>
+                <h3>
+                  <strong>累計 <%= @all_study_time %> h</strong>
+                </h3>
               <% end %>
             </td>
           </tr>
