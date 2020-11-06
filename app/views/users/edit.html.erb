@@ -1,12 +1,12 @@
 <div class="container">
-  <%# ユーザー編集画面 %>
+  <!-- ユーザー編集画面 -->
   <div class="row">
     <div class="col-md-6 col-md-offset-0">
       <h2>ユーザー編集</h2>
     </div>
   </div>
 
-  <%# ユーザー編集フォーム %>
+  <!-- ユーザー編集フォーム -->
   <%= form_for(@user) do |f| %>
     <%= render 'layouts/error_messages', model: f.object %>
     <div class="item-image">
@@ -45,7 +45,7 @@
     <%= f.submit class: 'btn btn-primary col-md-3'%>
   <% end %>
 
-  <%# ユーザー退会ボタン %>
+  <!-- ユーザー退会ボタン -->
   <div class="row">
     <div class="col-md-4">
       <%= link_to '退会する', @user, method: :delete, data: { confirm: '本当に消しますか？' }, class: " btn btn-default"%>
