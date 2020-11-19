@@ -11,8 +11,8 @@
 
 ### テーマを選んだ理由
 
-1.自身の浪人生活を通して学習手帳の有用性を感じていたが、一つのページに収まらず活用しきれなかった経験から  
-2.勉強関係の情報をまとめて管理するサイトが欲しかった為
+- 自身の浪人生活を通して学習手帳の有用性を感じていたが、一つのページに収まらず活用しきれなかった経験から
+- 勉強関係の情報をまとめて管理するサイトが欲しかった為
 
 ### ターゲットユーザ
 
@@ -33,26 +33,24 @@
 - Nginx
 - Puma
 - AWS(EC2,RDS)
-- Bootstrap, jQuery
-- その他 gem
+- Bootstrap
+- jQuery
+- gem
 
 ### アプリの立ち上げ手順
 
-$docker-compose up
-別タブにて
-$docker-compose exec web rails db:create
-\$docker-compose exec web bin/rails db:migrate RAILS_ENV=development
+docker-compose up
+別タブで
+docker-compose exec web rails db:create
+docker-compose exec web rails db:migrate RAILS_ENV=development
 
-$docker-compose exec web rails db:drop
-$docker-compose exec web rails db:create
-$docker-compose exec web rails db:schema:load
-$docker-compose exec web rails db:seed
+### アプリのデモデータ読み込み
 
-$docker-compose exec web rails db:drop
-$docker-compose exec web rails db:reset
-\$docker-compose exec web rails db:seed
+docker-compose exec web rails db:drop
+docker-compose exec web rails db:reset
+docker-compose exec web rails db:seed
 
-### rspec での簡易テストの確認方法
+### rspec での簡易テストの確認方法(一部)
 
 docker-compose exec web rspec spec
 

@@ -1,65 +1,71 @@
-<p id="notice"><%= notice %></p>
-<div class="row">
-  <%# ユーザーテンプレート呼び出し %>
-  <div class="col-md-12">
-    <%= render 'users/template', user: @user%>
+<!-- 学習時間一覧表示 -->
+<div class="container">
+  <p id="notice"><%= notice %></p>
+  <div class="row">
+    <!-- ユーザーテンプレート呼び出し -->
+    <div class="col-md-12">
+      <%= render 'users/template', user: @user%>
+    </div>
+    <hr>
   </div>
-  <hr>
-</div>
+  
+  <!-- 学習時間表示 -->
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table"  BORDER='0' style="table-layout:fixed;width:100%;" >
+        <tbody>
+          <tr class="active">
+            <td class="active text-center">
+              <%= link_to study_times_path(current_user.id) do %>
+                <h3>
+                  <strong>今日 <%= @total_study_time0 %> h</strong>
+                </h3>
+              <% end %>  
+            </td>
 
-<div class="row">
-  <%# 学習時間表示 %>
-  <div class="col-md-12">
-    <table class="table"  BORDER='0' style="table-layout:fixed;width:100%;" >
-      <tbody>
-        <tr class="active">
-          <td class="active text-center">
-            <%= link_to study_times_path(current_user.id) do %>
-              <h3><strong>
-                今日 <%= @total_study_time0 %> h
-              </strong></h3>
-            <% end %>  
-          </td>
-          <td class="active text-center">
-            <%= link_to study_times_path(current_user.id) do %>
-              <h3><strong>
-                今週 <%= @week_study_time %>  h
-              </strong></h3>
-            <% end %>  
-          </td>
-          <td class="active text-center">
-            <%= link_to study_times_path(current_user.id) do %>
-              <h3><strong>
-                累計 <%= @all_study_time %> h
-              </strong></h3>
-            <% end %>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <%= link_to "記録", new_study_time_path(current_user.id), class:"btn btn-success form-control" %>	
+            <td class="active text-center">
+              <%= link_to study_times_path(current_user.id) do %>
+                <h3>
+                  <strong>今週 <%= @week_study_time %>  h</strong>
+                </h3>
+              <% end %>  
+            </td>
+            
+            <td class="active text-center">
+              <%= link_to study_times_path(current_user.id) do %>
+                <h3>
+                  <strong>累計 <%= @all_study_time %> h</strong>
+                </h3>
+              <% end %>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <%= link_to "記録", new_study_time_path(current_user.id), class:"btn btn-success form-control" %>	
+    </div>
+
+    <!-- 勉強時間グラフ呼び出し、chart.js、event.coffeeに記載 -->
+    <div class="col-md-12">
+      <canvas id="myChart"></canvas> 
+      <script>draw_graph();</script> 
+    </div>
+    <hr>
   </div>
 
-  <%# 勉強時間グラフ呼び出し、chart.js、event.coffeeに記載 %>
-  <div class="col-md-12">
-    <canvas id="myChart"></canvas> 
-    <script>draw_graph();</script> 
+  <!-- カレンダー、予定一覧 -->
+  <div class="row">
+    <div class="col-md-12">
+      <%= link_to '新しい予定', new_event_path, class:"btn btn-success form-control" %>	
+    </div>
+    <br>
   </div>
-  <hr>
-</div>
 
-<%# カレンダー、予定一覧 %>
-<div class="row">
-  <div class="col-md-12">
-    <%= link_to '新しい予定', new_event_path, class:"btn btn-success form-control" %>	
+  <!-- カレンダー呼び出し・application.jsに記述 -->
+  <div class="row">
+    <div class="col-md-12">
+      <div id="calendar" ></div>
+    </div>
+    <hr>
+    <br>
   </div>
-</div>
-
-<%# カレンダー呼び出し・application.jsに記述 %>
-<div class="row">
-  <div class="col-md-12">
-    <div id="calendar" ></div>
-  </div>
-  <hr>
-  <br>
 </div>

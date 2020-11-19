@@ -49,13 +49,13 @@
               <strong><%= link_to "　　マイページ　　", user_path(current_user.id) %></strong>
             <!-- ログインしていない場合 -->
             <% else %>
-            <% end %>    
+            <% end %>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="container">
+    <div class="contant">
       <%= yield %>
     </div>
 
@@ -63,14 +63,12 @@
       <div class="footer">
         当サイトは学習教材・時間・日程を管理を補助するサイトです。
       </div>
-
       <div class="copyright">
-        NO Right Reserved.
+        ALL Right Reserved.
       </div>
     </div>
   </body>
 </html>
-
 
 <%
 =begin

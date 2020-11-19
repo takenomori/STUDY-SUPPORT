@@ -1,10 +1,11 @@
 <div class="container">
-  <%# 学習時間詳細一覧表示 %>
+  <!-- 学習時間詳細一覧表示 -->
   <div class="row">
     <div class="col-md-6 col-md-offset-0">
       <h1>時間詳細</h1>
     </div>
   </div>
+
   <div class="field row">
     <%= @study_time.day %>
   </div>
@@ -20,14 +21,15 @@
   <div class="field row">
     <%= @study_time.comment %>
   </div>
-  <%# 編集、消去ボタン %>
+
+  <!-- 編集遷移ボタン、削除ボタン -->
   <div class="row">
     <div class="col-md-1">
       <%= link_to "fix", edit_study_time_path, class: " btn btn-default", style: "border-radius: 100%" %>	
     </div>
+
     <div class="col-md-1">
       <%= link_to 'Destroy', @study_time, method: :delete, data: { confirm: '本当に消しますか？' }, class: "btn-sm btn-danger destroy_study_time_#{@study_time.id}"%>
     </div>
   </div>
-  
 </div>
