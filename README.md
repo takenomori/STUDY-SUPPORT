@@ -35,7 +35,6 @@
 - AWS(EC2,RDS)
 - Bootstrap
 - jQuery
-- gem
 
 ### アプリの立ち上げ手順
 
