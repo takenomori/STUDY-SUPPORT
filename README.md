@@ -38,8 +38,9 @@
 
 ### アプリの立ち上げ手順
 
+docker のコンテナを立てる
 docker-compose up
-別タブで
+別タブでアプリの起動準備
 docker-compose exec web rails db:create
 docker-compose exec web rails db:migrate RAILS_ENV=development
 
