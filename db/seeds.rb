@@ -41,12 +41,12 @@ subject = ["国語", "理科", "社会", "数学", "英語"]
   5.times do |i|
     title = degree[n] + subject[i] 
       Textbook.create!(
-          user_id: 1,
-          tag_id: i + 1,
-          title: title,
-          status: Random.rand(0..2),
-          note: 'サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。',
-          book_image: File.open("./app/assets/images/kyoka#{i + 1}.gif")
+        user_id: 1,
+        tag_id: i + 1,
+        title: title,
+        status: Random.rand(0..2),
+        note: 'サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。',
+        book_image: File.open("./app/assets/images/kyoka#{i + 1}.gif")
       )
   end
 end
