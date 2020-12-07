@@ -2,7 +2,7 @@
 
 ## サイト概要
 
-勉強時間や予定、使用参考書を記録しておくことで、勉強自体に集中出来る様にサポートする。
+勉強時間や予定、使用参考書を記録をサポートするサイト
 
 ### サイトテーマ
 
@@ -18,7 +18,7 @@
 
 学生など日々の学習記録をする人
 
-### 主な利用シーン
+### 主な利用方法
 
 - 年間予定の管理
 - 勉強の進捗の管理
@@ -35,12 +35,12 @@
 - AWS(EC2,RDS)
 - Bootstrap
 - jQuery
-- gem
 
 ### アプリの立ち上げ手順
 
+docker のコンテナを立てる
 docker-compose up
-別タブで
+別タブでアプリの起動準備
 docker-compose exec web rails db:create
 docker-compose exec web rails db:migrate RAILS_ENV=development
 

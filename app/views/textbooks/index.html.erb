@@ -1,12 +1,13 @@
+<!-- 教材 一覧 -->
 <div class="container">
-	<!-- ページネーション 上部 -->
+	<!-- ページネーション 上部 gem kaminari-->
 	<div class="row">
 		<div class="text-center">
 			<%= paginate(@textbooks) %>
 		</div>
 	</div>
 
-	<!-- 教材一覧表示 -->
+	<!-- 一覧表示 -->
 	<div class="row">
 		<%= render 'textbooks/textbook_box' %>
 		<br>

@@ -41,18 +41,18 @@ subject = ["国語", "理科", "社会", "数学", "英語"]
   5.times do |i|
     title = degree[n] + subject[i] 
       Textbook.create!(
-          user_id: 1,
-          tag_id: i + 1,
-          title: title,
-          status: Random.rand(0..2),
-          note: 'サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。',
-          book_image: File.open("./app/assets/images/kyoka#{i + 1}.gif")
+        user_id: 1,
+        tag_id: i + 1,
+        title: title,
+        status: Random.rand(0..2),
+        note: 'サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。',
+        book_image: File.open("./app/assets/images/kyoka#{i + 1}.gif")
       )
   end
 end
 
-# StudyTime 昨年から２年分の学習時間仮作成
-(1..730).each do |i|
+# StudyTime 昨年からの学習時間仮作成
+(1..365).each do |i|
   StudyTime.create!(
     user_id: 1,
     time: Random.rand(1..11),
