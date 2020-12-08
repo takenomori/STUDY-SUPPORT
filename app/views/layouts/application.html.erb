@@ -95,12 +95,12 @@
       <div class="glovalNavigation">
         <div class="row">
           <div class="col-md-12">
-            <%# ログインしている場合 %>
+            <!-- ログインしている場合 -->
             <% if user_signed_in? %>
               <strong><%= link_to "　　本棚　　", textbooks_path%></strong>
               <strong><%= link_to "　　メインページ　　", events_path%></strong>
               <strong><%= link_to "　　マイページ　　", user_path(current_user.id) %></strong>
-            <%# ログインしていない場合 %>
+            <!-- ログインしていない場合 -->
             <% else %>
             <% end %>    
           </div>
@@ -117,7 +117,7 @@
       </div>
       <div class="content">
         <%= yield %>
-      </div>s
+      </div>
   </body>
 <%
 =end
