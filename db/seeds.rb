@@ -87,7 +87,7 @@ kana_first_names = %W[\u30B7\u30E7\u30A6\u30BF \u30EC\u30F3 \u30B7\u30E7\u30A6 \
   )
 end
 
-# 各ユーザー  StudyTime 習時間仮作成
+# テストユーザー2〜 StudyTime 習時間仮作成
 (1..50).each do |n|
   (1..500).each do |i|
     StudyTime.create!(
