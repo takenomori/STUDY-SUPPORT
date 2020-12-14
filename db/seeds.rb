@@ -27,7 +27,7 @@ User.create!(
   password_confirmation: 'password'
 )
 
-# タグ
+# タグ デフォルト
 Tag.create!(name: '国語')
 Tag.create!(name: '理科')
 Tag.create!(name: '社会')
