@@ -1,12 +1,13 @@
-<!-- ユーザー編集 -->
+<!-- ユーザー 編集 -->
 <div class="container">
+	<!-- ページ名 -->
   <div class="row">
     <div class="col-md-6 col-md-offset-0">
       <h2>ユーザー編集</h2>
     </div>
   </div>
 
-  <!-- ユーザー編集フォーム -->
+  <!-- ユーザー編集 フォーム -->
   <%= form_for(@user) do |f| %>
     <%= render 'layouts/error_messages', model: f.object %>
     <div class="item-image">
@@ -41,7 +42,6 @@
       <%= f.label :kana_first_name, '　　　メイ　　', class: 'col-md-2' %>
       <%= f.text_area :kana_first_name, class: 'col-md-10' %>
     </div>
-    
     <%= f.submit class: 'btn btn-primary col-md-3'%>
   <% end %>
 

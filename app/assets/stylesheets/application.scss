@@ -42,6 +42,7 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
+// headerデザイン
 .hwrapper {
   width: 100%;
   background-color: #ffffff;
@@ -85,6 +86,7 @@ li {
   background-color: #fff;
 }
 
+// footerデザイン
 .localNavigation {
   margin: 0px;
   padding: 15px;
@@ -104,7 +106,7 @@ li {
   margin: auto;
   height: 40px;
   max-width: 1000px;
-  padding: 10px; /*これを書かないとフッターの下に余白ができてしまう*/
+  padding: 10px; /*これを書かないとフッターの下に余白ができる*/
   font-size: 80%;
   color: #888;
   text-align: center;
@@ -131,6 +133,7 @@ li {
   color: white;
 }
 
+// ページネーションデザイン
 // ページネーションを中央に
 .text-center {
   text-align: center;
@@ -145,120 +148,15 @@ li {
 // 表示しているページ番号のデザイン
 .pagination > .active > a {
   background: #93c9ff; /*背景の色を変える*/
-  border-radius: 15px; /*角を丸くする*/
+  border-radius: 15px; /*角丸にする*/
 }
 
 // ホバー時のデザイン
 .pagination > li > a:hover {
-  border-radius: 15px; /*角を丸くする*/
+  border-radius: 15px; /*角丸にする*/
 }
 
 // ユーザーアイコンのデザイン
 .UserIcon-image {
-  border-radius: 50%; /* 角丸半径を50%にする(=円形にする) */
+  border-radius: 50%; /* 角丸半径を50%の円にする */
 }
-
-/*
-body {
-  font-family: "Helvetica Neue", Helvetica, Arial, "游ゴシック体", "Yu Gothic",
-    YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, "Open Sans", sans-serif;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-color: #eeeeee;
-}
-.header {
-  height: 70px;
-  display: flex;
-  align-items: center;
-  background-color: #fff;
-}
-nav {
-  margin: 0 0 0 auto;
-}
-ul {
-  list-style: none;
-  margin: 0;
-  display: flex;
-}
-li {
-  margin: 0 0 0 15px;
-  font-size: 14px;
-}
-.glovalNavigation {
-  margin: 0px;
-  padding: 15px;
-  position: relative;
-  border-bottom: #dddddd solid 1px;
-  border-top: #dddddd solid 1px;
-  text-align: center;
-}
-
-.content {
-  flex: 1;
-  background-color: #fff;
-  // text-align: center;
-  margin: 10px 0 10px 0;
-}
-.localNavigation {
-  height: 70px;
-  text-align: center;
-  background-color: #888;
-  color: #fff;
-}
-*/
-
-// /*_textbook_box.html.erb*/
-// /* タブエリアのdivへの適用 */
-// #smallArea {
-//   /* 基本的なサイズの設定 */
-//   background-color: #bbedce;
-//   //   width: 80px;
-//   //   height: 26px;
-//   //   padding-top: 4px;
-
-//   // borderに関する設定
-//   border: 1px solid; /* 線の太さと可視化 */
-//   border-bottom: transparent; /* 下辺を透明に */
-//   border-top-left-radius: 8px; /* 左上を角丸に */
-//   border-top-right-radius: 8px; /* 右上を角丸に */
-
-//   // メイン表示エリアの線の太さだけ下にずらす
-//   margin-bottom: -1px;
-
-//   // その他設定
-//   position: relative;
-//   text-align: center;
-// }
-
-// // メイン表示エリアのdivへの適用
-// #largeArea {
-//   /* 基本的なサイズの設定 */
-//   background-color: #fff;
-//   //   width: 200px;
-//   //   height: 40px;
-//   //   padding: 20px;
-
-//   /* 枠線を太さ1pxで表示 */
-//   border: 1px solid;
-//   border-bottom-left-radius: 8px; /* 左下を角丸に */
-//   border-bottom-right-radius: 8px; /* 右下を角丸に */
-// }
-
-// // メイン表示エリアのdivへの適用
-// #underArea {
-//   /* 基本的なサイズの設定 */
-//   background-color: #fff;
-//   //   width: 200px;
-//   //   height: 40px;
-//   //   padding: 20px;
-
-//   //   /* 枠線を太さ1pxで表示 */
-//   //   border: 1px solid;
-// }
-
-// // コンテンツを見やすく表示
-// .disp-area {
-//   margin-top: 20px;
-//   margin-left: 20px;
-// }
