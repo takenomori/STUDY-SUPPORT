@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# Faker日本語設定
+# Faker 日本語設定gem
 Faker::Config.locale = :ja
 
 # level_setting とりあえず10年✖️365日✖️24時間
