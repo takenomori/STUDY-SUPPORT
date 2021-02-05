@@ -6,20 +6,24 @@
       <h1>学習時間詳細</h1>
     </div>
   </div>
+
   <div class="field row">
     <%= @study_time.day %>
   </div>
+
   <div class="field row">
     <%= @study_time.time %>
   </div>
+
   <div class="field row">
     <%= @study_time.genre %>
   </div>
+
   <div class="field row">
     <%= @study_time.comment %>
   </div>
 
-  <!-- 編集遷移ボタン 削除ボタン -->
+  <!-- 編集画面遷移ボタン 学習時間削除ボタン -->
   <div class="row">
     <div class="col-md-1">
       <%= link_to "fix", edit_study_time_path, class: " btn btn-default", style: "border-radius: 100%" %>	

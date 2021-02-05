@@ -134,9 +134,8 @@ li {
 }
 
 // ページネーションデザイン
-// ページネーションを中央に
 .text-center {
-  text-align: center;
+  text-align: center; /*ページネーションを中央に*/
 }
 
 // ページネーション自体のデザイン
@@ -158,5 +157,5 @@ li {
 
 // ユーザーアイコンのデザイン
 .UserIcon-image {
-  border-radius: 50%; /* 角丸半径を50%の円にする */
+  border-radius: 50%; /*角丸半径を50%の円にする*/
 }
