@@ -1,4 +1,4 @@
-<!-- 教材編集 -->
+<!-- 教材 編集 -->
 <div class="container">
 	<!-- ページ名 -->
   <div class="row">
@@ -12,7 +12,7 @@
     <%= render 'form', textbook: @textbook%>
   </div>
 
-  <!-- 戻るボタン -->
+  <!-- 教材一覧に戻るボタン -->
   <div class="row">
     <div class="col-md-2">
       <%= link_to "戻る", textbook_path(@textbook.id), class: " btn btn-default" %>
