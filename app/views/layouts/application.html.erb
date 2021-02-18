@@ -3,7 +3,7 @@
   <head>
     <title>STUDY-SUPPORT</title>
     <%= favicon_link_tag('favicon.png') %>
-    <%# <meta name="viewport" content="width=device-width, initial-scale=1.0"> %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <!-- gem gon chart.jsで使用 -->
@@ -23,7 +23,7 @@
           <%= image_tag 'header.png', width: 100, height: 70 %>
         <% end %>
 
-        <!-- header -->
+        <!-- ヘッダー -->
         <nav class="headerNavigation">
           <ul>
             <!-- ログインしている場合 -->
@@ -65,13 +65,15 @@
       </div>
     </div>
 
+    <!-- コンテンツ -->
     <div class="contant">
       <%= yield %>
     </div>
 
+    <!-- フッター -->
     <div class="fwrapper">
       <div class="footer">
-          このサイトは使用教材・時間・日程の管理の為のサイトです。
+        このサイトは学習教材・時間・予定を管理します。
       </div>
       <div class="copyright">
         ALL Right Reserved.
