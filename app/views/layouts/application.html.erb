@@ -18,12 +18,12 @@
 
   <body>
     <div class="hwrapper">
+      <!-- ヘッダー -->
       <div class="header">
         <%= link_to(root_path) do %>
           <%= image_tag 'header.png', width: 100, height: 70 %>
         <% end %>
 
-        <!-- ヘッダー -->
         <nav class="headerNavigation">
           <ul>
             <!-- ログインしている場合 -->
@@ -65,7 +65,7 @@
       </div>
     </div>
 
-    <!-- コンテンツ -->
+    <!-- メインコンテンツ -->
     <div class="contant">
       <%= yield %>
     </div>
@@ -76,7 +76,7 @@
         このサイトは学習教材・時間・予定を管理します。
       </div>
       <div class="copyright">
-        ALL Right Reserved.
+      CopyRight ©️2020 ALLRightReserved.
       </div>
     </div>
   </body>

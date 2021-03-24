@@ -96,12 +96,10 @@ li {
   text-align: center;
   background-color: #fff;
 }
-
 .fwrapper {
   width: 100%;
   background-color: #222;
 }
-
 .footer {
   margin: auto;
   height: 40px;
@@ -138,7 +136,7 @@ li {
   text-align: center; /*ページネーションを中央に*/
 }
 
-// ページネーション自体のデザイン
+// ページネーション 文字のデザイン
 .pagination > li > a {
   border: none; /*枠線をなくす*/
   color: #696969; /*文字の色を変える*/
